@@ -27,4 +27,14 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex);
     }
+
+    public void QuitGame()
+    {
+        // If the game is running in the editor, stop playing
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
 }
