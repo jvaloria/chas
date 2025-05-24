@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824304618}
   - component: {fileID: 824304619}
+  - component: {fileID: 824304620}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -222,6 +223,18 @@ MonoBehaviour:
   - {fileID: 993450403}
   - {fileID: 1483352932}
   - {fileID: 1440277902}
+--- !u!114 &824304620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824304617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e75872ce56eb96449fef0b59338660f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842856234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,9 +1349,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 824304619}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: MakeChoice
+      - m_Target: {fileID: 824304620}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: LoadSceneByIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
