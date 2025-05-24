@@ -1,3 +1,5 @@
+ EXTERNAL loadScreen(int screenNumber)
+
 ->main
 
 ===main===
@@ -7,7 +9,9 @@
         ->ColectiveroAnnoyed
     *Mantener Apretado el timbre
         ->ColectiveroAnnoyed
-    *Bajar del Colectivo -> NextScreen
+    *Bajar del Colectivo 
+    ~ loadScreen(0)
+->DONE
 
 === ColectiveroAnnoyed ===
 Dale Pibe, No rompas las pelotas!

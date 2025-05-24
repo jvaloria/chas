@@ -1349,9 +1349,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 824304620}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: LoadSceneByIndex
+      - m_Target: {fileID: 824304619}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

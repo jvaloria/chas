@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -54,13 +55,17 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
 
-        Debug.Log(currentStory);
+        currentStory.BindExternalFunction("loadScreen", (int screenToLoad) =>
+        {
+            SceneManager.LoadScene(screenToLoad);
+        });
 
         ContinueStory();
     }
 
     private void ExitDialogueMode()
     {
+        currentStory.UnbindExternalFunction("loadScreen");
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _dialogueText.text = "";
@@ -109,7 +114,6 @@ public class DialogueManager : MonoBehaviour
             int index = 0;
             foreach (Choice choice in currentChoices)
             {
-                Debug.Log(index);
                 _choices[index].gameObject.SetActive(true);
                 _choicesText[index].text = choice.text;
                 index++;
@@ -141,6 +145,7 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
         ContinueStory();
     }
 
