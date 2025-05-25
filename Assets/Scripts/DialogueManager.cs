@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] _choices;
+    [SerializeField] private TimedOptionSlider[] _sliders;
     [SerializeField] private TextMeshProUGUI[] _choicesText;
 
     private Story currentStory;
@@ -55,17 +57,38 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
 
-        currentStory.BindExternalFunction("loadScreen", (int screenToLoad) =>
+        currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
         {
             SceneManager.LoadScene(screenToLoad);
         });
+        currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
+        {
+            ObjectManager.GetInstance().enableObject(imageToLoad);
+        });
+        currentStory.BindExternalFunction("RemoveObject", (string imageToRemove) =>
+        {
+            ObjectManager.GetInstance().disableObject(imageToRemove);
+        });
+        currentStory.BindExternalFunction("TimedOption", (int optionToTime, int timeForOption) =>
+        {
+            _sliders[optionToTime].EnableTimer(timeForOption);
+        });
+        currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
+        {
+            Debug.Log("Reproducir sonido de " + soundToPlay);
+        });
+
 
         ContinueStory();
     }
 
     private void ExitDialogueMode()
     {
-        currentStory.UnbindExternalFunction("loadScreen");
+        currentStory.UnbindExternalFunction("LoadScreen");
+        currentStory.UnbindExternalFunction("LoadImage");
+        currentStory.UnbindExternalFunction("RemoveImage");
+        currentStory.UnbindExternalFunction("TimedOption");
+        currentStory.UnbindExternalFunction("PlaySound");
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _dialogueText.text = "";
@@ -127,12 +150,12 @@ public class DialogueManager : MonoBehaviour
         //}
     }
 
-    private IEnumerator SelectFirstChoice()
+    /*private IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(_choices[0].gameObject);
-    }
+    }*/
 
     public void ContinueChoiceless()
     {
