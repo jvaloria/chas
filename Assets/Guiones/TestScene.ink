@@ -10,7 +10,7 @@
     *Mantener Apretado el timbre
         ->ColectiveroAnnoyed
     *Bajar del Colectivo 
-    ~ loadScreen(0)
+    ~ loadScreen(2)
 ->DONE
 
 === ColectiveroAnnoyed ===
