@@ -2,7 +2,7 @@
 - Project name: chas
 - Unity version: Unity 2022.3.59f1
 - Active game object:
-  - Name: DialogueManager
+  - Name: DialogueVariables
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

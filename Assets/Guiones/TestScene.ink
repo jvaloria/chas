@@ -1,4 +1,5 @@
- EXTERNAL loadScreen(int screenNumber)
+EXTERNAL LoadScreen(int screenNumber)
+ INCLUDE GLOBALS.ink
 
 ->main
 
@@ -10,7 +11,7 @@
     *Mantener Apretado el timbre
         ->ColectiveroAnnoyed
     *Bajar del Colectivo 
-    ~ loadScreen(2)
+    ~ LoadScreen(2)
 ->DONE
 
 === ColectiveroAnnoyed ===

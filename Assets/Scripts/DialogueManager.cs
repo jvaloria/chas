@@ -6,10 +6,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager _instance;
+    private DialogueVariables _dialogueVariables;
+    [Header("Globals Ink File")]
 
     [Header("DialogueUI")]
     [SerializeField] private GameObject _dialoguePanel;
@@ -40,6 +43,7 @@ public class DialogueManager : MonoBehaviour
             _choices[index].gameObject.SetActive(false);
             index++;
         }
+        _dialogueVariables = DialogueVariables.GetInstance();
     }
 
     // Update is called once per frame
@@ -56,6 +60,8 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
+
+        _dialogueVariables.StartListening(currentStory);
 
         currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
         {
@@ -89,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         currentStory.UnbindExternalFunction("RemoveImage");
         currentStory.UnbindExternalFunction("TimedOption");
         currentStory.UnbindExternalFunction("PlaySound");
+        _dialogueVariables.StopListening(currentStory);
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _dialogueText.text = "";
@@ -170,6 +177,17 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
         ContinueStory();
+    }
+
+    public Ink.Runtime.Object GetVariableState(string variableName)
+    {
+        Ink.Runtime.Object variableValue = null;
+        DialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if(variableValue == null)
+        {
+            Debug.LogWarning("Ink Variable was found to be null" + variableName);
+        }
+        return variableValue;
     }
 
 }
