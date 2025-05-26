@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
@@ -10,8 +8,8 @@ public class ObjectManager : MonoBehaviour
     {
         _instance = this;
     }
-    
-    static public ObjectManager GetInstance()
+
+    public static ObjectManager GetInstance()
     {
         if (_instance == null)
         {
@@ -21,25 +19,14 @@ public class ObjectManager : MonoBehaviour
         }
         return _instance;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void enableObject(string objectName)
+    public void EnableObject(string objectName)
     {
         GameObject spawnableObject = transform.Find(objectName).gameObject;
         // Enable the object
         spawnableObject.SetActive(true);
     }
-    public void disableObject(string objectName)
+    public void DisableObject(string objectName)
     {
         GameObject spawnableObject = transform.Find(objectName).gameObject;
         // Enable the object

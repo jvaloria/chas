@@ -69,11 +69,11 @@ public class DialogueManager : MonoBehaviour
         });
         currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
         {
-            ObjectManager.GetInstance().enableObject(imageToLoad);
+            ObjectManager.GetInstance().EnableObject(imageToLoad);
         });
         currentStory.BindExternalFunction("RemoveObject", (string imageToRemove) =>
         {
-            ObjectManager.GetInstance().disableObject(imageToRemove);
+            ObjectManager.GetInstance().DisableObject(imageToRemove);
         });
         currentStory.BindExternalFunction("TimedOption", (int optionToTime, int timeForOption) =>
         {
@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    static public DialogueManager GetInstance()
+    public static DialogueManager GetInstance()
     {
         if (_instance == null)
         {
