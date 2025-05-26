@@ -835,6 +835,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1083207944907247103, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 36a62840bf6372448bd296aab4fa7700, type: 3}
     - target: {fileID: 1277818088139068453, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Name
       value: Dialogue System

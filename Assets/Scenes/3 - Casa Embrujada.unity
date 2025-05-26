@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 1083207944907247103, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: bdecfbd81f1824b4e96f313d0734aa03, type: 3}
+      objectReference: {fileID: 4900000, guid: 7fd73af36550faf49b8ccb1ad3696537, type: 3}
     - target: {fileID: 1277818088139068453, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Name
       value: Dialogue System 1
