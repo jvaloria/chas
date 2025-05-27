@@ -7,11 +7,6 @@ public class Ciclista : MonoBehaviour
     [SerializeField] float SpeedX;
     [SerializeField] float SpeedY;
     [SerializeField] float SpeedSizeIncrease;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
