@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 1456619180}
   - component: {fileID: 1456619181}
   m_Layer: 5
-  m_Name: Interactions
+  m_Name: InteractionsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
