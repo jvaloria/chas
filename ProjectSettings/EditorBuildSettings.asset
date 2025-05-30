@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/3 - Casa Embrujada.unity
     guid: 413ae7d3711d7224a916c2ae3cf8a62f
   - enabled: 1
+    path: Assets/Scenes/4 - Parada186.unity
+    guid: 141152eee3f0b394885d610d903f85ac
+  - enabled: 1
     path: Assets/Scenes/99 - Credits.unity
     guid: 9605e119da680664781ce7c7dfa5d1a3
   m_configObjects: {}
