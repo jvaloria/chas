@@ -1,26 +1,26 @@
 INCLUDE GLOBALS.ink
+VAR chofer_text_color = "\#ADF0C7"
 
 ->main
 
 ===main===
-¡PARQUE CHAAAS!
+<color={chofer_text_color}>¡PARQUE CHAAAS!</color>
+<color={chofer_text_color}>¡BAJATE RAPIDO! No me gusta quedarme mucho acá.</color>
 ->stitch
 =stitch
-¡BAJATE RAPIDO! No me gusta quedarme mucho acá.
-
-    *¡Pero quien te crees que sos para apurarme?! todos iguales los choferes!
-        ->ColectiveroAnnoyed
-    *Mantener Apretado el timbre
-        ->ColectiveroAnnoyed
-    *Bajar del Colectivo 
+    *¿Pero quién te crees que sos para apurarme? ¡Todos iguales los choferes!
+        ->ColectiveroAnnoyed1
+    *¡Tomá! ¡A ver si te gusta este timbrazo!
+        TODO Ejecutar SFX de timbrazo
+        ->ColectiveroAnnoyed2
+    *Mejor me bajo... 
     ~ LoadScreen(2)
 ->DONE
 
-=== ColectiveroAnnoyed ===
-Dale Pibe, No rompas las pelotas!
+=== ColectiveroAnnoyed1 ===
+<color={chofer_text_color}>¡Bajate ya o me voy!</color>
 ->main.stitch
 
-
-=== NextScreen ===
-Implementar que pase de pantalla, baje del bondi
-->DONE
+=== ColectiveroAnnoyed2 ===
+<color={chofer_text_color}>¡Tenes 3 segundos para bajarte! ¡Uno.. Dos..!</color>
+->main.stitch

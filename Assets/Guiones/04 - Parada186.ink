@@ -3,6 +3,6 @@ INCLUDE GLOBALS.ink
 ->main
 ===main===
 ¿Qué le pasa a este gato?
-    * Volvés sobre tus pasos
+    * Volver a la casa vieja
     ~ LoadScreen(3)
 ->END

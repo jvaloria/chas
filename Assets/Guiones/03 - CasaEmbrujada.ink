@@ -1,19 +1,20 @@
 INCLUDE GLOBALS.ink
-  
+VAR vieja_text_color = "\#ff9e9e"  
+
 ->main
 
 ===main===
-No me gusta nada este barrio oscuro... ¿Cómo se supone que llegue si no puedo encontrar la calle?
+No me gusta nada este barrio oscuro... ¿Cómo voy a llegar al asado si no encuentro la calle?
 ->yahora
 =yahora
-Y ahora qué hago? que casa más rara...
-    *{tuxedoCatMansion} Ya fue, sigo a ese gato a ver qué encuentro.
+¿Y ahora qué hago? que casa más rara...
+    *{tuxedoCatMansion} ¿Maullidos? Vienen de acá a la vuelta, ¿será el gato de recién?
     ~ LoadScreen(4) 
     ->DONE
     *{viejaMansionFuente} Si sigo derecho voy a la fuente, el de la bici me mandó para ahí
      ~ LoadScreen(4)
     ->DONE
-    *{viejaMansionPizza} La avenida Triunvirato es para la izquierda, voy para allá.
+    *{viejaMansionPizza} La avenida Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.
     ~ LoadScreen(4)
     ->DONE
     +->
@@ -21,43 +22,45 @@ Y ahora qué hago? que casa más rara...
 ->yahora
 
 ===rayo===
-WAGH!! Qué fue eso?
+¡¡WAGH!! No decía que iba a llover..
+Qué gato elegante, ¿siempre estuviste ahí? 
 ->main.yahora
 
 ===tuxedoCat===
-A dónde va ese gato con galera?->main.yahora
+¡Ey, espera!
+->main.yahora
 
 === vieja ===
-Por fin llega la pizza! Por qué tardaste tanto?
-    *Perdón, no soy el del delivery. Estoy perdido, me dice cómo llego a <color=yellow>Avalos y Cádiz</color>, por favor?
+<color={vieja_text_color}>Por fin llega la pizza! Por qué tardaste tanto?</color>
+    *Perdón, no soy el del delivery. Estoy perdido, ¿me dice cómo llego a <color=yellow>Avalos y Cádiz</color>, por favor?
         -> viejaAvalosyCadiz
-    *{infoViejoFuente}Perdón, no soy el del delivery. Estoy perdido, me dice cómo llego a <color=yellow>la fuente</color>, por favor?
+    *{infoViejoFuente}Perdón, no soy el del delivery. Estoy perdido, ¿me dice cómo llego a <color=yellow>la fuente</color>, por favor?
         -> viejaFuente
 
 
 === viejaAvalosyCadiz ===
-eh? ¿perdiste la pizza? trae otra y te digo.
+<color={vieja_text_color}> ¿Eh? ¿perdiste la pizza? trae otra y te digo.</color>
     *bueno, ¿dónde es la pizzería? (ahí capaz me dicen)
         doblá acá a la izquierda, hacia Triunvirato.
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
         -> break_and_go
     *que no soy el del delivery dije. por favor
-        pizza dije. la pizzería es doblando a la izquierda, hacia Triunvirato.
+        <color={vieja_text_color}>Traeme la pizza te dije. La pizzería es doblando a la izquierda, hacia Triunvirato.</color>
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
         -> break_and_go
 
 
 === viejaFuente ===
-eh? ¿perdiste la pizza? trae otra y te digo.
+<color={vieja_text_color}> ¿Eh? ¿perdiste la pizza? trae otra y te digo.</color>
     *bueno, ¿dónde es la pizzería? (ahí capaz me dicen)
-        doblá acá a la izquierda, hacia Triunvirato.
+        <color={vieja_text_color}>doblá acá a la izquierda, hacia Triunvirato.</color>
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
         -> break_and_go
     *que no soy el del delivery dije. por favor <color=yellow>la fuente</color>
-        Meh... Seguí derecho, está por ahí.
+        <color={vieja_text_color}>Meh... Seguí derecho, está por ahí.</color>
         ~ viejaMansionFuente = true
         ~ RemoveObject("Vieja")
         -> break_and_go
