@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TuxedoCatCasaEmbrujada : InteractableObject
 {
-    public override void CustomAction()
+    protected override void CustomAction()
     {
         DialogueVariables.GetInstance().SetBoolVariable("tuxedoCatMansion", true);
         gameObject.SetActive(false);

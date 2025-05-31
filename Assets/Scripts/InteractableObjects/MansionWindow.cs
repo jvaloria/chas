@@ -14,7 +14,7 @@ public class MansionWindow : InteractableObject
     private bool isDeviled = false;
 
 
-    public override void CustomAction()
+    protected override void CustomAction()
     {
         if (!isDeviled)
         {

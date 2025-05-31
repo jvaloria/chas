@@ -355,7 +355,6 @@ GameObject:
   - component: {fileID: 312976146}
   - component: {fileID: 312976150}
   - component: {fileID: 312976149}
-  - component: {fileID: 312976148}
   - component: {fileID: 312976151}
   m_Layer: 5
   m_Name: TuxedoCat
@@ -383,35 +382,6 @@ RectTransform:
   m_AnchoredPosition: {x: 368, y: 58}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &312976148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312976145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 312976151}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &312976149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +452,6 @@ GameObject:
   - component: {fileID: 503704187}
   - component: {fileID: 503704186}
   - component: {fileID: 503704188}
-  - component: {fileID: 503704189}
   - component: {fileID: 503704190}
   m_Layer: 5
   m_Name: Window-TopLeft
@@ -576,35 +545,6 @@ MonoBehaviour:
   devilSprite: {fileID: 21300000, guid: 72218ce3877e82b46a8236b07f5368d8, type: 3}
   onOff: 1
   windowCounter: {fileID: 503704190}
---- !u!114 &503704189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503704183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 503704188}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &503704190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +581,6 @@ GameObject:
   - component: {fileID: 636991994}
   - component: {fileID: 636991993}
   - component: {fileID: 636991992}
-  - component: {fileID: 636991991}
   m_Layer: 5
   m_Name: Window-TopRight
   m_TagString: Untagged
@@ -668,35 +607,6 @@ RectTransform:
   m_AnchoredPosition: {x: 153.8, y: 99.5}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &636991991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636991989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 636991992}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &636991992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1057,6 @@ GameObject:
   - component: {fileID: 960651090}
   - component: {fileID: 960651089}
   - component: {fileID: 960651088}
-  - component: {fileID: 960651087}
   m_Layer: 5
   m_Name: Window-BottomRight
   m_TagString: Untagged
@@ -1174,35 +1083,6 @@ RectTransform:
   m_AnchoredPosition: {x: 167.6, y: -18.9}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &960651087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960651085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 960651088}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &960651088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,7 +1159,6 @@ GameObject:
   - component: {fileID: 1006695584}
   - component: {fileID: 1006695587}
   - component: {fileID: 1006695586}
-  - component: {fileID: 1006695589}
   - component: {fileID: 1006695590}
   m_Layer: 5
   m_Name: Antenna-FX
@@ -1345,35 +1224,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006695583}
   m_CullTransparentMesh: 1
---- !u!114 &1006695589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006695583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1006695590}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1006695590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,7 +1260,6 @@ GameObject:
   - component: {fileID: 1371954052}
   - component: {fileID: 1371954051}
   - component: {fileID: 1371954050}
-  - component: {fileID: 1371954049}
   m_Layer: 5
   m_Name: Window-TopMid
   m_TagString: Untagged
@@ -1437,35 +1286,6 @@ RectTransform:
   m_AnchoredPosition: {x: -56.4, y: 102.3}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1371954049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371954047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1371954050}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1371954050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,7 +1363,6 @@ GameObject:
   - component: {fileID: 1417859566}
   - component: {fileID: 1417859570}
   - component: {fileID: 1417859569}
-  - component: {fileID: 1417859568}
   - component: {fileID: 1417859571}
   m_Layer: 5
   m_Name: Timbre
@@ -1571,35 +1390,6 @@ RectTransform:
   m_AnchoredPosition: {x: 105, y: -16}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1417859568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417859565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1417859571}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1417859569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +1523,6 @@ GameObject:
   - component: {fileID: 1555785691}
   - component: {fileID: 1555785695}
   - component: {fileID: 1555785694}
-  - component: {fileID: 1555785693}
   - component: {fileID: 1555785696}
   m_Layer: 5
   m_Name: Vieja
@@ -1761,35 +1550,6 @@ RectTransform:
   m_AnchoredPosition: {x: -194, y: -296}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1555785693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555785690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11500000, guid: 5548638b6d43b7a49902eec2d381c6b8, type: 3}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1555785694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,7 +1707,6 @@ GameObject:
   - component: {fileID: 1692185867}
   - component: {fileID: 1692185866}
   - component: {fileID: 1692185865}
-  - component: {fileID: 1692185864}
   m_Layer: 5
   m_Name: Window-FarRight
   m_TagString: Untagged
@@ -1974,35 +1733,6 @@ RectTransform:
   m_AnchoredPosition: {x: 297.8, y: 70.2}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1692185864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692185862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1692185865}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1692185865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +1810,6 @@ GameObject:
   - component: {fileID: 2090173626}
   - component: {fileID: 2090173625}
   - component: {fileID: 2090173624}
-  - component: {fileID: 2090173623}
   m_Layer: 5
   m_Name: Window-BottomLeft
   m_TagString: Untagged
@@ -2107,35 +1836,6 @@ RectTransform:
   m_AnchoredPosition: {x: -259.9, y: 15.8}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2090173623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090173621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2090173624}
-          m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
-          m_MethodName: onInteraction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &2090173624
 MonoBehaviour:
   m_ObjectHideFlags: 0

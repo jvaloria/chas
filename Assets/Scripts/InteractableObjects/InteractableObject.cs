@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     [SerializeField] protected bool playsSound;
     [SerializeField] private bool hasCustomAction;
     [SerializeField] private bool isUsedOnce;
-    private bool alreadyUsed = false;
+    private bool _alreadyUsed = false;
     [SerializeField] private AudioClip objectAudio;
     [SerializeField] private bool continuesStory;
     [SerializeField] private string storyKnot;
     [SerializeField] private bool activatesOther;
     [SerializeField] private InteractableObject otherInteractableObject;
 
-    public void onInteraction()
+    public void OnClick()
     {
-        if (!alreadyUsed)
+        //Debug.Log("InteractableObject clicked: " + gameObject.name);
+        if (!_alreadyUsed)
         {
             if (isUsedOnce)
             {
-                alreadyUsed = true;
+                _alreadyUsed = true;
             }
             if (playsSound)
             {
@@ -44,10 +43,9 @@ public class InteractableObject : MonoBehaviour
 
     }
 
-    public virtual void CustomAction()
+    protected virtual void CustomAction()
     {
         Debug.Log("custom action override method not implemented");
-        return;
     }
 
     private void ContinueStory()

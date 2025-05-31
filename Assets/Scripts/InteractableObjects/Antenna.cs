@@ -21,7 +21,8 @@ public class Antenna : InteractableObject
         // Ensure it starts invisible
         flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 0f);
     }
-    public override void CustomAction()
+
+    protected override void CustomAction()
     {
         if (flashImage)
         {
