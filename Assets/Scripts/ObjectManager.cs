@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -22,15 +24,21 @@ public class ObjectManager : MonoBehaviour
 
     public void EnableObject(string objectName)
     {
-        GameObject spawnableObject = transform.Find(objectName).gameObject;
-        // Enable the object
-        spawnableObject.SetActive(true);
+        GameObject.FindFirstObjectByType<ObjectController>().EnableObject(objectName);
     }
     public void DisableObject(string objectName)
     {
-        GameObject spawnableObject = transform.Find(objectName).gameObject;
-        // Enable the object
-        spawnableObject.SetActive(false);
+        GameObject.FindFirstObjectByType<ObjectController>().DisableObject(objectName);
+    }
+
+    public void EnableObject(GameObject objeto)
+    {
+        objeto.SetActive(true);
+    }
+
+    public void DisableObject(GameObject objeto)
+    {
+        objeto.SetActive(false);
     }
 
 

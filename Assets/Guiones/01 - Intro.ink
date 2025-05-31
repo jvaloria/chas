@@ -1,9 +1,9 @@
-EXTERNAL LoadScreen(int screenNumber)
- INCLUDE GLOBALS.ink
+INCLUDE GLOBALS.ink
 
 ->main
 
 ===main===
+¡PARQUE CHAAAS!
 ¡BAJATE RAPIDO! No me gusta quedarme mucho acá.
 
     *¡Pero quien te crees que sos para apurarme?! todos iguales los choferes!

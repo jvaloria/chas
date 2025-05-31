@@ -18,8 +18,7 @@ public class TuxedoCatCasaEmbrujada : InteractableObject
 
     public override void CustomAction()
     {
-        Debug.Log("GatoClick");
         DialogueVariables.GetInstance().SetBoolVariable("tuxedoCatMansion", true);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

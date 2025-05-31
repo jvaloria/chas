@@ -23,17 +23,14 @@ public class Antenna : InteractableObject
     }
     public override void CustomAction()
     {
-        Debug.Log("0");
         if (flashImage)
         {
-            Debug.Log("1");
             StartCoroutine(FlashCoroutine());
         }
     }
 
     private IEnumerator FlashCoroutine()
     {
-        Debug.Log("2");
         // Set to almost full alpha
         flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 0.8f);
         // Wait for the flash duration

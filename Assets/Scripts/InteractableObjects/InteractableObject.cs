@@ -6,10 +6,15 @@ public class InteractableObject : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] private bool playsSound;
+    [SerializeField] protected bool playsSound;
     [SerializeField] private bool hasCustomAction;
     [SerializeField] private bool isUsedOnce;
+    private bool alreadyUsed = false;
     [SerializeField] private AudioClip objectAudio;
+    [SerializeField] private bool continuesStory;
+    [SerializeField] private string storyKnot;
+    [SerializeField] private bool activatesOther;
+    [SerializeField] private InteractableObject otherInteractableObject;
     void Start()
     {
         
@@ -23,18 +28,28 @@ public class InteractableObject : MonoBehaviour
 
     public void onInteraction()
     {
-        if (isUsedOnce)
+        if (!alreadyUsed)
         {
-            this.gameObject.SetActive(false);
-        }
-        if (playsSound)
-        {
-            SoundManager.PlaySFX(objectAudio);
-        }
-        if (hasCustomAction)
-        {
-            Debug.Log("GatoClick");
-            CustomAction();
+            if (isUsedOnce)
+            {
+                alreadyUsed = true;
+            }
+            if (playsSound)
+            {
+                SoundManager.PlaySFX(objectAudio);
+            }
+            if (hasCustomAction)
+            {
+                CustomAction();
+            }
+            if (continuesStory)
+            {
+                ContinueStory();
+            }
+            if (activatesOther)
+            {
+                ObjectManager.GetInstance().EnableObject(otherInteractableObject.gameObject);
+            }
         }
 
     }
@@ -45,5 +60,16 @@ public class InteractableObject : MonoBehaviour
         return;
     }
 
+    private void ContinueStory()
+    {
+        if(storyKnot != "")
+        {
+            DialogueManager.GetInstance().GoToKnot(storyKnot);
+        }
+        else
+        {
+            DialogueManager.GetInstance().ContinueStory();
+        }
+    }
     
 }

@@ -1,9 +1,4 @@
-EXTERNAL LoadObject(string object)
-EXTERNAL RemoveObject(string object)
-EXTERNAL TimedOption(int optionNumber, int timeForOption)
-EXTERNAL LoadScreen(int screenNumber)
-EXTERNAL PlaySound(string soundToPlay)
- INCLUDE GLOBALS.ink
+INCLUDE GLOBALS.ink
 
 
 ->main

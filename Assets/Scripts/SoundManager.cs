@@ -73,6 +73,15 @@ public static class SoundManager
         source.Play();
     }
 
+    public static void PlaySceneSFX(string clipName)
+    {
+        AudioClip clip = GameObject.FindFirstObjectByType<SceneSoundsController>().getSound(clipName);
+        if(clip != null)
+        {
+            PlaySFX(clip);
+        }
+    }
+
     private static AudioSource GetAvailableSFXSource()
     {
         foreach (var src in sfxSources)

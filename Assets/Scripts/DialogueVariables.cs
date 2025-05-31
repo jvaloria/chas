@@ -99,6 +99,7 @@ public class DialogueVariables : MonoBehaviour
             variables.Add(name, Value.Create(boolean));
         }
         globalVariablesStory.variablesState.SetGlobal(name, Value.Create(boolean));
+        DialogueManager.GetInstance().SetVariableState(name, Value.Create(boolean));
     }
 
 }

@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Ink.UnityIntegration;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -81,7 +82,7 @@ public class DialogueManager : MonoBehaviour
         });
         currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
         {
-            Debug.Log("Reproducir sonido de " + soundToPlay);
+            SoundManager.PlaySceneSFX(soundToPlay);
         });
 
 
@@ -142,6 +143,7 @@ public class DialogueManager : MonoBehaviour
         //if(currentChoices.Count != 0)
         //{
             int index = 0;
+            EventSystem.current.SetSelectedGameObject(null);
             foreach (Choice choice in currentChoices)
             {
                 _choices[index].gameObject.SetActive(true);
@@ -190,4 +192,31 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
+    public void SetVariableState(string variableName, Value value)
+    {
+        currentStory.variablesState.SetGlobal(variableName, value);
+    }
+
+    public void GoToKnot(string knotName)
+    {
+        try
+        {
+            currentStory.ChoosePathString(knotName);
+            ContinueStory();
+        }
+        catch (System.Exception)
+        {
+            try
+            {
+                currentStory.ResetState();
+                DialogueVariables.GetInstance().VariablesToStory(currentStory);
+                currentStory.ChoosePathString(knotName);
+                ContinueStory();
+            }
+            catch (System.Exception)
+            {
+                Debug.LogError("Failed to jump to Ink knot" + knotName);
+            }
+        }
+    }
 }
