@@ -14,7 +14,7 @@ Y ahora qué hago? que casa más rara...
      ~ LoadScreen(4)
     ->DONE
     *{viejaMansionPizza} La avenida Triunvirato es para la izquierda, voy para allá.
-    ~ LoadScreen(5)
+    ~ LoadScreen(4)
     ->DONE
     +->
     ->yahora

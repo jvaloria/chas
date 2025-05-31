@@ -4,6 +4,8 @@ INCLUDE GLOBALS.ink
 
 ===main===
 ¡PARQUE CHAAAS!
+->stitch
+=stitch
 ¡BAJATE RAPIDO! No me gusta quedarme mucho acá.
 
     *¡Pero quien te crees que sos para apurarme?! todos iguales los choferes!
@@ -16,7 +18,7 @@ INCLUDE GLOBALS.ink
 
 === ColectiveroAnnoyed ===
 Dale Pibe, No rompas las pelotas!
-->main
+->main.stitch
 
 
 === NextScreen ===
