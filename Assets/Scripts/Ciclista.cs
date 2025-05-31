@@ -8,7 +8,6 @@ public class Ciclista : MonoBehaviour
     [SerializeField] float SpeedY;
     [SerializeField] float SpeedSizeIncrease;
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = new Vector3(SpeedX * Time.deltaTime + transform.position.x, SpeedY * Time.deltaTime + transform.position.y, transform.position.z);
