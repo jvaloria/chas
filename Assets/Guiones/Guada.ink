@@ -10,9 +10,14 @@ EXTERNAL PlaySound(string soundToPlay)
 ===main===
 Hola como estas?
 
-    *bien -> guada2
+    *bien 
+    -> guada2
     *mal -> guada2
     *ok ->DONE
 ===guada2===
     guada2
+    
+    *op1
+    ->DONE
+    *op2
 ->DONE

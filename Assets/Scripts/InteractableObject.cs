@@ -29,8 +29,7 @@ public class InteractableObject : MonoBehaviour
         }
         if (playsSound)
         {
-            Debug.Log("play interactable object sound");
-            //SoundManager.play(objectAudio);
+            SoundManager.PlaySFX(objectAudio.clip);
         }
 
     }
