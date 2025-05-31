@@ -1,4 +1,8 @@
+INCLUDE GLOBALS.ink
+
 ->main
 ===main===
-ESCENA CON GATO Y PARADA DE BONDI
+¿Qué le pasa a este gato?
+    * Volvés sobre tus pasos
+    ~ LoadScreen(3)
 ->END

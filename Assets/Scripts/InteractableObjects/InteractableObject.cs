@@ -15,16 +15,6 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private string storyKnot;
     [SerializeField] private bool activatesOther;
     [SerializeField] private InteractableObject otherInteractableObject;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void onInteraction()
     {
@@ -71,5 +61,5 @@ public class InteractableObject : MonoBehaviour
             DialogueManager.GetInstance().ContinueStory();
         }
     }
-    
+
 }
