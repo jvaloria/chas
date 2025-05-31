@@ -1,5 +1,5 @@
 INCLUDE GLOBALS.ink
-VAR ciclista_text_color = "\#bdb2fb"
+VAR ciclista_text_color = "\#BDB2FB"
 
 ->main
 

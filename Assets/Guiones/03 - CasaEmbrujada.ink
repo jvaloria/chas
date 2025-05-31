@@ -1,5 +1,5 @@
 INCLUDE GLOBALS.ink
-VAR vieja_text_color = "\#ff9e9e"  
+VAR vieja_text_color = "\#FF9E9E"  
 
 ->main
 
