@@ -21,7 +21,6 @@ public class DialogueVariables : MonoBehaviour
         return _instance;
     }
     [SerializeField] private InkFile globalsInkFile;
-    [SerializeField] private bool viejotest= false;
 
     private void Awake()
     {
@@ -35,12 +34,13 @@ public class DialogueVariables : MonoBehaviour
         }
     }
     public static Dictionary<string, Ink.Runtime.Object> variables { get; private set; } = new Dictionary<string, Ink.Runtime.Object>();
+    private Story globalVariablesStory;
 
     public void Start()
     {
         string inkFileContents = File.ReadAllText (globalsInkFile.filePath);
         Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
-        Story globalVariablesStory = compiler.Compile();
+        globalVariablesStory = compiler.Compile();
         VariablesToStory(globalVariablesStory);
         foreach (string name in globalVariablesStory.variablesState)
         {
@@ -66,7 +66,7 @@ public class DialogueVariables : MonoBehaviour
     {
         story.variablesState.variableChangedEvent -= VariableChanged;
     }
-    private void VariableChanged(string name, Ink.Runtime.Object value)
+    public void VariableChanged(string name, Ink.Runtime.Object value)
     {
         if (variables.ContainsKey(name))
         {
@@ -77,14 +77,28 @@ public class DialogueVariables : MonoBehaviour
         {
             variables.Add(name, value);
         }
-        viejotest = true;
+        //viejotest = true;
     }
 
-    private void VariablesToStory(Story story)
+    public void VariablesToStory(Story story)
     {
             foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
             {
                 story.variablesState.SetGlobal(variable.Key, variable.Value);
             }
     }
+
+    public void SetBoolVariable(string name, bool boolean)
+    {
+        if (variables.ContainsKey(name))
+        {
+            variables[name] = Value.Create(boolean);
+        }
+        else
+        {
+            variables.Add(name, Value.Create(boolean));
+        }
+        globalVariablesStory.variablesState.SetGlobal(name, Value.Create(boolean));
+    }
+
 }

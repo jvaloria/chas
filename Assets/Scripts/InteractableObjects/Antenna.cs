@@ -1,8 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
-public class InteractionsManager : MonoBehaviour
+public class Antenna : InteractableObject
 {
     public Image flashImage;
     public float flashDuration = 0.1f;
@@ -20,24 +21,23 @@ public class InteractionsManager : MonoBehaviour
         // Ensure it starts invisible
         flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 0f);
     }
-
-    // The UI Button will call this public method
-    public void TriggerFlash()
+    public override void CustomAction()
     {
+        Debug.Log("0");
         if (flashImage)
         {
+            Debug.Log("1");
             StartCoroutine(FlashCoroutine());
         }
     }
 
     private IEnumerator FlashCoroutine()
     {
-        // Set to full alpha
-        flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 1f);
-
+        Debug.Log("2");
+        // Set to almost full alpha
+        flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 0.8f);
         // Wait for the flash duration
         yield return new WaitForSeconds(flashDuration);
-
         // Fade out
         var elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
@@ -47,7 +47,6 @@ public class InteractionsManager : MonoBehaviour
             flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, alpha);
             yield return null; // Wait for the next frame
         }
-
         // Ensure it's fully transparent
         flashImage.color = new Color(flashColor.r, flashColor.g, flashColor.b, 0f);
     }

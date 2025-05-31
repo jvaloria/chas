@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool playsSound;
     [SerializeField] private bool hasCustomAction;
     [SerializeField] private bool isUsedOnce;
-    [SerializeField] private AudioSource objectAudio;
+    [SerializeField] private AudioClip objectAudio;
     void Start()
     {
         
@@ -29,7 +29,12 @@ public class InteractableObject : MonoBehaviour
         }
         if (playsSound)
         {
-            SoundManager.PlaySFX(objectAudio.clip);
+            SoundManager.PlaySFX(objectAudio);
+        }
+        if (hasCustomAction)
+        {
+            Debug.Log("GatoClick");
+            CustomAction();
         }
 
     }
