@@ -506,6 +506,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4036171081515845536, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: _choices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036171081515845536, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: _choices.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036171081515845536, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: _choicesText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036171081515845536, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: _choicesText.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4360206561383092768, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
