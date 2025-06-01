@@ -1,0 +1,25 @@
+INCLUDE GLOBALS.ink
+
+->main
+
+===main===
+TODO SFX aguas danzantes
+TODO BGM Mistico
+[Llega a la fuente]
+TODO Podria encontrar la brujula acá tirada, quizas rota. ra lo que la urraca se robó de otro path
+Al fin llegué. Estoy sediento, necesito tomar algo
+    * El agua, se ve exquisita, necesito tomar algo, solo un poco
+    ->BebeGatoBebe
+    * Está en rojo pero no pasa nadie, mejor cruzo y busco un kiosco
+        TODO hacer que pueda volver de la death scene
+        [IMPLEMENTAR MUERTE]
+        ~ LoadScreen(9)
+        ->DONE
+->DONE
+
+=== BebeGatoBebe ===
+Es lo más rico que probé en mi vida, no puedo parar de tomar
+TODO Final Gato
+ [IMPLEMENTAR FINAL GATO]
+//~ LoadScreen(10)
+->DONE
