@@ -14,7 +14,7 @@ VAR chofer_text_color = "\#ADF0C7"
         TODO Ejecutar SFX de timbrazo
         ->ColectiveroAnnoyed2
     *Mejor me bajo... 
-    ~ LoadScreen(2)
+        ~ LoadScreen(2)
 ->DONE
 
 === ColectiveroAnnoyed1 ===
