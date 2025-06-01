@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Path-Locura/7 - Tejados.unity
     guid: 2f5817a1a245abe459a6b6531a788217
   - enabled: 1
+    path: Assets/Scenes/Path-Locura/8 - Fuente.unity
+    guid: 3ecf952214b5fda47bb3dcf873349694
+  - enabled: 1
+    path: Assets/Scenes/Path-Locura/Final 1 - Gato.unity
+    guid: 318211a9668a1ec41b33c1c4b43a189e
+  - enabled: 1
     path: Assets/Scenes/99 - Credits.unity
     guid: 9605e119da680664781ce7c7dfa5d1a3
   m_configObjects: {}
