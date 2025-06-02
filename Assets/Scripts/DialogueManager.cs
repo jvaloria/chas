@@ -85,9 +85,9 @@ public class DialogueManager : MonoBehaviour
         {
             _sliders[optionToTime].EnableTimer(timeForOption);
         });
-        _currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
+        _currentStory.BindExternalFunction("PlaySound", (string soundToPlay, float volume) =>
         {
-            SoundManager.PlaySceneSFX(soundToPlay);
+            SoundManager.PlaySceneSFX(soundToPlay, volume);
         });
 
 
@@ -154,7 +154,7 @@ public class DialogueManager : MonoBehaviour
         foreach (var letter in line.ToCharArray())
         {
             // if the player presses a button, skip the typing effect
-            if (Input.GetButton("Fire1") || Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetButton("Fire1"))
             {
                 _dialogueText.text = line;
                 break;
