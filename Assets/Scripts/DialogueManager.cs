@@ -105,7 +105,6 @@ public class DialogueManager : MonoBehaviour
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _dialogueText.text = "";
-
     }
 
 
@@ -115,7 +114,6 @@ public class DialogueManager : MonoBehaviour
         {
             _instance = new GameObject().AddComponent<DialogueManager>();
             DontDestroyOnLoad(_instance.gameObject);
-
         }
         return _instance;
     }
@@ -127,7 +125,7 @@ public class DialogueManager : MonoBehaviour
                 if (_currentStory.canContinue)
                 {
                     //set text for the dialogue line
-                    //_dialogueText.text = currentStory.Continue();
+                    //_dialogueText.text = _currentStory.Continue();
                     if (_displayLineCoroutine != null)
                     {
                         StopCoroutine(_displayLineCoroutine);
@@ -175,8 +173,6 @@ public class DialogueManager : MonoBehaviour
                 _dialogueText.text += letter;
                 yield return new WaitForSeconds(_typingSpeed);
             }
-
-
         }
 
         // actions to take after the line is displayed
@@ -186,40 +182,42 @@ public class DialogueManager : MonoBehaviour
         canContinueToNextLine = true;
     }
 
+    /// <summary>
+    /// Hides all the choices in the dialogue UI.
+    /// </summary>
     private void HideChoices()
     {
         foreach (GameObject choice in _choices)
         {
             choice.SetActive(false);
         }
-        foreach (TimedOptionSlider slider in _sliders)
-        {
-            slider.DisableTimer();
-        }
     }
 
+    /// <summary>
+    /// Displays the choices available in the current story.
+    /// </summary>
     private void DisplayChoices()
     {
         List<Choice> currentChoices = _currentStory.currentChoices;
-        if(currentChoices.Count > _choices.Length)
+        if (currentChoices.Count > _choices.Length)
         {
-            Debug.LogError("More choices were given than the UI can support. Number of choices given: " + currentChoices.Count );
+            Debug.LogError("More choices were given than the UI can support. Number of choices given: " + currentChoices.Count);
         }
         //if(currentChoices.Count != 0)
         //{
-            int index = 0;
-            EventSystem.current.SetSelectedGameObject(null);
-            foreach (Choice choice in currentChoices)
-            {
-                _choices[index].gameObject.SetActive(true);
-                _choicesText[index].text = choice.text;
-                index++;
-            }
+        int index = 0;
+        EventSystem.current.SetSelectedGameObject(null);
+        foreach (Choice choice in currentChoices)
+        {
+            _choices[index].gameObject.SetActive(true);
+            _choicesText[index].text = choice.text;
+            index++;
+        }
 
-            for (int i = index; i < _choices.Length; i++)
-            {
-                _choices[i].gameObject.SetActive(false);
-            }
+        for (int i = index; i < _choices.Length; i++)
+        {
+            _choices[i].gameObject.SetActive(false);
+        }
 
         //}
     }
