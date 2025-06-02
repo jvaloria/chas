@@ -7,11 +7,12 @@ using UnityEngine;
 public class SceneSoundsController : MonoBehaviour
 {
     [SerializeField] private AudioClip SceneBGM;
+    [SerializeField] private float SceneBGMVolume = 1f;
     [SerializeField] private List<AudioClip> SceneSounds;
     // Start is called before the first frame update
     void Start()
     {
-        SoundManager.PlayBGM(SceneBGM);
+        SoundManager.PlayBGM(SceneBGM, SceneBGMVolume);
     }
 
     public AudioClip getSound(string soundName)
