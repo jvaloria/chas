@@ -5,7 +5,6 @@ INCLUDE GLOBALS.ink
 ===main===
 TODO SFX aguas danzantes
 TODO BGM Mistico
-[Llega a la fuente]
 TODO Podria encontrar la brujula acá tirada, quizas rota. ra lo que la urraca se robó de otro path
 Al fin llegué. Estoy sediento, necesito tomar algo
     * El agua, se ve exquisita, necesito tomar algo, solo un poco
