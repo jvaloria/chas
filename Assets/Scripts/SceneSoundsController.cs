@@ -14,12 +14,6 @@ public class SceneSoundsController : MonoBehaviour
         SoundManager.PlayBGM(SceneBGM);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public AudioClip getSound(string soundName)
     {
         foreach (var sound in SceneSounds)
