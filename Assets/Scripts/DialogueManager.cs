@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Ink.UnityIntegration;
 using System;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -126,8 +127,8 @@ public class DialogueManager : MonoBehaviour
         {
                 if (_currentStory.canContinue)
                 {
-                    //set text for the dialogue line
-                    //_dialogueText.text = currentStory.Continue();
+                //set text for the dialogue line
+                //_dialogueText.text = currentStory.Continue();
                     if (_displayLineCoroutine != null)
                     {
                         StopCoroutine(_displayLineCoroutine);
@@ -143,6 +144,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
+        if (_dialogueText.text != line) {
         _dialogueText.text = "";
         _continueIcon.SetActive(false);
         HideChoices();
@@ -178,11 +180,11 @@ public class DialogueManager : MonoBehaviour
 
 
         }
+        }
 
         // actions to take after the line is displayed
         _continueIcon.SetActive(true);
         DisplayChoices();
-
         canContinueToNextLine = true;
     }
 

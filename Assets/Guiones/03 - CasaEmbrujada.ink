@@ -30,7 +30,7 @@ Qué gato elegante, ¿siempre estuviste ahí?
 ¡Ey, espera!
 ->main.yahora
 
-=== vieja ===
+===vieja===
 <color={vieja_text_color}>Por fin llega la pizza! Por qué tardaste tanto?</color>
     *Perdón, no soy el del delivery. Estoy perdido, ¿me dice cómo llego a <color=yellow>Avalos y Cádiz</color>, por favor?
         -> viejaAvalosyCadiz
