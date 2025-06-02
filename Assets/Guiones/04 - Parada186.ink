@@ -4,7 +4,6 @@ VAR gato_text_color = "purple"
 ->main
 
 ===main===
-¿Por qué me mira así este gato?
     ->stitch
     =stitch
     * ¿Tenés idea dónde está la fuente?

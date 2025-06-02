@@ -6,7 +6,7 @@ INCLUDE GLOBALS.ink
 TODO SFX de alas de pajaro
 [Persigue una urraca por los tejados]
 ¡Se fué por ahí!
-    *¡Allá está La fuente! Voló cerca del agua y dejo caer algo en la fuente
+    *¡Allá está <color=yellow>la fuente</color>! Voló cerca del agua y dejo caer algo en la fuente
         ~ LoadScreen(8)
         ->DONE
     * No parece muy alto, si me tiro a esa rama llego más rápido
