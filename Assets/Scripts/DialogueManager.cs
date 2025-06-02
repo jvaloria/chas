@@ -17,15 +17,20 @@ public class DialogueManager : MonoBehaviour
 
     [Header("DialogueUI")]
     [SerializeField] private GameObject _dialoguePanel;
+    [SerializeField] private GameObject _continueIcon;
     [SerializeField] private TextMeshProUGUI _dialogueText;
+    [SerializeField] private float _typingSpeed = 0.04f;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] _choices;
     [SerializeField] private TimedOptionSlider[] _sliders;
     [SerializeField] private TextMeshProUGUI[] _choicesText;
 
-    private Story currentStory;
+    private Story _currentStory;
     bool _dialogueIsPlaying;
+
+    private Coroutine _displayLineCoroutine;
+    public bool canContinueToNextLine = false;
 
     private void Awake()
     {
@@ -58,29 +63,29 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode (TextAsset inkJSON)
     {
-        currentStory = new Story(inkJSON.text);
+        _currentStory = new Story(inkJSON.text);
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
 
-        _dialogueVariables.StartListening(currentStory);
+        _dialogueVariables.StartListening(_currentStory);
 
-        currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
+        _currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
         {
             SceneManager.LoadScene(screenToLoad);
         });
-        currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
+        _currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
         {
             ObjectManager.GetInstance().EnableObject(imageToLoad);
         });
-        currentStory.BindExternalFunction("RemoveObject", (string imageToRemove) =>
+        _currentStory.BindExternalFunction("RemoveObject", (string imageToRemove) =>
         {
             ObjectManager.GetInstance().DisableObject(imageToRemove);
         });
-        currentStory.BindExternalFunction("TimedOption", (int optionToTime, int timeForOption) =>
+        _currentStory.BindExternalFunction("TimedOption", (int optionToTime, int timeForOption) =>
         {
             _sliders[optionToTime].EnableTimer(timeForOption);
         });
-        currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
+        _currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
         {
             SoundManager.PlaySceneSFX(soundToPlay);
         });
@@ -91,12 +96,12 @@ public class DialogueManager : MonoBehaviour
 
     private void ExitDialogueMode()
     {
-        currentStory.UnbindExternalFunction("LoadScreen");
-        currentStory.UnbindExternalFunction("LoadImage");
-        currentStory.UnbindExternalFunction("RemoveImage");
-        currentStory.UnbindExternalFunction("TimedOption");
-        currentStory.UnbindExternalFunction("PlaySound");
-        _dialogueVariables.StopListening(currentStory);
+        _currentStory.UnbindExternalFunction("LoadScreen");
+        _currentStory.UnbindExternalFunction("LoadImage");
+        _currentStory.UnbindExternalFunction("RemoveImage");
+        _currentStory.UnbindExternalFunction("TimedOption");
+        _currentStory.UnbindExternalFunction("PlaySound");
+        _dialogueVariables.StopListening(_currentStory);
         _dialogueIsPlaying = false;
         _dialoguePanel.SetActive(false);
         _dialogueText.text = "";
@@ -119,12 +124,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (_dialogueIsPlaying)
         {
-                if (currentStory.canContinue)
+                if (_currentStory.canContinue)
                 {
                     //set text for the dialogue line
-                    _dialogueText.text = currentStory.Continue();
-                    //set text for the options
-                    DisplayChoices();
+                    //_dialogueText.text = currentStory.Continue();
+                    if (_displayLineCoroutine != null)
+                    {
+                        StopCoroutine(_displayLineCoroutine);
+                    }
+                    _displayLineCoroutine = StartCoroutine(DisplayLine(_currentStory.Continue()));
                 }
                 else
                 {
@@ -133,9 +141,66 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private IEnumerator DisplayLine(string line)
+    {
+        _dialogueText.text = "";
+        _continueIcon.SetActive(false);
+        HideChoices();
+
+        canContinueToNextLine = false;
+
+        bool isAddingRichTextTags = false;
+
+        foreach (var letter in line.ToCharArray())
+        {
+            // if the player presses a button, skip the typing effect
+            if (Input.GetButton("Fire1") || Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            {
+                _dialogueText.text = line;
+                break;
+            }
+
+            // if the letter is a rich text tag, add it to the text without waiting
+            if (letter == '<' || isAddingRichTextTags)
+            {
+                isAddingRichTextTags = true;
+                _dialogueText.text += letter;
+                if (letter == '>')
+                {
+                    isAddingRichTextTags = false;
+                }
+            }
+            else
+            {
+                _dialogueText.text += letter;
+                yield return new WaitForSeconds(_typingSpeed);
+            }
+
+
+        }
+
+        // actions to take after the line is displayed
+        _continueIcon.SetActive(true);
+        DisplayChoices();
+
+        canContinueToNextLine = true;
+    }
+
+    private void HideChoices()
+    {
+        foreach (GameObject choice in _choices)
+        {
+            choice.SetActive(false);
+        }
+        foreach (TimedOptionSlider slider in _sliders)
+        {
+            slider.DisableTimer();
+        }
+    }
+
     private void DisplayChoices()
     {
-        List<Choice> currentChoices = currentStory.currentChoices;
+        List<Choice> currentChoices = _currentStory.currentChoices;
         if(currentChoices.Count > _choices.Length)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: " + currentChoices.Count );
@@ -168,7 +233,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ContinueChoiceless()
     {
-        List<Choice> currentChoices = currentStory.currentChoices;
+        List<Choice> currentChoices = _currentStory.currentChoices;
         if (currentChoices.Count == 0)
         {
             ContinueStory();
@@ -176,9 +241,11 @@ public class DialogueManager : MonoBehaviour
     }
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
-        ContinueStory();
+        if (canContinueToNextLine)
+        {
+            _currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
+        }
     }
 
     public Ink.Runtime.Object GetVariableState(string variableName)
@@ -194,23 +261,23 @@ public class DialogueManager : MonoBehaviour
 
     public void SetVariableState(string variableName, Value value)
     {
-        currentStory.variablesState.SetGlobal(variableName, value);
+        _currentStory.variablesState.SetGlobal(variableName, value);
     }
 
     public void GoToKnot(string knotName)
     {
         try
         {
-            currentStory.ChoosePathString(knotName);
+            _currentStory.ChoosePathString(knotName);
             ContinueStory();
         }
         catch (System.Exception)
         {
             try
             {
-                currentStory.ResetState();
-                DialogueVariables.GetInstance().VariablesToStory(currentStory);
-                currentStory.ChoosePathString(knotName);
+                _currentStory.ResetState();
+                DialogueVariables.GetInstance().VariablesToStory(_currentStory);
+                _currentStory.ChoosePathString(knotName);
                 ContinueStory();
             }
             catch (System.Exception)

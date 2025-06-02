@@ -6,7 +6,7 @@ VAR gato_text_color = "purple"
 ===main===
     ->stitch
     =stitch
-    * ¿Tenés idea dónde está la fuente?
+    * ¿Sabés dónde está la fuente?
         ->AcertijoGato
     * Volver a la casa vieja
         ~ LoadScreen(3)
