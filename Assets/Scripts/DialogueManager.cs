@@ -86,9 +86,9 @@ public class DialogueManager : MonoBehaviour
         {
             _sliders[optionToTime].EnableTimer(timeForOption);
         });
-        _currentStory.BindExternalFunction("PlaySound", (string soundToPlay) =>
+        _currentStory.BindExternalFunction("PlaySound", (string soundToPlay, float volume) =>
         {
-            SoundManager.PlaySceneSFX(soundToPlay);
+            SoundManager.PlaySceneSFX(soundToPlay, volume);
         });
 
 
@@ -193,10 +193,6 @@ public class DialogueManager : MonoBehaviour
         foreach (GameObject choice in _choices)
         {
             choice.SetActive(false);
-        }
-        foreach (TimedOptionSlider slider in _sliders)
-        {
-            slider.DisableTimer();
         }
     }
 
