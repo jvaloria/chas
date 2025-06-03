@@ -2,7 +2,7 @@ EXTERNAL LoadObject(string object)
 EXTERNAL RemoveObject(string object)
 EXTERNAL TimedOption(int optionNumber, int timeForOption)
 EXTERNAL LoadScreen(int screenNumber)
-EXTERNAL PlaySound(string soundToPlay)
+EXTERNAL PlaySound(string soundToPlay, float volume)
 VAR infoViejoFuente = false
 VAR aguaBendita = false
 VAR tuxedoCatMansion = false

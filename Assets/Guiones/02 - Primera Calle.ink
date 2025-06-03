@@ -4,11 +4,11 @@ VAR ciclista_text_color = "\#BDB2FB"
 ->main
 
 === main ===
-~PlaySound("bondiSeVa")
+~PlaySound("bondiSeVa", 0.1)
 Parque Chas... Tendría que haber pensado un poco más antes de decir que sí a este <color=yellow>asado</color>.
 Los tacheros no me querían traer y el del bondi casi me baja a patadas. ¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...
 ~ LoadObject("celularmapa")
-~ PlaySound("eerieWind")
+~ PlaySound("eerieWind", 1)
 Lo que faltaba, me falla el mapa y no tengo señal...
 ~ RemoveObject("celularmapa")
 ~ TimedOption(0, 8)

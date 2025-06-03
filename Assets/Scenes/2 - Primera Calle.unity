@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneBGM: {fileID: 8300000, guid: 4974387690a4f1d4c87461aae2b2cdb9, type: 3}
+  SceneBGMVolume: 1
   SceneSounds:
   - {fileID: 8300000, guid: 511a6705d8397b34e9d8ff0fc157cc19, type: 3}
   - {fileID: 8300000, guid: 87119ebec78691d49925474645f13ab4, type: 3}

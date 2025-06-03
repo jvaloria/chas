@@ -9,10 +9,6 @@ public class TimedOptionSlider : MonoBehaviour
     [SerializeField] private GameObject _button;
     [SerializeField] private float _actionableTime;
     private float _timePassed;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
