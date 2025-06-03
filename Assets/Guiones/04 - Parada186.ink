@@ -17,8 +17,7 @@ VAR gato_text_color = "purple"
     <color={gato_text_color}>Si en un cuarto hay varios gatos, cada gato en un rincón, cada uno ve 3 gatos, ¿Sabés cuántos gatos son?</color>
     * 4
         <color={gato_text_color}>Claro que somos 4, doblá a la derecha y en 2 cuadras llegás a la fuente. Saludá a los demás si los ves.</color>
-        TODO No me salió apagar al gato
-        //~ RemoveObject("TuxedoCat") 
+        ~ RemoveObject("TuxedoCat") 
          ->4Gatos
     * 186
         TODO SFX de Gato maullido enojado y se vá
@@ -30,8 +29,7 @@ VAR gato_text_color = "purple"
         ->main.stitch
     * ¿Qué?!!
         Miauu
-        TODO No me salió apagar al gato
-        //~ RemoveObject("TuxedoCat") 
+        ~ RemoveObject("TuxedoCat") 
         ->main.stitch
 ->DONE
 

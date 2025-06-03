@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject _dialoguePanel;
     [SerializeField] private GameObject _continueIcon;
     [SerializeField] private TextMeshProUGUI _dialogueText;
-    [SerializeField] private float _typingSpeed = 0.04f;
+    [SerializeField] private float _typingSpeed = 0.4f;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] _choices;
@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     private Story _currentStory;
     bool _dialogueIsPlaying;
+    private string _line;
 
     private Coroutine _displayLineCoroutine;
     public bool canContinueToNextLine = false;
@@ -67,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         _currentStory = new Story(inkJSON.text);
         _dialogueIsPlaying = true;
         _dialoguePanel.SetActive(true);
+        canContinueToNextLine = true;
 
         _dialogueVariables.StartListening(_currentStory);
 
@@ -125,10 +127,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (_dialogueIsPlaying)
         {
+            if (canContinueToNextLine)
+            {
                 if (_currentStory.canContinue)
                 {
-                //set text for the dialogue line
-                //_dialogueText.text = currentStory.Continue();
+                    //set text for the dialogue line
+                    //_dialogueText.text = currentStory.Continue();
                     if (_displayLineCoroutine != null)
                     {
                         StopCoroutine(_displayLineCoroutine);
@@ -139,53 +143,63 @@ public class DialogueManager : MonoBehaviour
                 {
                     ExitDialogueMode();
                 }
+            }
+            else
+            {
+                StopCoroutine(_displayLineCoroutine);
+                _dialogueText.text = _line;
+                _continueIcon.SetActive(true);
+                DisplayChoices();
+                canContinueToNextLine = true;
+            }
         }
     }
 
     private IEnumerator DisplayLine(string line)
     {
-        if (_dialogueText.text != line) {
-        _dialogueText.text = "";
-        _continueIcon.SetActive(false);
-        HideChoices();
-
-        canContinueToNextLine = false;
-
-        bool isAddingRichTextTags = false;
-
-        foreach (var letter in line.ToCharArray())
+        _line = line;
+        if (_dialogueText.text != line || line =="")
         {
-            // if the player presses a button, skip the typing effect
-            if (Input.GetButton("Fire1") || Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
-            {
-                _dialogueText.text = line;
-                break;
-            }
+            _dialogueText.text = "";
+            _continueIcon.SetActive(false);
+            HideChoices();
 
-            // if the letter is a rich text tag, add it to the text without waiting
-            if (letter == '<' || isAddingRichTextTags)
+            canContinueToNextLine = false;
+            bool isAddingRichTextTags = false;
+            foreach (var letter in line.ToCharArray())
             {
-                isAddingRichTextTags = true;
-                _dialogueText.text += letter;
-                if (letter == '>')
+                // if the player presses a button, skip the typing effect
+                /*if (Input.GetButton("Fire1") || Input.GetButton("Submit") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
-                    isAddingRichTextTags = false;
+                    _dialogueText.text = line;
+                    break;
+                }*/
+
+                // if the letter is a rich text tag, add it to the text without waiting
+                if (letter == '<' || isAddingRichTextTags)
+                {
+                    isAddingRichTextTags = true;
+                    _dialogueText.text += letter;
+                    if (letter == '>')
+                    {
+                        isAddingRichTextTags = false;
+                    }
                 }
+                else
+                {
+                    _dialogueText.text += letter;
+                    yield return new WaitForSeconds(_typingSpeed);
+                }
+
+
             }
-            else
-            {
-                _dialogueText.text += letter;
-                yield return new WaitForSeconds(_typingSpeed);
-            }
-
-
-        }
+            // actions to take after the line is displayed
+            _continueIcon.SetActive(true);
+            DisplayChoices();
+            canContinueToNextLine = true;
         }
 
-        // actions to take after the line is displayed
-        _continueIcon.SetActive(true);
-        DisplayChoices();
-        canContinueToNextLine = true;
+       
     }
 
     private void HideChoices()
@@ -235,6 +249,17 @@ public class DialogueManager : MonoBehaviour
         if (currentChoices.Count == 0)
         {
             ContinueStory();
+        }
+        else
+        {
+            if (!canContinueToNextLine)
+            {
+                StopCoroutine(_displayLineCoroutine);
+                _dialogueText.text = _line;
+                _continueIcon.SetActive(true);
+                DisplayChoices();
+                canContinueToNextLine = true;
+            }
         }
     }
     public void MakeChoice(int choiceIndex)

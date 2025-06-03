@@ -18,10 +18,7 @@ public class DialogueTrigger : MonoBehaviour
         if (started)
         {
             var dialogueManager = DialogueManager.GetInstance();
-            if (dialogueManager.canContinueToNextLine)
-            {
-                dialogueManager.ContinueChoiceless();
-            }
+            dialogueManager.ContinueChoiceless();
         }
         else
         {
