@@ -6,9 +6,18 @@ VAR gato_text_color = "purple"
 ===main===
     ->stitch
     =stitch
-    * ¿Sabés dónde está la fuente?
-        ->AcertijoGato
-    * Volver a la casa vieja
+    Doblo la esquina y el aire cambia. Otra vez el gato, me mira fijo.
+    Es como si el animal tuviera una lengua que no suena pero se entiende.
+
+    <color={gato_text_color}>Te estabas por olvidar de vos, ¿no?</color>
+
+    No me asusto. No me río. Acepto. Porque algo en mí sabe que es cierto. 
+    Y que esta conversación inexplicable es profundamente real.
+
+    * [El gato habla raro, pero me da paz. Lo escucho, total no vine a imponer lógica.]
+        //->AcertijoGato
+        ~ LoadScreen(6)
+    * [No tengo tiempo para maullidos filosóficos. Vuelvo a la casa, mido y me voy.]
         ~ LoadScreen(4)
 ->DONE
 
