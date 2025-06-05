@@ -15,20 +15,19 @@ Lo que faltaba, me falla el mapa y no tengo señal...
 ~ LoadObject("ciclista")
 ->stitch2
 =stitch2
-Y ahora que hago?
-    *¿Y este? ¡Flaco! ¡Esperá!
-    ->ciclista
-    *Bueno, me mando por acá.
-    ~ LoadScreen(3)
+*¿Y este? ¡Flaco! ¡Esperá!
+->ciclista
+*Bueno, me mando por acá.
+~ LoadScreen(3)
 ->DONE
 
 === ciclista === 
 ~ RemoveObject("ciclista")
 ~ LoadObject("ciclistaStatic")
 Disculpame...
-    * Sabes cómo llegar a <color=yellow>Avalos y Cádiz?</color>
+    * ¿Sabés cómo llegar a <color=yellow>Avalos y Cádiz?</color>
         ->ciclista_RTA
-    * Me prestarías el teléfono un segundo que el mío no anda?
+    * ¿Me prestarías el teléfono un segundo que el mío no anda?
         ->ciclista_RTA
 ->DONE
 
