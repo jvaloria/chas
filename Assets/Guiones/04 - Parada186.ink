@@ -14,20 +14,23 @@ VAR gato_text_color = "purple"
     No me asusto. No me río. Acepto. Porque algo en mí sabe que es cierto. 
     Y que esta conversación inexplicable es profundamente real.
 
-    * [El gato habla raro, pero me da paz. Lo escucho, total no vine a imponer lógica.]
-        //->AcertijoGato
+    * ¿Sabés dónde queda la fuente?
+        ->AcertijoGato
         ~ LoadScreen(6)
     * [No tengo tiempo para maullidos filosóficos. Vuelvo a la casa, mido y me voy.]
         ~ LoadScreen(4)
 ->DONE
 
 === AcertijoGato ===
+    El gato habla raro, pero me da paz. Lo escucho, total no vine a imponer lógica.
     <color={gato_text_color}>Claro que lo sé. Pero...</color>
     <color={gato_text_color}>Si en un cuarto hay varios gatos, cada gato en un rincón, cada uno ve 3 gatos, ¿Sabés cuántos gatos son?</color>
     * 4
-        <color={gato_text_color}>Claro que somos 4, doblá a la derecha y en 2 cuadras llegás a la fuente. Saludá a los demás si los ves.</color>
+        <color={gato_text_color}>Claro que somos 4</color>
+        El gato se aleja como si supiera a dónde va… y yo lo sigo.
         ~ RemoveObject("TuxedoCat") 
-         ->4Gatos
+        ~ LoadScreen(6)
+         //->4Gatos
     * 186
         TODO SFX de Gato maullido enojado y se vá
         TODO Aparece el bondi 186 y te lleva por el camino del diablo
