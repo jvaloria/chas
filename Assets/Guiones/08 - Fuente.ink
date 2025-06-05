@@ -12,11 +12,11 @@ Al fin llegué. Estoy sediento, necesito tomar algo
     * Está en rojo pero no pasa nadie, mejor cruzo y busco un kiosco
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(10)
+        ~ LoadScreen(11)
         ->DONE
 ->DONE
 
 === BebeGatoBebe ===
 Es lo más rico que probé en mi vida, no puedo parar de tomar
-~ LoadScreen(9)
+~ LoadScreen(10)
 ->DONE

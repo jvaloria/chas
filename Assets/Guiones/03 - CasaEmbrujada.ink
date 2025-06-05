@@ -4,26 +4,25 @@ VAR vieja_text_color = "\#FF9E9E"
 ->main
 
 ===main===
-No me gusta nada este barrio oscuro... ¿Cómo voy a llegar si no encuentro la calle?
+La casa se impone sin hacer ruido. No sé si llegué hasta ella por decisión propia o por arrastre. Me freno.
 ->yahora
 =yahora
-¿Y ahora qué hago? que casa más rara...
+¿Dónde voy?
     *{tuxedoCatMansion} ¿Maullidos? Vienen de acá a la vuelta, ¿será el gato de recién?
-    ~ LoadScreen(4) 
+    ~ LoadScreen(5) 
     ->DONE
     *{viejaMansionFuente} Si sigo derecho voy a la fuente, el de la bici me mandó para ahí
-     ~ LoadScreen(4)
+     ~ LoadScreen(5)
     ->DONE
     *{viejaMansionPizza} La avenida Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.
-    ~ LoadScreen(4)
+    ~ LoadScreen(5)
     ->DONE
     +->
     ->yahora
 ->yahora
 
 ===rayo===
-¡¡WAGH!! No decía que iba a llover..
-Qué gato elegante, ¿siempre estuviste ahí? 
+En la reja, aparece un gato que me mira como si me conociera. No se mueve. Me observa. Y siento que hay un juicio, pero sin condena.
 ->main.yahora
 
 ===tuxedoCat===

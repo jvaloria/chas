@@ -8,12 +8,12 @@ INCLUDE GLOBALS.ink
         ->BajoAuto
     * ¡Ese árbol! Si me subo no me va a alcanzar
         ... Ya no escucho nada, parece que se fue ...
-        ~ LoadScreen(6)
+        ~ LoadScreen(7)
         ->DONE
     * Me arrinconó, es el o yo...
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(6)
+        ~ LoadScreen(7)
         ->DONE
 ->DONE
 
@@ -22,7 +22,7 @@ INCLUDE GLOBALS.ink
 * Mejor me apuro a salir de acá y seguir viaje antes de que vuelva
     Está hermosa la noche, con la luz de la luna se ve todo mucho mejor
     Si me subo a este árbol capaz veo para donde está la fuente
-     ~ LoadScreen(6)
+     ~ LoadScreen(7)
     ->DONE
 * Hay una alcantarilla
     TODO Va a laberinto

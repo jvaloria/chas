@@ -9,7 +9,7 @@ VAR gato_text_color = "purple"
     * ¿Sabés dónde está la fuente?
         ->AcertijoGato
     * Volver a la casa vieja
-        ~ LoadScreen(3)
+        ~ LoadScreen(4)
 ->DONE
 
 === AcertijoGato ===
@@ -35,7 +35,7 @@ VAR gato_text_color = "purple"
 
 === 4Gatos ===
     * OK, voy para la derecha entonces
-        ~ LoadScreen(5)
+        ~ LoadScreen(6)
         ->DONE
     * Este gato me dijo que vaya a la derecha, pero él se fué a la izquierda, mejor lo sigo
         TODO Camino del pasado
@@ -44,5 +44,5 @@ VAR gato_text_color = "purple"
         // temporalmente dejo esto para poder elegir la otra opcion
         ->4Gatos
     * Mirá si le voy a hacer caso a un gato parlante, yo me vuelvo por donde vine
-        ~ LoadScreen(3)
+        ~ LoadScreen(4)
 ->DONE
