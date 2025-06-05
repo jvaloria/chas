@@ -1,6 +1,14 @@
 INCLUDE GLOBALS.ink
 
 ->main
+Camino junto al gato. Ya no me apura la meta, ni el reloj. 
+Siento que cada paso me aleja de la persona que fui esta mañana. Esa persona tan llena de deberes que ya no sabía cómo desear.
+
+Entonces, un ladrido me sacude. El cuerpo reacciona antes que la mente. Se me cierra el pecho, como si me hubieran recordado algo que había preferido olvidar.
+
+El gato no se inmuta. Me mira de reojo, como quien ya pasó por esto.
+
+El perro ladra desde un umbral. No avanza, pero su voz me atraviesa.
 
 ===main===
 <color=red>Grrrrrrrrrrrrrrrr</color>
