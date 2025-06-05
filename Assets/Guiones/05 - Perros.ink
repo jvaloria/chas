@@ -18,6 +18,9 @@ El perro ladra desde un umbral. No avanza, pero su voz me atraviesa.
         ->BajoAuto
     * ¡Ese árbol! Si me subo no me va a alcanzar
         ... Ya no escucho nada, parece que se fue ...
+        Me viene una urgencia por mirar desde más arriba. 
+        No sé si para orientarme o para comprobar que todo esto es real. Pero lo necesito. 
+        Esa necesidad no es lógica, es física. Como un hambre. Como si, desde una altura, pudiera entender mi lugar en todo esto.
         ~ LoadScreen(7)
         ->DONE
     * Me arrinconó, es el o yo...
@@ -30,8 +33,14 @@ El perro ladra desde un umbral. No avanza, pero su voz me atraviesa.
 ===BajoAuto===
 ... Ya no escucho nada, parece que se fue ...
 * Mejor me apuro a salir de acá y seguir viaje antes de que vuelva
-    Está hermosa la noche, con la luz de la luna se ve todo mucho mejor
-    Si me subo a este árbol capaz veo para donde está la fuente
+    Ya no siento miedo. Siento una forma de expansión. Como si al dejar de apurarme empezara a ver.
+    
+    Me doy cuenta de que no busco una salida. Busco sentido. O algo parecido. 
+    
+    Me viene una urgencia por mirar desde más arriba. 
+    No sé si para orientarme o para comprobar que todo esto es real. Pero lo necesito. 
+    
+    Esa necesidad no es lógica, es física. Como un hambre. Como si, desde una altura, pudiera entender mi lugar en todo esto.
      ~ LoadScreen(7)
     ->DONE
 * Hay una alcantarilla
