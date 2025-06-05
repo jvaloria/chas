@@ -5,8 +5,8 @@ VAR ciclista_text_color = "\#BDB2FB"
 
 === main ===
 ~PlaySound("bondiSeVa", 0.1)
-Parque Chas... Tendría que haber pensado un poco más antes de decir que sí a este <color=yellow>asado</color>.
-Los tacheros no me querían traer y el del bondi casi me baja a patadas. ¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...
+Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.
+¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...
 ~ LoadObject("celularmapa")
 ~ PlaySound("eerieWind", 1)
 Lo que faltaba, me falla el mapa y no tengo señal...
@@ -15,9 +15,9 @@ Lo que faltaba, me falla el mapa y no tengo señal...
 ~ LoadObject("ciclista")
 ->stitch2
 =stitch2
-*¿Y este? ¡Flaco! ¡Esperá!
+*¡Flaco! ¡Esperá!
 ->ciclista
-*Bueno, me mando por acá.
+*[Camino. Ya estoy acá, algo me empuja a seguir.]
 ~ LoadScreen(3)
 ->DONE
 
@@ -35,6 +35,6 @@ Disculpame...
 <color={ciclista_text_color}>Todas las paralelas a Pampa llevan a</color> <color=yellow>la fuente.</color>
     ~ RemoveObject("ciclistaStatic")
     ~ infoViejoFuente = true
-¿Y qué tiene que ver <color=yellow>la fuente</color>? Están todos locos por acá...
+¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
     ->main.stitch2
 ->DONE

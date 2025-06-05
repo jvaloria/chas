@@ -4,7 +4,7 @@ VAR vieja_text_color = "\#FF9E9E"
 ->main
 
 ===main===
-No me gusta nada este barrio oscuro... ¿Cómo voy a llegar al asado si no encuentro la calle?
+No me gusta nada este barrio oscuro... ¿Cómo voy a llegar si no encuentro la calle?
 ->yahora
 =yahora
 ¿Y ahora qué hago? que casa más rara...
