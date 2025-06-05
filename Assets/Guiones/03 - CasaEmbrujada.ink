@@ -65,6 +65,5 @@ Qué gato elegante, ¿siempre estuviste ahí?
         ~ RemoveObject("Vieja")
         -> break_and_go
 
-
 === break_and_go ===
 -> main.yahora
