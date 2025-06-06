@@ -22,7 +22,6 @@ VAR gato_text_color = "purple"
 ->DONE
 
 === AcertijoGato ===
-    El gato habla raro, pero me da paz. Lo escucho, total no vine a imponer lógica.
     <color={gato_text_color}>Claro que lo sé. Pero...</color>
     <color={gato_text_color}>Si en un cuarto hay varios gatos, cada gato en un rincón, cada uno ve 3 gatos, ¿Sabés cuántos gatos son?</color>
     * 4

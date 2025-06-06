@@ -6,27 +6,22 @@ INCLUDE GLOBALS.ink
 Camino junto al gato. Ya no me apura la meta, ni el reloj. 
 Siento que cada paso me aleja de la persona que fui esta mañana. Esa persona tan llena de deberes que ya no sabía cómo desear.
 
-Entonces, un ladrido me sacude. El cuerpo reacciona antes que la mente. 
+TODO SFX Ladrido
 Se me cierra el pecho, como si me hubieran recordado algo que había preferido olvidar.
 
-El gato no se inmuta. Me mira de reojo, como quien ya pasó por esto.
-
-El perro ladra desde un umbral. No avanza, pero su voz me atraviesa.
-
 <color=red>Grrrrrrrrrrrrrrrr</color>
-    * ¡Rápido, abajo de ese auto así no me mata!
+    * [¡Rápido, abajo de ese auto así no me mata!]
         ->BajoAuto
     * ¡Ese árbol! Si me subo no me va a alcanzar
         ... Ya no escucho nada, parece que se fue ...
         Me viene una urgencia por mirar desde más arriba. 
-        No sé si para orientarme o para comprobar que todo esto es real. Pero lo necesito. 
-        Esa necesidad no es lógica, es física. Como un hambre. Como si, desde una altura, pudiera entender mi lugar en todo esto.
+        Como si, desde una altura, pudiera entender mi lugar en todo esto.
         ~ LoadScreen(7)
         ->DONE
     * Me arrinconó, es el o yo...
         TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(7)
+        TODO [IMPLEMENTAR MUERTE]
+        ~ LoadScreen(12)
         ->DONE
 ->DONE
 

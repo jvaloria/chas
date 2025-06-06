@@ -9,7 +9,5 @@ TODO SFX de alas de pajaro
 Es una urraca. Salta de techo en techo. Me guía sin mirarme.
 
 Y yo la sigo.
-
-No porque quiera, sino porque no hacerlo implicaría quedarme detenido en algo que ya no me contiene.
 ~ LoadScreen(8)
 ->DONE

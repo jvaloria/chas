@@ -4,7 +4,7 @@ VAR vieja_text_color = "\#FF9E9E"
 ->main
 
 ===main===
-La casa se impone sin hacer ruido. No sé si llegué hasta ella por decisión propia o por arrastre. Me freno.
+No sé si llegué hasta ella por decisión propia o por arrastre.
 ->yahora
 =yahora
 ¿Qué hago?
