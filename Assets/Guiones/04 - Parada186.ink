@@ -14,7 +14,7 @@ VAR gato_text_color = "purple"
     No me asusto. No me río. Acepto. Porque algo en mí sabe que es cierto. 
     Y que esta conversación inexplicable es profundamente real.
 
-    * ¿Sabés dónde queda la fuente?
+    * ¿Sabés dónde queda <color=yellow>la fuente</color>?
         ->AcertijoGato
         ~ LoadScreen(6)
     * [No tengo tiempo para maullidos filosóficos. Vuelvo a la casa, mido y me voy.]

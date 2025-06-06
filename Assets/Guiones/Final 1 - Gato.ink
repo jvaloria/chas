@@ -3,8 +3,9 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
-Me encanta el agua de la fuente...
-Al final no era tan malo Parque Chas.
+Soy un gato naranja.
+Soy libre.
+Y por fin, estoy en casa.
 TODO implementar escena de fin o usar esta
 ~ LoadObject("Fin")
 ~ RemoveObject("DialoguePanel")

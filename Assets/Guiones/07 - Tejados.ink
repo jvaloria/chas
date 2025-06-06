@@ -4,14 +4,18 @@ INCLUDE GLOBALS.ink
 
 ===main===
 TODO SFX de alas de pajaro
-[Persigue una urraca por los tejados]
-¡Se fué por ahí!
-    *¡Allá está <color=yellow>la fuente</color>! Voló cerca del agua y dejo caer algo en la fuente
+¿Qué hago?
+    *[La urraca salta como marcando un camino… y yo me dejo llevar.]
         ~ LoadScreen(9)
         ->DONE
-    * No parece muy alto, si me tiro a esa rama llego más rápido
+    * [Salto con todas mis fuerzas]
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(10)
+        ~ LoadScreen(8)
+        ->DONE
+    * [Mejor me bajo y vuelvo para Triunvirato]
+        TODO hacer que pueda volver de la death scene
+        [IMPLEMENTAR OTRO CAMINO]
+        ~ LoadScreen(8)
         ->DONE
 ->DONE

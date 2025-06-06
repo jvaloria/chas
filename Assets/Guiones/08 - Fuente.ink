@@ -5,18 +5,31 @@ INCLUDE GLOBALS.ink
 ===main===
 TODO SFX aguas danzantes
 TODO BGM Mistico
-TODO Podria encontrar la brujula acá tirada, quizas rota. ra lo que la urraca se robó de otro path
-Al fin llegué. Estoy sediento, necesito tomar algo
-    * El agua, se ve exquisita, necesito tomar algo, solo un poco
+Llego sin buscarla. No me sorprende estar acá. La sensación es más bien de retorno. 
+Como si siempre hubiera sido este el destino, aunque el plan fuera otro.
+
+Me acerco. El aire alrededor es distinto. No huele a nada, pero me limpia. 
+
+No tengo sed, pero tengo una falta. La fuente no me invita. Me espera.
+
+¿Qué hago?
+    * Tomo el agua. Siento que hace tiempo que estoy sediento de otra cosa.
     ->BebeGatoBebe
-    * Está en rojo pero no pasa nadie, mejor cruzo y busco un kiosco
+    * Me alejo. Hay algo en ese reflejo que no estoy listo para ver.
         TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
+        [IMPLEMENTAR OTRO CAMINO]
         ~ LoadScreen(11)
         ->DONE
 ->DONE
 
 === BebeGatoBebe ===
-Es lo más rico que probé en mi vida, no puedo parar de tomar
+No hay milagro. No hay revelación. Solo un descanso. Una apertura. Como si, por fin, pudiera quitarme el peso del alma.
+
+No pienso. No recuerdo. Me siento.
+
+Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.
+
+La noche ya no me pesa. El mundo no me exige. No me acuerdo del trabajo. No me acuerdo del nombre. Y no me hace falta.
+
 ~ LoadScreen(10)
 ->DONE

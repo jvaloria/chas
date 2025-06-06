@@ -3,20 +3,13 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
+Desde lo alto, siento algo. No lo veo, lo percibo. Como una hebra de pensamiento que no es mía, pero que igual me lleva. 
 TODO SFX de alas de pajaro
 [Una figura de pajaro pasa rapido por la pantalla]
-¿Qué es eso? Lleva algo
-    *¡Lo necesito! No se me va a escapar
-        ~ LoadScreen(8)
-        ->DONE
-    * Salto con todas mis fuerzas
-        TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(8)
-        ->DONE
-    * Por los cables seguro llego más rápido
-        TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(8)
-        ->DONE
+Es una urraca. Salta de techo en techo. Me guía sin mirarme.
+
+Y yo la sigo.
+
+No porque quiera, sino porque no hacerlo implicaría quedarme detenido en algo que ya no me contiene.
+~ LoadScreen(8)
 ->DONE
