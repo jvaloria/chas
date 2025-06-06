@@ -7,7 +7,7 @@ VAR vieja_text_color = "\#FF9E9E"
 La casa se impone sin hacer ruido. No sé si llegué hasta ella por decisión propia o por arrastre. Me freno.
 ->yahora
 =yahora
-¿Dónde voy?
+¿Qué hago?
     *{tuxedoCatMansion} ¿Maullidos? Vienen de acá a la vuelta, ¿será el gato de recién?
     ~ LoadScreen(5) 
     ->DONE
