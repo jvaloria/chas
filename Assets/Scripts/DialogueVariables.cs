@@ -4,7 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 using Unity.VisualScripting;
-using Ink.UnityIntegration;
+//using Ink.UnityIntegration;
 
 public class DialogueVariables : MonoBehaviour
 {
@@ -20,7 +20,8 @@ public class DialogueVariables : MonoBehaviour
         }
         return _instance;
     }
-    [SerializeField] private InkFile globalsInkFile;
+    //[SerializeField] private InkFile globalsInkFile;
+    [SerializeField] private TextAsset globalsInkFile;
 
     private void Awake()
     {
@@ -38,9 +39,9 @@ public class DialogueVariables : MonoBehaviour
 
     public void Start()
     {
-        string inkFileContents = File.ReadAllText (globalsInkFile.filePath);
-        Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
-        globalVariablesStory = compiler.Compile();
+        //string inkFileContents = globalsInkFile.text;
+        //Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
+        globalVariablesStory = new Story(globalsInkFile.text);
         VariablesToStory(globalVariablesStory);
         foreach (string name in globalVariablesStory.variablesState)
         {
@@ -57,6 +58,22 @@ public class DialogueVariables : MonoBehaviour
             
         }
     }
+
+    /*public DialogueVariables(TextAsset loadGlobalsJSON)
+    {
+        // create the story
+        Story globalVariablesStory = new Story(loadGlobalsJSON.text);
+
+        // initialize the dictionary
+        variables = new Dictionary<string, Ink.Runtime.Object>();
+        foreach (string name in globalVariablesStory.variablesState)
+        {
+            Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
+            variables.Add(name, value);
+            Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
+        }
+    }*/
+
     public void StartListening(Story story)
     {
         VariablesToStory(story);
