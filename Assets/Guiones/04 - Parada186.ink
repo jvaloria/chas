@@ -29,6 +29,7 @@ VAR gato_text_color = "purple"
         <i>El gato se aleja como si supiera a dónde va… y yo lo sigo.</i>
         ~ RemoveObject("TuxedoCat")
         ~ LoadScreen(6)
+        ->DONE
          //->4Gatos
     * 186
         TODO SFX de Gato maullido enojado y se vá
