@@ -6,13 +6,13 @@ VAR gato_text_color = "purple"
 ===main===
     ->stitch
     =stitch
-    Doblo la esquina y el aire cambia. Otra vez el gato, me mira fijo.
-    Es como si el animal tuviera una lengua que no suena pero se entiende.
+    <i>Doblo la esquina y el aire cambia. Otra vez el gato, me mira fijo.</i>
+    <i>Es como si el animal tuviera una lengua que no suena pero se entiende.</i>
 
     <color={gato_text_color}>Te estabas por olvidar de vos, ¿no?</color>
 
-    No me asusto. No me río. Acepto. Porque algo en mí sabe que es cierto. 
-    Y que esta conversación inexplicable es profundamente real.
+    <i>No me asusto. No me río. Acepto. Porque algo en mí sabe que es cierto.</i>
+    <i>Y que esta conversación inexplicable es profundamente real.</i>
 
     * ¿Sabés dónde queda <color=yellow>la fuente</color>?
         ->AcertijoGato
@@ -26,8 +26,8 @@ VAR gato_text_color = "purple"
     <color={gato_text_color}>Si en un cuarto hay varios gatos, cada gato en un rincón, cada uno ve 3 gatos, ¿Sabés cuántos gatos son?</color>
     * 4
         <color={gato_text_color}>Claro que somos 4</color>
-        El gato se aleja como si supiera a dónde va… y yo lo sigo.
-        ~ RemoveObject("TuxedoCat") 
+        <i>El gato se aleja como si supiera a dónde va… y yo lo sigo.</i>
+        ~ RemoveObject("TuxedoCat")
         ~ LoadScreen(6)
          //->4Gatos
     * 186
@@ -40,20 +40,20 @@ VAR gato_text_color = "purple"
         ->main.stitch
     * ¿Qué?!!
         Miauu
-        ~ RemoveObject("TuxedoCat") 
+        ~ RemoveObject("TuxedoCat")
         ->main.stitch
 ->DONE
 
 === 4Gatos ===
-    * OK, voy para la derecha entonces
+    * [OK, voy para la derecha entonces]
         ~ LoadScreen(6)
         ->DONE
-    * Este gato me dijo que vaya a la derecha, pero él se fué a la izquierda, mejor lo sigo
+    * [Este gato me dijo que vaya a la derecha, pero él se fué a la izquierda, mejor lo sigo]
         TODO Camino del pasado
         [VA A ESCENA NUEVA: PASADO]
         //->DONE
         // temporalmente dejo esto para poder elegir la otra opcion
         ->4Gatos
-    * Mirá si le voy a hacer caso a un gato parlante, yo me vuelvo por donde vine
+    * [Mirá si le voy a hacer caso a un gato parlante, yo me vuelvo por donde vine]
         ~ LoadScreen(4)
 ->DONE

@@ -4,11 +4,11 @@ INCLUDE GLOBALS.ink
 
 ===main===
 TODO SFX de alas de pajaro
-No pienso. No recuerdo. Me siento.
+<i>No pienso. No recuerdo. Me siento.</i>
 
-Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.
+<i>Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.</i>
 
-¿Qué hago?
+<i>¿Qué hago?</i>
     *[La urraca salta como marcando un camino… y yo me dejo llevar.]
         ~ LoadScreen(9)
         ->DONE

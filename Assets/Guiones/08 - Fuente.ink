@@ -5,14 +5,14 @@ INCLUDE GLOBALS.ink
 ===main===
 TODO SFX aguas danzantes
 TODO BGM Mistico
-Llego sin buscarla. No me sorprende estar acá. La sensación es más bien de retorno. 
-Como si siempre hubiera sido este el destino, aunque el plan fuera otro.
+<i>Llego sin buscarla. No me sorprende estar acá. La sensación es más bien de retorno.</i>
+<i>Como si siempre hubiera sido este el destino, aunque el plan fuera otro.</i>
 
-Me acerco. El aire alrededor es distinto. No huele a nada, pero me limpia. 
+<i>Me acerco. El aire alrededor es distinto. No huele a nada, pero me limpia.</i>
 
-No tengo sed, pero tengo una falta. La fuente no me invita. Me espera.
+<i>No tengo sed, pero tengo una falta. La fuente no me invita. Me espera.</i>
 
-¿Qué hago?
+<i>¿Qué hago?</i>
     * [Tomo el agua. Siento que hace tiempo que estoy sediento de otra cosa.]
     ->BebeGatoBebe
     * [Me alejo. Hay algo en ese reflejo que no estoy listo para ver.]
@@ -23,9 +23,9 @@ No tengo sed, pero tengo una falta. La fuente no me invita. Me espera.
 ->DONE
 
 === BebeGatoBebe ===
-No hay milagro. No hay revelación. Solo un descanso. Una apertura. Como si, por fin, pudiera quitarme el peso del alma.
+<i>No hay milagro. No hay revelación. Solo un descanso. Una apertura. Como si, por fin, pudiera quitarme el peso del alma.</i>
 
-La noche ya no me pesa. El mundo no me exige. No me acuerdo del trabajo. No me acuerdo del nombre. Y no me hace falta.
+<i>La noche ya no me pesa. El mundo no me exige. No me acuerdo del trabajo. No me acuerdo del nombre. Y no me hace falta.</i>
 
 ~ LoadScreen(10)
 ->DONE

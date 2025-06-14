@@ -1,20 +1,20 @@
 INCLUDE GLOBALS.ink
-VAR vieja_text_color = "\#FF9E9E"  
+VAR vieja_text_color = "\#FF9E9E"
 
 ->main
 
 ===main===
-No sé si llegué hasta ella por decisión propia o por arrastre.
+<i>No sé si llegué hasta ella por decisión propia o por arrastre.</i>
 ->yahora
 =yahora
-¿Qué hago?
-    *{tuxedoCatMansion} ¿Maullidos? Vienen de acá a la vuelta, ¿será el gato de recién?
-    ~ LoadScreen(5) 
+<i>¿Qué hago?</i>
+    *{tuxedoCatMansion} [¿Maullidos? Vienen de acá a la vuelta. Mejor voy a ver qué pasa.]
+    ~ LoadScreen(5)
     ->DONE
-    *{viejaMansionFuente} Si sigo derecho voy a la fuente, el de la bici me mandó para ahí
+    *{viejaMansionFuente} [Si sigo derecho voy a la fuente, el de la bici me mandó para ahí]
      ~ LoadScreen(5)
     ->DONE
-    *{viejaMansionPizza} La avenida Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.
+    *{viejaMansionPizza} [La avenida Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.]
     ~ LoadScreen(5)
     ->DONE
     +->
@@ -22,7 +22,7 @@ No sé si llegué hasta ella por decisión propia o por arrastre.
 ->yahora
 
 ===rayo===
-En la reja, aparece un gato que me mira como si me conociera. No se mueve. Me observa. Y siento que hay un juicio, pero sin condena.
+<i>En la reja, aparece un gato que me mira como si me conociera. No se mueve. Me observa. Y siento que hay un juicio, pero sin condena.</i>
 ->main.yahora
 
 ===tuxedoCat===

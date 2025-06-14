@@ -3,11 +3,11 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
-Desde lo alto, siento algo. No lo veo, lo percibo. Como una hebra de pensamiento que no es mía, pero que igual me lleva. 
+<i>Desde lo alto, siento algo. No lo veo, lo percibo. Como una hebra de pensamiento que no es mía, pero que igual me lleva.</i>
 TODO SFX de alas de pajaro
 [Una figura de pajaro pasa rapido por la pantalla]
-Es una urraca. Salta de techo en techo. Me guía sin mirarme.
+<i>Es una urraca. Salta de techo en techo. Me guía sin mirarme.</i>
 
-Y yo la sigo.
+<i>Y yo la sigo.</i>
 ~ LoadScreen(8)
 ->DONE

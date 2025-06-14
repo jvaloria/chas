@@ -3,9 +3,9 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
-Soy un gato naranja.
-Soy libre.
-Y por fin, estoy en casa.
+<i>Soy un gato naranja.</i>
+<i>Soy libre.</i>
+<i>Y por fin, estoy en casa.</i>
 TODO implementar escena de fin o usar esta
 ~ LoadObject("Fin")
 ~ RemoveObject("DialoguePanel")

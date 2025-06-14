@@ -5,11 +5,11 @@ VAR ciclista_text_color = "\#BDB2FB"
 
 === main ===
 ~PlaySound("bondiSeVa", 0.1)
-Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.
-¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...
+<i>Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.</i>
+<i>¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...</i>
 ~ LoadObject("celularmapa")
 ~ PlaySound("eerieWind", 1)
-Lo que faltaba, me falla el mapa y no tengo señal...
+<i>Lo que faltaba, me falla el mapa y no tengo señal...</i>
 ~ RemoveObject("celularmapa")
 ~ TimedOption(0, 8)
 ~ LoadObject("ciclista")
@@ -21,7 +21,7 @@ Lo que faltaba, me falla el mapa y no tengo señal...
 ~ LoadScreen(3)
 ->DONE
 
-=== ciclista === 
+=== ciclista ===
 ~ RemoveObject("ciclista")
 ~ LoadObject("ciclistaStatic")
 Disculpame...
@@ -31,7 +31,7 @@ Disculpame...
         ->ciclista_RTA
 ->DONE
 
-=== ciclista_RTA === 
+=== ciclista_RTA ===
 <color={ciclista_text_color}>Todas las paralelas a Pampa llevan a</color> <color=yellow>la fuente.</color>
     ~ RemoveObject("ciclistaStatic")
     ~ infoViejoFuente = true
