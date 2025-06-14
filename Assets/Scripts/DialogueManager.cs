@@ -292,6 +292,7 @@ public class DialogueManager : MonoBehaviour
         try
         {
             _currentStory.ChoosePathString(knotName);
+            canContinueToNextLine = true;
             ContinueStory();
         }
         catch (System.Exception)
@@ -301,6 +302,7 @@ public class DialogueManager : MonoBehaviour
                 _currentStory.ResetState();
                 DialogueVariables.GetInstance().VariablesToStory(_currentStory);
                 _currentStory.ChoosePathString(knotName);
+                canContinueToNextLine = true;
                 ContinueStory();
             }
             catch (System.Exception)
