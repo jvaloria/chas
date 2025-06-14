@@ -74,7 +74,8 @@ public class DialogueManager : MonoBehaviour
 
         _currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
         {
-            SceneManager.LoadScene(screenToLoad);
+            FindAnyObjectByType<SceneChanger>().LoadSceneByIndex(screenToLoad);
+            //SceneManager.LoadScene(screenToLoad);
         });
         _currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
         {

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class SceneChanger : MonoBehaviour
     /// Loads a scene based on the specified scene name.
     /// </summary>
     /// <param name="sceneName">The name of the scene to be loaded.</param>
+    [SerializeField] ScreenFader screenFader;
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
@@ -25,7 +27,9 @@ public class SceneChanger : MonoBehaviour
     /// <param name="sceneBuildIndex">The build index of the scene to be loaded.</param>
     public void LoadSceneByIndex(int sceneBuildIndex)
     {
-        SceneManager.LoadScene(sceneBuildIndex);
+        //screenFader.gameObject.SetActive(true);
+        StartCoroutine(TransitionRoutine(sceneBuildIndex));
+        
     }
 
     /// <summary>
@@ -40,4 +44,14 @@ public class SceneChanger : MonoBehaviour
             Application.Quit();
         #endif
     }
+
+    private IEnumerator TransitionRoutine(int sceneBuildIndex)
+    {
+        yield return StartCoroutine(screenFader.FadeToBlack());
+        SceneManager.LoadScene(sceneBuildIndex);
+    }
+
+
+
+
 }
