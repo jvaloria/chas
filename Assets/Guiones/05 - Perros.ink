@@ -27,15 +27,10 @@ TODO SFX Ladrido
 
 ===BajoAuto===
 <i>Ya no escucho nada, parece que se fue...</i>
-* [Mejor me apuro a salir de acá y seguir viaje antes de que vuelva]
-    <i>Ya no siento miedo. Siento una forma de expansión. Como si al dejar de apurarme empezara a ver.</i>
-
-    <i>Me doy cuenta de que no busco una salida. Busco sentido. O algo parecido.</i>
-
+* [Mejor sigo viaje antes de que vuelva]
+    <i>Ya no siento miedo. Como si al dejar de apurarme empezara a ver.</i>
     <i>Me viene una urgencia por mirar desde más arriba.</i>
-    <i>No sé si para orientarme o para comprobar que todo esto es real. Pero lo necesito.</i>
-
-    <i>Esa necesidad no es lógica, es física. Como un hambre. Como si, desde una altura, pudiera entender mi lugar en todo esto.</i>
+    <i>Como si, desde una altura, pudiera entender mi lugar en todo esto.</i>
      ~ LoadScreen(7)
     ->DONE
 * [Hay una alcantarilla]

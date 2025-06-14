@@ -48,12 +48,12 @@ VAR gato_text_color = "purple"
     * [OK, voy para la derecha entonces]
         ~ LoadScreen(6)
         ->DONE
-    * [Este gato me dijo que vaya a la derecha, pero él se fué a la izquierda, mejor lo sigo]
+    * [El gato dijo derecha, pero se fué a la izquierda, mejor lo sigo]
         TODO Camino del pasado
         [VA A ESCENA NUEVA: PASADO]
         //->DONE
         // temporalmente dejo esto para poder elegir la otra opcion
         ->4Gatos
-    * [Mirá si le voy a hacer caso a un gato parlante, yo me vuelvo por donde vine]
+    * [Mirá si le voy a hacer caso a un gato parlante, vuelvo por donde vine]
         ~ LoadScreen(4)
 ->DONE
