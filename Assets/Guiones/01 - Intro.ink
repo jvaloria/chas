@@ -17,7 +17,7 @@ VAR chofer_text_color = "\#ADF0C7"
 =stitch
     *¿Por qué? No deben faltar muchas cuadras...
         ->TacheroAnnoyed
-    *[No pregunto por qué. En el fondo, ya lo sé. Hay lugares que no aceptan explicaciones. Bajo.]
+    *[Hay lugares que no aceptan explicaciones. Bajo.]
         ~ LoadScreen(2)
 ->DONE
 

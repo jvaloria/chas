@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 1061962438}
   - component: {fileID: 1061962437}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Img Tachero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443096420992897794, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1737268003995780488, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Pivot.x
@@ -504,7 +504,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852160698212597271, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590434853814362175, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610172478630925833, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Color.a
+      value: 0.92941177
       objectReference: {fileID: 0}
     - target: {fileID: 4036171081515845536, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: _continueIcon
@@ -613,6 +641,30 @@ PrefabInstance:
     - target: {fileID: 8153077765534294256, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450614253028576834, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.53333336
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -737,7 +789,7 @@ GameObject:
   - component: {fileID: 1796282277}
   - component: {fileID: 1796282276}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: BG-Negro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
