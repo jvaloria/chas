@@ -9,7 +9,7 @@ VAR ciclista_text_color = "\#BDB2FB"
 <i>Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.</i>
 <i>¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...</i>
 ~ LoadObject("celularmapa")
-~ PlaySound("eerieWind", 1)
+~ PlaySound("eerieWind", 0.5)
 <i>Lo que faltaba, me falla el mapa y no tengo señal...</i>
 ~ RemoveObject("celularmapa")
 +->
@@ -24,6 +24,7 @@ Imposible leer estos carteles
 
 ~ TimedOption(0, 8)
 ~ LoadObject("ciclista")
+~ PlaySound("BiciRing", 0.6)
 ->stitch2
 =stitch2
 *¡Flaco! ¡Esperá!
@@ -35,6 +36,7 @@ Imposible leer estos carteles
 === ciclista ===
 ~ RemoveObject("ciclista")
 ~ LoadObject("ciclistaStatic")
+~ LoadObject("PanelBloqueante")
 Disculpame...
     * ¿Sabés cómo llegar a <color=yellow>Avalos y Cádiz?</color>
         ->ciclista_RTA
@@ -45,6 +47,8 @@ Disculpame...
 === ciclista_RTA ===
 <color={ciclista_text_color}>Todas las paralelas a Pampa llevan a</color> <color=yellow>la fuente.</color>
     ~ RemoveObject("ciclistaStatic")
+    ~ RemoveObject("PanelBloqueante")
+    ~ PlaySound("BiciRing", 0.8)
     ~ infoViejoFuente = true
 ¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
     ~ LoadScreen(3)

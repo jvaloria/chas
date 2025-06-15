@@ -39,6 +39,7 @@ VAR vieja_text_color = "\#FF9E9E"
 ->main.yahora
 
 ===vieja===
+~ LoadObject("PanelBloqueante")
 <color={vieja_text_color}>Por fin llega la pizza! Por qué tardaste tanto?</color>
     *Perdón, no soy el del delivery. ¿me dice cómo llego a <color=yellow>Avalos y Cádiz</color>, por favor?
         -> viejaAvalosyCadiz
@@ -52,11 +53,13 @@ VAR vieja_text_color = "\#FF9E9E"
         Doblá acá a la izquierda, hacia Triunvirato.
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
+        ~ RemoveObject("PanelBloqueante")
         -> break_and_go
     *No soy el del delivery dije. por favor.
         <color={vieja_text_color}>Traeme la pizza te dije. La pizzería es doblando a la izquierda, hacia Triunvirato.</color>
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
+        ~ RemoveObject("PanelBloqueante")
         -> break_and_go
 
 
@@ -66,11 +69,13 @@ VAR vieja_text_color = "\#FF9E9E"
         <color={vieja_text_color}>doblá acá a la izquierda, hacia Triunvirato.</color>
         ~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
+        ~ RemoveObject("PanelBloqueante")
         -> break_and_go
     *que no soy el del delivery dije. por favor <color=yellow>la fuente</color>
         <color={vieja_text_color}>Meh... Seguí derecho, está por ahí.</color>
         ~ viejaMansionFuente = true
         ~ RemoveObject("Vieja")
+        ~ RemoveObject("PanelBloqueante")
         -> break_and_go
 
 === break_and_go ===
