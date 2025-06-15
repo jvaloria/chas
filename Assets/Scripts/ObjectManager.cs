@@ -24,7 +24,6 @@ public class ObjectManager : MonoBehaviour
 
     public void EnableObject(string objectName)
     {
-        Debug.Log("Enabling object: " + objectName);
         GameObject.FindFirstObjectByType<ObjectController>().EnableObject(objectName);
     }
     public void DisableObject(string objectName)

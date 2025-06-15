@@ -4,6 +4,7 @@ VAR ciclista_text_color = "\#BDB2FB"
 ->main
 
 === main ===
+
 ~PlaySound("bondiSeVa", 0.1)
 <i>Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.</i>
 <i>¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...</i>
@@ -11,13 +12,23 @@ VAR ciclista_text_color = "\#BDB2FB"
 ~ PlaySound("eerieWind", 1)
 <i>Lo que faltaba, me falla el mapa y no tengo señal...</i>
 ~ RemoveObject("celularmapa")
++->
+->queCalle
+
+=queCalle
+¿Que calle será esta?
+->queCalle
+
+=== cartelCalleNext ===
+Imposible leer estos carteles
+
 ~ TimedOption(0, 8)
 ~ LoadObject("ciclista")
 ->stitch2
 =stitch2
 *¡Flaco! ¡Esperá!
 ->ciclista
-*[Camino. Ya estoy acá, algo me empuja a seguir.]
+*{cartelCalle} [Camino. Ya estoy acá, algo me empuja a seguir.]
 ~ LoadScreen(3)
 ->DONE
 
@@ -36,5 +47,5 @@ Disculpame...
     ~ RemoveObject("ciclistaStatic")
     ~ infoViejoFuente = true
 ¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
-    ->main.stitch2
+    ->cartelCalleNext.stitch2
 ->DONE
