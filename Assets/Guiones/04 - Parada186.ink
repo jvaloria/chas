@@ -31,14 +31,14 @@ VAR gato_text_color = "purple"
         ~ LoadScreen(6)
         ->DONE
          //->4Gatos
-    * 186
+        //*186
         TODO SFX de Gato maullido enojado y se vá
         TODO Aparece el bondi 186 y te lleva por el camino del diablo
-        [VA A ESCENA NUEVA: DIABLO]
+        //[VA A ESCENA NUEVA: DIABLO]
         //~ LoadScreen(5)
         //->DONE
         // temporalmente dejo esto para poder elegir la otra opcion
-        ->main.stitch
+        //->main.stitch
     * ¿Qué?!!
         Miauu
         ~ RemoveObject("TuxedoCat")
