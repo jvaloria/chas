@@ -200,7 +200,7 @@ public class DialogueManager : MonoBehaviour
             canContinueToNextLine = true;
         }
 
-       
+
     }
 
     private void HideChoices()

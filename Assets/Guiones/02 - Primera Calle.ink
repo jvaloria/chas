@@ -47,5 +47,5 @@ Disculpame...
     ~ RemoveObject("ciclistaStatic")
     ~ infoViejoFuente = true
 ¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
-    ->cartelCalleNext.stitch2
+    ~ LoadScreen(3)
 ->DONE
