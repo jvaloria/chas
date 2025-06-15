@@ -13,12 +13,6 @@ public class WindowCounter : MonoBehaviour
         counter = 2;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void CounterUp()
     {
         counter++;

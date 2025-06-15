@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    [SerializeField] ScreenFader screenFader;
+
     /// <summary>
     /// Loads a scene based on the specified scene name.
     /// </summary>
     /// <param name="sceneName">The name of the scene to be loaded.</param>
-    [SerializeField] ScreenFader screenFader;
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
@@ -29,7 +30,7 @@ public class SceneChanger : MonoBehaviour
     {
         //screenFader.gameObject.SetActive(true);
         StartCoroutine(TransitionRoutine(sceneBuildIndex));
-        
+
     }
 
     /// <summary>
