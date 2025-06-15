@@ -1,3 +1,4 @@
+using GifImporter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,7 @@ public class Antenna : InteractableObject
         {
             StartCoroutine(FlashCoroutine());
         }
-        glitchingAntenna.SetActive(false);
+        glitchingAntenna.GetComponent<GifPlayer>().holdOnFirstFrame = true;
     }
 
     private IEnumerator FlashCoroutine()
