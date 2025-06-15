@@ -9,6 +9,7 @@ namespace GifImporter
     {
         public Gif Gif;
         public bool holdOnFirstFrame = false;
+        public int startingFrameIndex = 0;
 
         private int _index;
         private float _flip;
@@ -24,7 +25,9 @@ namespace GifImporter
             var frames = Gif.Frames;
             if (frames == null || frames.Count == 0) return;
 
-            _index = Mathf.Clamp(_index, 0, frames.Count - 1);
+            startingFrameIndex = Mathf.Clamp(startingFrameIndex, 0, frames.Count - 1);
+            _index = startingFrameIndex;
+
             Apply(frames[_index]);
         }
 
@@ -117,5 +120,3 @@ namespace GifImporter
         }
     }
 }
-
-
