@@ -8,10 +8,15 @@ namespace GifImporter
     public class GifPlayer : MonoBehaviour
     {
         public Gif Gif;
+        public bool holdOnFirstFrame = false;
 
-        private int   _index;
+        private int _index;
         private float _flip;
-        private Gif   _setGif;
+        private Gif _setGif;
+
+        private bool _playOnceForward = false;
+        private bool _playOnceReverse = false;
+        private bool _playingOneShot = false;
 
         private void OnEnable()
         {
@@ -19,38 +24,61 @@ namespace GifImporter
             var frames = Gif.Frames;
             if (frames == null || frames.Count == 0) return;
 
-            if (_index > frames.Count - 1)
-            {
-                _index = _index % frames.Count;
-            }
-
-            var frame = frames[_index];
-            Apply(frame);
+            _index = Mathf.Clamp(_index, 0, frames.Count - 1);
+            Apply(frames[_index]);
         }
 
         private void Update()
         {
-            if (Gif == null) return;
+            if (Gif == null || holdOnFirstFrame) return;
             var frames = Gif.Frames;
             if (frames == null || frames.Count == 0) return;
 
-            int index = _index;
+            int frameCount = frames.Count;
 
-            if (Application.isPlaying && _flip < Time.time)
+            if (_playingOneShot)
             {
-                index++;
+                if (Application.isPlaying && _flip < Time.time)
+                {
+                    if (_playOnceForward)
+                    {
+                        _index++;
+                        if (_index >= frameCount)
+                        {
+                            _index = frameCount - 1;
+                            _playingOneShot = false;
+                            _playOnceForward = false;
+                        }
+                        else Apply(frames[_index]);
+                    }
+                    else if (_playOnceReverse)
+                    {
+                        _index--;
+                        if (_index < 0)
+                        {
+                            _index = 0;
+                            _playingOneShot = false;
+                            _playOnceReverse = false;
+                        }
+                        else Apply(frames[_index]);
+                    }
+                }
             }
-
-            if (index > frames.Count - 1)
+            else
             {
-                index %= frames.Count;
-            }
+                int index = _index;
 
-            if (index != _index || _setGif != Gif)
-            {
-                _index = index;
-                var frame = frames[_index];
-                Apply(frame);
+                if (Application.isPlaying && _flip < Time.time)
+                {
+                    index++;
+                    if (index >= frameCount) index = 0;
+                }
+
+                if (index != _index || _setGif != Gif)
+                {
+                    _index = index;
+                    Apply(frames[_index]);
+                }
             }
         }
 
@@ -62,11 +90,32 @@ namespace GifImporter
                 _flip = Time.time + frame.DelayInMs * 0.001f;
 
                 if (spriteRenderer != null) spriteRenderer.sprite = frame.Sprite;
-                else if (image != null) image.sprite              = frame.Sprite;
+                else if (image != null) image.sprite = frame.Sprite;
 
                 _setGif = Gif;
             }
         }
+
+        public void PlayOnceForward()
+        {
+            if (Gif == null || Gif.Frames == null || Gif.Frames.Count == 0) return;
+            _playOnceForward = true;
+            _playOnceReverse = false;
+            _playingOneShot = true;
+            _index = 0;
+            Apply(Gif.Frames[_index]);
+        }
+
+        public void PlayOnceReverse()
+        {
+            if (Gif == null || Gif.Frames == null || Gif.Frames.Count == 0) return;
+            _playOnceForward = false;
+            _playOnceReverse = true;
+            _playingOneShot = true;
+            _index = Gif.Frames.Count - 1;
+            Apply(Gif.Frames[_index]);
+        }
     }
 }
+
 

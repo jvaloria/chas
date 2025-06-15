@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class WindowCounter : MonoBehaviour
 {
     private int counter;
-    [SerializeField] private MansionWindow[] windows = new MansionWindow[6];
+    [SerializeField] private MansionWindow[] windows = new MansionWindow[5];
     // Start is called before the first frame update
     void Start()
     {
-        counter = 1;
+        counter = 2;
     }
 
     // Update is called once per frame
@@ -29,7 +29,8 @@ public class WindowCounter : MonoBehaviour
     }
     public void DevilCheck()
     {
-        if (counter == 6)
+        Debug.Log("DevilCheck called, current counter: " + counter);
+        if (counter == 5)
         {
             foreach (var window in windows)
             {

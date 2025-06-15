@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GifImporter;
 
 public class MansionWindow : InteractableObject
 {
     [SerializeField] private List<MansionWindow> neighborWindows;
-    [SerializeField] private Sprite onSprite;
+    /*[SerializeField] private Sprite onSprite;
     [SerializeField] private Sprite offSprite;
-    [SerializeField] private Sprite devilSprite;
+    [SerializeField] private Sprite devilSprite;*/
+    [SerializeField] private GameObject onSpriteObject;
+    [SerializeField] private GameObject offSpriteObject;
+    [SerializeField] private GameObject devilSpriteObject;
     [SerializeField] private bool onOff;
     [SerializeField] WindowCounter windowCounter;
     private bool isDeviled = false;
@@ -16,6 +20,7 @@ public class MansionWindow : InteractableObject
 
     protected override void CustomAction()
     {
+        Debug.Log("window clicked");
         if (!isDeviled)
         {
             TurnOnOff();
@@ -32,13 +37,17 @@ public class MansionWindow : InteractableObject
         if (onOff)
         {
             onOff = false;
-            GetComponent<Image>().sprite = offSprite;
+            offSpriteObject.GetComponent<GifPlayer>().PlayOnceForward();
+            onSpriteObject.SetActive(false);
             windowCounter.CounterDown();
         }
         else
         {
             onOff = true;
-            GetComponent<Image>().sprite = onSprite;
+            offSpriteObject.GetComponent<GifPlayer>().PlayOnceReverse();
+            //offSpriteObject.SetActive(false);
+            onSpriteObject.SetActive(true);
+            //GetComponent<Image>().sprite = onSprite;
             windowCounter.CounterUp();
         }
     }
@@ -46,7 +55,10 @@ public class MansionWindow : InteractableObject
     public void setDevil()
     {
         isDeviled = true;
-        GetComponent<Image>().sprite = devilSprite;
+        onSpriteObject.SetActive(false);
+        //offSpriteObject.SetActive(false);
+        devilSpriteObject.SetActive(true);
+        //GetComponent<Image>().sprite = devilSprite;
         playsSound = false;
     }
 }
