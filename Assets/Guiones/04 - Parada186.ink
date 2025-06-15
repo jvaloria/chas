@@ -1,12 +1,22 @@
 INCLUDE GLOBALS.ink
 VAR gato_text_color = "purple"
+~ tuxedoCatMansion = true
 
 ->main
 
 ===main===
     ->stitch
     =stitch
-    <i>Doblo la esquina y el aire cambia. Otra vez el gato, me mira fijo.</i>
+     {tuxedoCatMansion:
+        ~ LoadObject("TuxedoCat")
+    }
+    <i>Doblo la esquina y el aire cambia. {tuxedoCatMansion: Otra vez el gato, me mira fijo.}</i>
+   
+    ->stitch
+->DONE
+
+
+===gatoTalk===
     <i>Es como si el animal tuviera una lengua que no suena pero se entiende.</i>
 
     <color={gato_text_color}>Te estabas por olvidar de vos, ¿no?</color>
@@ -27,7 +37,7 @@ VAR gato_text_color = "purple"
     * 4
         <color={gato_text_color}>Claro que somos 4</color>
         <i>El gato se aleja como si supiera a dónde va… y yo lo sigo.</i>
-        ~ RemoveObject("TuxedoCat")
+        ~ RemoveObject("TuxedoCatBig")
         ~ LoadScreen(6)
         ->DONE
          //->4Gatos

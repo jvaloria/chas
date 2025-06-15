@@ -12,7 +12,9 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool continuesStory;
     [SerializeField] private string storyKnot;
     [SerializeField] private bool activatesOther;
+    [SerializeField] private bool deactivatesOther;
     [SerializeField] private InteractableObject otherInteractableObject;
+    [SerializeField] private InteractableObject deactivatableInteractableObject;
 
     public void OnClick()
     {
@@ -38,6 +40,10 @@ public class InteractableObject : MonoBehaviour
             if (activatesOther)
             {
                 ObjectManager.GetInstance().EnableObject(otherInteractableObject.gameObject);
+            }
+            if (deactivatesOther)
+            {
+                ObjectManager.GetInstance().DisableObject(deactivatableInteractableObject.gameObject);
             }
         }
 
