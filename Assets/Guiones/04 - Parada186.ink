@@ -5,16 +5,27 @@ VAR gato_text_color = "purple"
 ->main
 
 ===main===
-    ->stitch
-    =stitch
      {tuxedoCatMansion:
         ~ LoadObject("TuxedoCat")
     }
     <i>Doblo la esquina y el aire cambia. {tuxedoCatMansion: Otra vez el gato, me mira fijo.}</i>
+    ->stitch
+    =stitch
+    <i>Otra encruzijada.</i>
     * [<i>Mejor vuelvo, mido y me voy.</i>]
-        ~ LoadScreen(6)
+        ~ LoadScreen(4)
         ->DONE
     ->stitch
+->DONE
+
+=== ParadaBondi ===
+~ TimedOption(0, 8)
+<i>¡Un colectivo!</i>
+*!Ey! ¡Esperá!
+~ LoadScreen(11)
+* [<i>Mejor vuelvo, mido y me voy.</i>]
+        ~ LoadScreen(6)
+        ->DONE
 ->DONE
 
 
@@ -30,9 +41,10 @@ VAR gato_text_color = "purple"
     * ¿Sabés dónde queda <color=yellow>la fuente</color>?
         ->AcertijoGato
         ~ LoadScreen(6)
-    * [No tengo tiempo para maullidos filosóficos.]
+    + [No tengo tiempo para maullidos filosóficos.]
         ~ RemoveObject("PanelBloqueante")
         ~ RemoveObject("TuxedoCatBig")
+        ~ LoadObject("TuxedoCat")
         ->main.stitch
 ->DONE
 
