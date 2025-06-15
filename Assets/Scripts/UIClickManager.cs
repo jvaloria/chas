@@ -69,6 +69,16 @@ public class UIClickManager : MonoBehaviour
                     // If the InteractableObject script is found, call its onClick method
                     interactable.OnClick();
                 }
+                else
+                {
+                    Debug.Log("UIClickManager: Clicked on UI element '" + clickedUiElement.name + "' but it does not have an InteractableObject script.");
+                    SmallTextObject obj = clickedUiElement.GetComponent<SmallTextObject>();
+                    Debug.Log("UIClickManager: Clicked on UI element '" + clickedUiElement.name + "' with SmallTextObject script.");
+                    if (obj)
+                    {
+                        obj.OnClick(); 
+                    }
+                }
                 /* Use this to see what was clicked if it wasn't an InteractableObject
                 // else
                 // {

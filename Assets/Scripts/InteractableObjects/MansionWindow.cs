@@ -20,7 +20,6 @@ public class MansionWindow : InteractableObject
 
     protected override void CustomAction()
     {
-        Debug.Log("window clicked");
         if (!isDeviled)
         {
             TurnOnOff();

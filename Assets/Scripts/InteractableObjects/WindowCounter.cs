@@ -23,7 +23,6 @@ public class WindowCounter : MonoBehaviour
     }
     public void DevilCheck()
     {
-        Debug.Log("DevilCheck called, current counter: " + counter);
         if (counter == 5)
         {
             foreach (var window in windows)
