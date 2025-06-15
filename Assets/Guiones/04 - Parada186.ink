@@ -11,12 +11,15 @@ VAR gato_text_color = "purple"
         ~ LoadObject("TuxedoCat")
     }
     <i>Doblo la esquina y el aire cambia. {tuxedoCatMansion: Otra vez el gato, me mira fijo.}</i>
-   
+    * [<i>Mejor vuelvo, mido y me voy.</i>]
+        ~ LoadScreen(6)
+        ->DONE
     ->stitch
 ->DONE
 
 
 ===gatoTalk===
+    ~ LoadObject("PanelBloqueante")
     <i>Es como si el animal tuviera una lengua que no suena pero se entiende.</i>
 
     <color={gato_text_color}>Te estabas por olvidar de vos, ¿no?</color>
@@ -27,8 +30,10 @@ VAR gato_text_color = "purple"
     * ¿Sabés dónde queda <color=yellow>la fuente</color>?
         ->AcertijoGato
         ~ LoadScreen(6)
-    * [No tengo tiempo para maullidos filosóficos. Vuelvo a la casa, mido y me voy.]
-        ~ LoadScreen(4)
+    * [No tengo tiempo para maullidos filosóficos.]
+        ~ RemoveObject("PanelBloqueante")
+        ~ RemoveObject("TuxedoCatBig")
+        ->main.stitch
 ->DONE
 
 === AcertijoGato ===
@@ -51,7 +56,8 @@ VAR gato_text_color = "purple"
         //->main.stitch
     * ¿Qué?!!
         Miauu
-        ~ RemoveObject("TuxedoCat")
+        ~ RemoveObject("TuxedoCatBig")
+        ~ RemoveObject("PanelBloqueante")
         ->main.stitch
 ->DONE
 
@@ -66,5 +72,6 @@ VAR gato_text_color = "purple"
         // temporalmente dejo esto para poder elegir la otra opcion
         ->4Gatos
     * [Mirá si le voy a hacer caso a un gato parlante, vuelvo por donde vine]
-        ~ LoadScreen(4)
+        ~ RemoveObject("PanelBloqueante")
+        ->main.stitch
 ->DONE
