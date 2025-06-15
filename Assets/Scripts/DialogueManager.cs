@@ -225,6 +225,17 @@ public class DialogueManager : MonoBehaviour
             {
                 _choices[index].gameObject.SetActive(true);
                 _choicesText[index].text = choice.text;
+                if (choice.text == "???")
+                {
+                    _choices[index].GetComponent<Button>().interactable = false;
+                    _choicesText[index].text = "???";
+                }
+                else
+                {
+                    _choices[index].GetComponent<Button>().interactable = true;
+                    _choicesText[index].text = choice.text;
+                }
+                
                 index++;
             }
 

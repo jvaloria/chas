@@ -610,7 +610,9 @@ MonoBehaviour:
   continuesStory: 1
   storyKnot: vieja
   activatesOther: 1
+  deactivatesOther: 0
   otherInteractableObject: {fileID: 1450490942}
+  deactivatableInteractableObject: {fileID: 0}
 --- !u!114 &228453324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2346,7 +2348,9 @@ MonoBehaviour:
   continuesStory: 1
   storyKnot: vieja
   activatesOther: 0
+  deactivatesOther: 0
   otherInteractableObject: {fileID: 0}
+  deactivatableInteractableObject: {fileID: 0}
 --- !u!61 &1450490943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2643,7 +2647,9 @@ MonoBehaviour:
   continuesStory: 1
   storyKnot: tuxedoCat
   activatesOther: 0
+  deactivatesOther: 0
   otherInteractableObject: {fileID: 0}
+  deactivatableInteractableObject: {fileID: 0}
 --- !u!114 &1965299103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,7 +2832,9 @@ MonoBehaviour:
   continuesStory: 1
   storyKnot: rayo
   activatesOther: 1
+  deactivatesOther: 0
   otherInteractableObject: {fileID: 1965299102}
+  deactivatableInteractableObject: {fileID: 0}
   flashImage: {fileID: 869652085}
   flashDuration: 0.1
   fadeDuration: 0.2
@@ -3040,7 +3048,9 @@ MonoBehaviour:
   continuesStory: 0
   storyKnot: 
   activatesOther: 0
+  deactivatesOther: 0
   otherInteractableObject: {fileID: 0}
+  deactivatableInteractableObject: {fileID: 0}
   neighborWindows:
   - {fileID: 1544133360}
   - {fileID: 1158385404}
