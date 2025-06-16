@@ -4,8 +4,8 @@ INCLUDE GLOBALS.ink
 
 ===main===
 <i>Desde lo alto, siento algo. No lo veo, lo percibo. Como una hebra de pensamiento que no es mía, pero que igual me lleva.</i>
+~ PlaySound("flappingWings", 0.6)
 ~ LoadObject("Sparrow")
-TODO SFX de alas de pajaro
 <i>Es un gorrión. Salta de un lado al otro. Me guía sin mirarme.</i>
 
 <i>Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.</i>
@@ -22,18 +22,14 @@ TODO SFX de alas de pajaro
         ->choicesKnot
     ->DONE
     * [Salto con todas mis fuerzas para agarrarlo]
+        TODO [IMPLEMENTAR MUERTE]
         TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
         ~ LoadScreen(11)
         ->DONE
-    /** [Mejor me bajo y vuelvo para Triunvirato]
-        TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR OTRO CAMINO]
-        ~ LoadScreen(8)
-        ->DONE*/
 ->DONE
 
 ===urraca===
 ~ urracaFlies = true
+~ PlaySound("flappingWings", 0.6)
 ->main.choicesKnot
 ->DONE

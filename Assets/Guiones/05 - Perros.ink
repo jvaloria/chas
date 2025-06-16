@@ -34,6 +34,7 @@ VAR usedCar = false
     * [Me arrinconó, es el o yo...]
         TODO hacer que pueda volver de la death scene
         TODO [IMPLEMENTAR MUERTE]
+        ~ PlaySound("PerroMuerte", 0.6)
         ~ LoadScreen(11)
         ->DONE
     +->

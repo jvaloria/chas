@@ -367,6 +367,7 @@ MonoBehaviour:
   SceneBGMVolume: 1
   SceneSounds:
   - {fileID: 8300000, guid: 23b7d5c0568584b48b88008e0e133825, type: 3}
+  - {fileID: 8300000, guid: dad47a2ca6e520e41b63ebd78077dd49, type: 3}
 --- !u!4 &290710328
 Transform:
   m_ObjectHideFlags: 0

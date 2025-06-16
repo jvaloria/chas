@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 290710328}
   - component: {fileID: 290710327}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: SoundController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneBGM: {fileID: 8300000, guid: 4974387690a4f1d4c87461aae2b2cdb9, type: 3}
   SceneBGMVolume: 1
-  SceneSounds: []
+  SceneSounds:
+  - {fileID: 8300000, guid: 113250dcc2b268a4aa9cf0a6c7f5ac4c, type: 3}
 --- !u!4 &290710328
 Transform:
   m_ObjectHideFlags: 0
@@ -685,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 11412409e0571e949a8bb00ab3b74012, type: 3}
     - target: {fileID: 1277818088139068453, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Name
-      value: UI Canvas (1)
+      value: UI Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 1737268003995780488, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Pivot.x
