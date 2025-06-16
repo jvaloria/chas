@@ -48,7 +48,7 @@ public class PajarilloTejado : InteractableObject
 
     public void moveToCompensate()
     {
-        transform.position += new Vector3(1f, 0f, 0f);
+        transform.position += new Vector3(1.01f, 0f, 0f);
     }
 
     public void StartFlying()

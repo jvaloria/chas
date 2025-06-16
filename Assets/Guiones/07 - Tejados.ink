@@ -4,8 +4,8 @@ INCLUDE GLOBALS.ink
 
 ===main===
 <i>Desde lo alto, siento algo. No lo veo, lo percibo. Como una hebra de pensamiento que no es mía, pero que igual me lleva.</i>
-TODO SFX de alas de pajaro
 ~ LoadObject("Sparrow")
+TODO SFX de alas de pajaro
 <i>Es un gorrión. Salta de un lado al otro. Me guía sin mirarme.</i>
 
 <i>Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.</i>
