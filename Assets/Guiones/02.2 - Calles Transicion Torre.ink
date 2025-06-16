@@ -4,6 +4,5 @@
 
 ===main===
 <i>Siento que alguien, o algo, me está esperando.</i>
-<i>Esa casa tiene luz. Tal vez alguien me pueda dar una dirección... o una respuesta.</i>
-~ LoadScreenByName("3 - Casa Embrujada")
+~ LoadScreenByName("2.3 - Calles transicion luz")
 ->DONE
