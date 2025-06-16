@@ -7,7 +7,9 @@ public class WindowCounter : MonoBehaviour
 {
     private int counter;
     [SerializeField] private MansionWindow[] windows = new MansionWindow[5];
-    // Start is called before the first frame update
+
+    [SerializeField] private InteractableObject otherInteractableObject;
+
     void Start()
     {
         counter = 2;
@@ -29,6 +31,7 @@ public class WindowCounter : MonoBehaviour
             {
                 window.setDevil();
             }
+            ObjectManager.GetInstance().EnableObject(otherInteractableObject.gameObject);
         }
     }
 }
