@@ -1,18 +1,18 @@
-﻿INCLUDE GLOBALS.ink
+INCLUDE GLOBALS.ink
 VAR vieja_text_color = "\#FF9E9E"
 
 ->main
 
 ===main===
 ~ LoadObject("Vieja")
-<i>Vuelvo. La encuentro en la puerta, como si nunca se hubiera movido. Le doy el agua.</i>
+<i>Vuelvo. La encuentro en la puerta, como si nunca se hubiera movido.</i>
+*[<i>Le doy el agua.</i>]
+// TODO efecto exorcismo, podria ser el flash blanco con otros valores tipo mas lento
+~ PlaySound("exorcismo", 0.5)
 ~ RemoveObject("Vieja")
-// TODO efecto exorcismo
-// ~ PlaySound("exorcismo", 0.5)
-// TODO escena terreno
-LA CASA DESAPARECE Y EN SU LUGAR APARECE UN TERRENO
-
-Apenas la sostiene entre las manos, la casa… desaparece. No se derrumba. No se esfuma. Simplemente deja de estar.
+// TODO Fade to white
+// TODO [LA CASA DESAPARECE Y EN SU LUGAR APARECE UN TERRENO]
+<i>Apenas la sostiene entre las manos, la casa... desaparece. No se derrumba. No se esfuma. Simplemente deja de estar.</i>
 
 Frente a mí, el terreno. Justo como decía la orden de trabajo.
 Mido rápido. El láser funciona. Los números tienen sentido. Pero yo no.

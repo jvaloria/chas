@@ -1,4 +1,4 @@
-﻿INCLUDE GLOBALS.ink
+INCLUDE GLOBALS.ink
 
 ->main
 
