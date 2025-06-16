@@ -17,16 +17,17 @@ VAR ciclista_text_color = "\#BDB2FB"
 
 =queCalle
 ¿Que calle será esta?
+    *???
+    ->DONE
 ->queCalle
 
 === cartelCalleNext ===
-Imposible leer estos carteles
-
 ~ TimedOption(0, 8)
 ~ LoadObject("ciclista")
 ~ PlaySound("BiciRing", 0.6)
 ->stitch2
 =stitch2
+Imposible leer estos carteles
 *¡Flaco! ¡Esperá!
 ->ciclista
 *{cartelCalle} [Camino. Ya estoy acá, algo me empuja a seguir.]
@@ -46,9 +47,9 @@ Disculpame...
 
 === ciclista_RTA ===
 <color={ciclista_text_color}>Todas las paralelas a Pampa llevan a</color> <color=yellow>la fuente.</color>
+    ~ PlaySound("BiciRing", 0.8)
     ~ RemoveObject("ciclistaStatic")
     ~ RemoveObject("PanelBloqueante")
-    ~ PlaySound("BiciRing", 0.8)
     ~ infoViejoFuente = true
 ¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
     ~ LoadScreen(3)
