@@ -1,6 +1,7 @@
 INCLUDE GLOBALS.ink
 VAR usedCar = false
 
+
 ->main
 
 ===main===

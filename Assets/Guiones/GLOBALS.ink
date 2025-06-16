@@ -8,6 +8,7 @@ VAR cartelCalle = false
 VAR infoViejoFuente = false
 VAR aguaBendita = false
 VAR tuxedoCatMansion = false
+VAR siameseCatMansion = false
 VAR viejaMansionPizza = false
 VAR viejaMansionFuente = false
 VAR clickedCar = false
