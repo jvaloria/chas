@@ -10,7 +10,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool hasCustomAction;
     [SerializeField] private bool isUsedOnce;
     private bool _alreadyUsed = false;
-    [SerializeField] private bool continuesStory;
+    [SerializeField] protected bool continuesStory;
     [SerializeField] private string storyKnot;
     [SerializeField] private bool activatesOther;
     [SerializeField] private bool deactivatesOther;

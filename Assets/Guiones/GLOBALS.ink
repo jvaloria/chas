@@ -11,3 +11,4 @@ VAR viejaMansionPizza = false
 VAR viejaMansionFuente = false
 VAR clickedCar = false
 VAR clickedTree = false
+VAR urracaFlies = false

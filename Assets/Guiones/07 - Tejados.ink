@@ -7,11 +7,15 @@ TODO SFX de alas de pajaro
 <i>No pienso. No recuerdo. Me siento.</i>
 
 <i>Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.</i>
-
+->choicesKnot
+=choicesKnot
 <i>¿Qué hago?</i>
-    *[La urraca salta como marcando un camino… y yo me dejo llevar.]
-        ~ LoadScreen(9)
-        ->DONE
+    *{urracaFlies} [La urraca salta como marcando un camino… y yo me dejo llevar.]
+        ->choicesKnot
+    ->DONE
+    *{!urracaFlies} [???]
+        ->choicesKnot
+    ->DONE
     * [Salto con todas mis fuerzas]
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
@@ -22,4 +26,9 @@ TODO SFX de alas de pajaro
         [IMPLEMENTAR OTRO CAMINO]
         ~ LoadScreen(8)
         ->DONE
+->DONE
+
+===urraca===
+~ urracaFlies = true
+->main.choicesKnot
 ->DONE
