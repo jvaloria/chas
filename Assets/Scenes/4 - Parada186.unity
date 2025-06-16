@@ -567,9 +567,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 0}
   continuesStory: 1
   storyKnot: gatoTalk
   activatesOther: 1
@@ -850,6 +851,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4360206561383092768, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360206561383092768, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -901,26 +906,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 701935169}
-    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ead654d36f224ba48a06ef5871f91d5b, type: 2}
-    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -2243972653973762622, guid: ead654d36f224ba48a06ef5871f91d5b, type: 2}
-    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026415146397205986, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 74.410034
-      objectReference: {fileID: 0}
     - target: {fileID: 8153077765534294256, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1022,9 +1007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 0}
   continuesStory: 0
   storyKnot: 
   activatesOther: 0
@@ -1527,9 +1513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 0}
   continuesStory: 0
   storyKnot: 
   activatesOther: 0
@@ -1663,9 +1650,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
+  clipVolume: 0.1
+  objectAudio: {fileID: 8300000, guid: 87119ebec78691d49925474645f13ab4, type: 3}
   hasCustomAction: 0
   isUsedOnce: 1
-  objectAudio: {fileID: 8300000, guid: 87119ebec78691d49925474645f13ab4, type: 3}
   continuesStory: 1
   storyKnot: ParadaBondi
   activatesOther: 1
@@ -1761,9 +1749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 0}
   continuesStory: 0
   storyKnot: 
   activatesOther: 0

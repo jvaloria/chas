@@ -503,9 +503,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
+  clipVolume: 0.1
+  objectAudio: {fileID: 8300000, guid: f6c47a032ebd1584ba7ec7a18a10b8b2, type: 3}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 8300000, guid: f6c47a032ebd1584ba7ec7a18a10b8b2, type: 3}
   continuesStory: 1
   storyKnot: vieja
   activatesOther: 1
@@ -1269,6 +1270,14 @@ PrefabInstance:
     - target: {fileID: 6765509407430964560, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_SortingOrder
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8153077765534294256, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2287,9 +2296,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 0
-  objectAudio: {fileID: 0}
   continuesStory: 1
   storyKnot: vieja
   activatesOther: 0
@@ -2586,9 +2596,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
+  clipVolume: 0.5
+  objectAudio: {fileID: 8300000, guid: 3b7287b76e0b9e14da790bed461eb581, type: 3}
   hasCustomAction: 1
   isUsedOnce: 1
-  objectAudio: {fileID: 8300000, guid: 3b7287b76e0b9e14da790bed461eb581, type: 3}
   continuesStory: 1
   storyKnot: tuxedoCat
   activatesOther: 0
@@ -2771,9 +2782,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
+  clipVolume: 0.3
+  objectAudio: {fileID: 8300000, guid: 6e1fbac347bafa84f8ad91424b5bfc79, type: 3}
   hasCustomAction: 1
   isUsedOnce: 1
-  objectAudio: {fileID: 8300000, guid: 6e1fbac347bafa84f8ad91424b5bfc79, type: 3}
   continuesStory: 1
   storyKnot: rayo
   activatesOther: 1
@@ -2987,9 +2999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
+  clipVolume: 1
+  objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
-  objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   continuesStory: 0
   storyKnot: 
   activatesOther: 0

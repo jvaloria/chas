@@ -18,6 +18,7 @@ public class TimedOptionSlider : MonoBehaviour
         if (_timePassed > _actionableTime)
         {
             _button.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 

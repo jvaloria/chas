@@ -18,8 +18,7 @@ VAR gato_text_color = "purple"
 ->DONE
 
 === ParadaBondi ===
-~ TimedOption(0, 8)
-<i>¡Un colectivo!</i>
+<i>¡Un colectivo!</i> {TimedOption(0, 8)}
 *!Ey! ¡Esperá!
 ~ LoadScreen(11)
 * [<i>Mejor vuelvo, mido y me voy.</i>]

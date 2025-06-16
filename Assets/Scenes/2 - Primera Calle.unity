@@ -1218,6 +1218,7 @@ MonoBehaviour:
   SceneSounds:
   - {fileID: 8300000, guid: 511a6705d8397b34e9d8ff0fc157cc19, type: 3}
   - {fileID: 8300000, guid: 87119ebec78691d49925474645f13ab4, type: 3}
+  - {fileID: 8300000, guid: 00b79428440612b46b00fb5db1437362, type: 3}
 --- !u!114 &1608055506
 MonoBehaviour:
   m_ObjectHideFlags: 0

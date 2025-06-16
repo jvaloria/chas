@@ -5,10 +5,11 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField] protected bool playsSound;
+    [SerializeField] protected float clipVolume = 1f;
+    [SerializeField] private AudioClip objectAudio;
     [SerializeField] private bool hasCustomAction;
     [SerializeField] private bool isUsedOnce;
     private bool _alreadyUsed = false;
-    [SerializeField] private AudioClip objectAudio;
     [SerializeField] private bool continuesStory;
     [SerializeField] private string storyKnot;
     [SerializeField] private bool activatesOther;
@@ -27,7 +28,7 @@ public class InteractableObject : MonoBehaviour
             }
             if (playsSound)
             {
-                SoundManager.PlaySFX(objectAudio);
+                SoundManager.PlaySFX(objectAudio, clipVolume);
             }
             if (hasCustomAction)
             {
