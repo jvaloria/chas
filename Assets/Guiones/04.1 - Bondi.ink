@@ -17,9 +17,24 @@ VAR devilCat_text_color = "\#FF400E"
     ->DONE
 *{!devilCatMansion} [???]
     ->DONE
-* [Siento que me hundo...]
-        TODO hacer que pueda volver de la death scene
-        TODO [IMPLEMENTAR MUERTE]
+* [Apoyo la cabeza contra la ventana...]
+    // TODO Fade to black
+    // TODO acallar bondi
+    <i>Me duermo... El zumbido del motor desaparece...</i>
+    <i>El silencio me empuja hacia adentro, como si el colectivo dejara de moverse pero yo siguiera cayendo.</i>
+    // TODO APARECE UNA FIGURA ROJA A LO LEJOS
+    <color={devil_text_color}>No te preocupes, no te vas a perder.</color>
+    <i>Una figura roja se acerca, me mira y sonríe.</i>
+    <color={devil_text_color}>No te vas a perder, porque no vas a volver a despertar.</color>
+    <i>Solo veo oscuridad. Esa figura me llama. No quiero ir... </i>
+    <i>Pero quizás es la única que me queda.</i>
+    //TODO LA FIGURA ROJA SE ACERCA AÚN MAS Y AHORA LA VEMOS EN PPP
+    // TODO DIABLO - LOCUCIÓN
+    ~ PlaySound("devilSpeak", 1)
+    <color={devil_text_color}>Nadie se pierde en Parque Chas. Solo dejan de buscar la salida.</color>
+    //TODO hacer que pueda volver de la death scene
+    //TODO [IMPLEMENTAR MUERTE]
+    // TODO MSG SOS UN ALMA PERDIDA EN PARQUE CHAS
     ~ LoadScreenByName("Muerte")
     ->DONE
 ->DONE

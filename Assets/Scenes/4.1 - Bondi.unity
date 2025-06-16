@@ -460,8 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneBGM: {fileID: 8300000, guid: 408c47a6aba326a47914098f2f98bcb7, type: 3}
-  SceneBGMVolume: 0.1
-  SceneSounds: []
+  SceneBGMVolume: 0.05
+  SceneSounds:
+  - {fileID: 8300000, guid: e04d5dabf1736d84a9e2d73c562ba29f, type: 3}
 --- !u!4 &290710328
 Transform:
   m_ObjectHideFlags: 0
