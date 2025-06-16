@@ -7,7 +7,8 @@ INCLUDE GLOBALS.ink
 <i>Soy libre.</i>
 <i>Y por fin, estoy en casa.</i>
 TODO implementar escena de fin o usar esta
-~ LoadObject("Fin")
 ~ RemoveObject("DialoguePanel")
-//~ LoadScreen(10)
+~ RemoveObject("arrowIcon")
+~ LoadObject("Fin")
+* hack
 ->END

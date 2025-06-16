@@ -246,6 +246,8 @@ public class DialogueManager : MonoBehaviour
                 index++;
             }
 
+            _continueIcon.SetActive(index == 0);
+
             for (int i = index; i < _choices.Length; i++)
             {
                 _choices[i].gameObject.SetActive(false);
