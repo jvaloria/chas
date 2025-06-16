@@ -19,23 +19,32 @@ public class SparrowAnimator : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        int currentState = animator.GetInteger("pajaritoState");
-        animator.SetInteger("pajaritoState", currentState + 1);
-        animator.SetBool("isClicked", false);
-        animator.SetBool("isClickable", true);
-        if(animator.GetInteger("pajaritoState") == 2)
+        //if (animator.GetBool("isClicked") )
+        //{
+            int currentState = animator.GetInteger("pajaritoState");
+            animator.SetInteger("pajaritoState", currentState + 1);
+            animator.SetBool("isClicked", false);
+            animator.SetBool("isClickable", true);
+            if (animator.GetInteger("pajaritoState") == 2)
+            {
+                animator.transform.localScale *= 0.89f;
+                animator.gameObject.GetComponent<PajarilloTejado>().moveToCompensate();
+            }
+            if (animator.GetInteger("pajaritoState") == 3)
+            {
+                animator.gameObject.GetComponent<PajarilloTejado>().moveToCompensate();
+                animator.transform.localScale *= 0.89f;
+                animator.gameObject.GetComponent<PajarilloTejado>().EnableStory();
+            }
+        //}
+        /*else
         {
-            //animator.transform.position = new Vector3(-190.7f, 46.2f, 0f);
-            Debug.Log("no me anda la linea de arriba, lo manda a cualquier lado. ver trigerear cambio de posicion en otro lado");
-            animator.transform.localScale *= 0.89f;
-        }
-        if (animator.GetInteger("pajaritoState") == 3)
-        {
-            animator.transform.localScale *= 0.89f;
-            //animator.gameObject.transform.position = new Vector3(-130, 46.4f, 0f);
-            Debug.Log("no me anda la linea de arriba, lo manda a cualquier lado. ver trigerear cambio de posicion en otro lado");
-            animator.gameObject.GetComponent<PajarilloTejado>().EnableStory();
-        }
+            if(animator.GetInteger("pajaritoState") == 3)
+            {
+                animator.gameObject.GetComponent<PajarilloTejado>().StartFlying();
+            }
+        }*/
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
