@@ -10,7 +10,7 @@ VAR gato_text_color = "purple"
     <i>Doblo la esquina y el aire cambia. {tuxedoCatMansion: Otra vez el gato, me mira fijo.}</i>
     ->stitch
     =stitch
-    <i>Otra encruzijada.</i>
+    <i>Otra encrucijada.</i>
     * [<i>Mejor vuelvo, mido y me voy.</i>]
         ~ LoadScreen(4)
         ->DONE

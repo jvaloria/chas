@@ -44,7 +44,7 @@ VAR usedCar = false
 
 ===BajoAuto===
 ~ usedCar = true
-<i>Me oculté lo más rápido que pude. Parece que se fue...</i>
+<i>Me oculto lo más rápido que puedo. Parece que se fue...</i>
 * [Mejor sigo viaje antes de que vuelva]
     ->main.yahora
     ->DONE
@@ -56,7 +56,7 @@ VAR usedCar = false
 ->DONE
 
 ===ArribaArbol===
-    <i>Trepé lo más rápido que pude y cuando llegué arriba ya no escucho nada...</i>
+    <i>Trepo lo más rápido que puedo y cuando llego arriba ya no escucho nada...</i>
     <i>Me viene una urgencia por mirar desde más arriba.</i>
     <i>Como si, desde una altura, pudiera entender mi lugar en todo esto.</i>
     ~ LoadScreen(7)
