@@ -10,7 +10,15 @@ VAR usedCar = false
 <i>Se me cierra el pecho, como si me hubieran recordado algo que había preferido olvidar.</i>
 ->yahora
 =yahora
-{not usedCar: <color=red>Grrrrrrrrrrrrrrrr</color> | <i>Escucho algo allá arriba.</i> }
+
+{ not usedCar:
+    TODO alargar audio, de 10 a 20+ segundos y ver bool para que no se repita
+	~ PlaySound("perros", 0.6)
+    <color=red>Grrrrrrrrrrrrrrrr</color>
+- else:
+	<i>Escucho algo allá arriba.</i>
+}
+
     *{clickedCar} [¡Rápido, abajo de ese auto así no me mata!]
         ->BajoAuto
     ->DONE

@@ -13,7 +13,7 @@ TODO BGM Mistico
     ->BebeGatoBebe
     * [Me alejo. Hay algo en ese reflejo que no estoy listo para ver.]
         TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR OTRO CAMINO]
+        [IMPLEMENTAR MUERTE]
         ~ LoadScreen(11)
         ->DONE
 ->DONE

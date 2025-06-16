@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 290710328}
   - component: {fileID: 290710327}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: SoundController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,7 +365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneBGM: {fileID: 8300000, guid: 4974387690a4f1d4c87461aae2b2cdb9, type: 3}
   SceneBGMVolume: 1
-  SceneSounds: []
+  SceneSounds:
+  - {fileID: 8300000, guid: 23b7d5c0568584b48b88008e0e133825, type: 3}
 --- !u!4 &290710328
 Transform:
   m_ObjectHideFlags: 0
@@ -432,9 +433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 1
-  objectAudio: {fileID: 0}
   continuesStory: 1
   storyKnot: clickCar
   activatesOther: 0
@@ -810,9 +812,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
   hasCustomAction: 0
   isUsedOnce: 1
-  objectAudio: {fileID: 0}
   continuesStory: 1
   storyKnot: clickTree
   activatesOther: 0
