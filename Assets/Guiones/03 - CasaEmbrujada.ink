@@ -9,22 +9,22 @@ VAR vieja_text_color = "\#FF9E9E"
 =yahora
 <i>¿Qué hago?</i>
     *{tuxedoCatMansion} [¿Maullidos? Suenan cerca. Mejor voy a ver qué pasa.]
-    ~ LoadScreen(5)
+    ~ LoadScreenByName("4 - Parada186")
     ->DONE
     *{!tuxedoCatMansion} [???]
-    ~ LoadScreen(5)
+    ~ LoadScreenByName("4 - Parada186")
     ->DONE
     *{viejaMansionPizza} [Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.]
-    ~ LoadScreen(5)
+    ~ LoadScreenByName("4 - Parada186")
     ->DONE
     *{!viejaMansionPizza} [???]
-    ~ LoadScreen(5)
+    ~ LoadScreenByName("4 - Parada186")
     ->DONE
     *{viejaMansionFuente} [Si sigo derecho voy a la fuente, el de la bici me mandó para ahí]
-     ~ LoadScreen(5)
+     ~ LoadScreenByName("4 - Parada186")
     ->DONE
     *{!viejaMansionFuente} [???]
-     ~ LoadScreen(5)
+     ~ LoadScreenByName("4 - Parada186")
     ->DONE
     +->
     ->yahora

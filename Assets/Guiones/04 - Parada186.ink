@@ -11,18 +11,19 @@ VAR gato_text_color = "purple"
     ->stitch
     =stitch
     <i>Otra encrucijada.</i>
-    * [<i>Mejor vuelvo, mido y me voy.</i>]
-        ~ LoadScreen(4)
+    * [<i>Mejor vuelvo a buscar el terreno, mido y me voy.</i>]
+        ~ LoadScreenByName("3 - Casa Embrujada")
         ->DONE
     ->stitch
 ->DONE
 
 === ParadaBondi ===
 <i>¡Un colectivo!</i> {TimedOption(0, 8)}
-*!Ey! ¡Esperá!
-~ LoadScreen(11)
-* [<i>Mejor vuelvo, mido y me voy.</i>]
-        ~ LoadScreen(6)
+*[<i>Me lo tomo, cualquier lugar es mejor que acá.</i>]
+~ LoadScreenByName("4.1 - Bondi")
+->DONE
+* [<i>Mejor vuelvo a buscar el terreno, mido y me voy.</i>]
+        ~ LoadScreenByName("5 - Perros")
         ->DONE
 ->DONE
 
@@ -38,7 +39,7 @@ VAR gato_text_color = "purple"
 
     * ¿Sabés dónde queda <color=yellow>la fuente</color>?
         ->AcertijoGato
-        ~ LoadScreen(6)
+        ~ LoadScreenByName("5 - Perros")
     + [No tengo tiempo para maullidos filosóficos.]
         ~ RemoveObject("PanelBloqueante")
         ~ RemoveObject("TuxedoCatBig")
@@ -53,7 +54,7 @@ VAR gato_text_color = "purple"
         <color={gato_text_color}>Claro que somos 4</color>
         <i>El gato se aleja como si supiera a dónde va… y yo lo sigo.</i>
         ~ RemoveObject("TuxedoCatBig")
-        ~ LoadScreen(6)
+        ~ LoadScreenByName("5 - Perros")
         ->DONE
          //->4Gatos
         //*186
@@ -73,7 +74,7 @@ VAR gato_text_color = "purple"
 
 === 4Gatos ===
     * [OK, voy para la derecha entonces]
-        ~ LoadScreen(6)
+        ~ LoadScreenByName("5 - Perros")
         ->DONE
     * [El gato dijo derecha, pero se fué a la izquierda, mejor lo sigo]
         TODO Camino del pasado

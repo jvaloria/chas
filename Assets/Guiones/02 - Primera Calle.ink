@@ -31,7 +31,7 @@ Imposible leer estos carteles
 *¡Flaco! ¡Esperá!
 ->ciclista
 *{cartelCalle} [Camino. Ya estoy acá, algo me empuja a seguir.]
-~ LoadScreen(3)
+~ LoadScreenByName("2.1 - Calles transicion")
 ->DONE
 
 === ciclista ===
@@ -52,5 +52,5 @@ Disculpame...
     ~ RemoveObject("PanelBloqueante")
     ~ infoViejoFuente = true
 ¿<color=yellow>La fuente</color>? ¿y eso que tiene que ver? Gracias por nada.
-    ~ LoadScreen(3)
+    ~ LoadScreenByName("2.1 - Calles transicion")
 ->DONE

@@ -9,5 +9,5 @@ TODO SFX de alas de pajaro
 <i>Es una urraca. Salta de techo en techo. Me guía sin mirarme.</i>
 
 <i>Y yo la sigo.</i>
-~ LoadScreen(8)
+~ LoadScreenByName("7 - Tejados")
 ->DONE

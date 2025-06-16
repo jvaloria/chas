@@ -14,12 +14,12 @@ TODO BGM Mistico
     * [Me alejo. Hay algo en ese reflejo que no estoy listo para ver.]
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
-        ~ LoadScreen(11)
+        ~ LoadScreenByName("Muerte")
         ->DONE
 ->DONE
 
 === BebeGatoBebe ===
 <i>No hay milagro. No hay revelación. Solo un descanso. Una apertura. Como si, por fin, pudiera quitarme el peso del alma.</i>
 <i>La noche ya no me pesa. El mundo no me exige. No me acuerdo del trabajo. No me acuerdo del nombre. Y no me hace falta.</i>
-~ LoadScreen(10)
+~ LoadScreenByName("Final 1 - Gato")
 ->DONE

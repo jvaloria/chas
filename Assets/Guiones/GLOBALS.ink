@@ -2,6 +2,7 @@ EXTERNAL LoadObject(string object)
 EXTERNAL RemoveObject(string object)
 EXTERNAL TimedOption(int optionNumber, int timeForOption)
 EXTERNAL LoadScreen(int screenNumber)
+EXTERNAL LoadScreenByName (string sceneName)
 EXTERNAL PlaySound(string soundToPlay, float volume)
 VAR cartelCalle = false
 VAR infoViejoFuente = false

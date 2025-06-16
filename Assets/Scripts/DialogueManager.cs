@@ -74,7 +74,10 @@ public class DialogueManager : MonoBehaviour
         _currentStory.BindExternalFunction("LoadScreen", (int screenToLoad) =>
         {
             FindAnyObjectByType<SceneChanger>().LoadSceneByIndex(screenToLoad);
-            //SceneManager.LoadScene(screenToLoad);
+        });
+        _currentStory.BindExternalFunction("LoadScreenByName", (string sceneName) =>
+        {
+            FindAnyObjectByType<SceneChanger>().LoadSceneByName(sceneName);
         });
         _currentStory.BindExternalFunction("LoadObject", (string imageToLoad) =>
         {
@@ -100,6 +103,7 @@ public class DialogueManager : MonoBehaviour
     private void ExitDialogueMode()
     {
         _currentStory.UnbindExternalFunction("LoadScreen");
+        _currentStory.UnbindExternalFunction("LoadScreenByName");
         _currentStory.UnbindExternalFunction("LoadImage");
         _currentStory.UnbindExternalFunction("RemoveImage");
         _currentStory.UnbindExternalFunction("TimedOption");

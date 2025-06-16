@@ -15,7 +15,7 @@ INCLUDE GLOBALS.ink
     *{urracaFlies} [El gorrión escapa, como marcando un camino... y yo me dejo llevar.]
         <i>El gorrión me lleva lejos, muy lejos.</i>
         <i>Y yo lo sigo.</i>
-        ~ LoadScreen(9)
+        ~ LoadScreenByName("8 - Fuente")
         ->DONE
     ->DONE
     *{!urracaFlies} [???]
@@ -24,7 +24,7 @@ INCLUDE GLOBALS.ink
     * [Salto con todas mis fuerzas para agarrarlo]
         TODO [IMPLEMENTAR MUERTE]
         TODO hacer que pueda volver de la death scene
-        ~ LoadScreen(11)
+        ~ LoadScreenByName("Muerte")
         ->DONE
 ->DONE
 

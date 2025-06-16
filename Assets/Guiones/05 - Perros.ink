@@ -1,7 +1,6 @@
 INCLUDE GLOBALS.ink
 VAR usedCar = false
 
-
 ->main
 
 ===main===
@@ -35,7 +34,7 @@ VAR usedCar = false
         TODO hacer que pueda volver de la death scene
         TODO [IMPLEMENTAR MUERTE]
         ~ PlaySound("PerroMuerte", 0.6)
-        ~ LoadScreen(11)
+        ~ LoadScreenByName("Muerte")
         ->DONE
     +->
     ->yahora
@@ -60,7 +59,7 @@ VAR usedCar = false
 * [Hay una alcantarilla]
     TODO Va a laberinto
     //[IMPLEMENTAR LABERINTO]
-    ~ LoadScreen(11)
+    ~ LoadScreenByName("Muerte")
     ->DONE
 ->DONE
 
@@ -68,6 +67,6 @@ VAR usedCar = false
     <i>Trepo lo más rápido que puedo y cuando llego arriba ya no escucho nada...</i>
     <i>Me viene una urgencia por mirar desde más arriba.</i>
     <i>Como si, desde una altura, pudiera entender mi lugar en todo esto.</i>
-    ~ LoadScreen(8)
+    ~ LoadScreenByName("7 - Tejados")
     ->DONE
 ->DONE

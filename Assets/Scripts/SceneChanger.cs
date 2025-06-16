@@ -14,7 +14,8 @@ public class SceneChanger : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
-            SceneManager.LoadScene(sceneName);
+            //SceneManager.LoadScene(sceneName);
+            StartCoroutine(TransitionRoutineByName(sceneName));
         }
         else
         {
@@ -39,17 +40,22 @@ public class SceneChanger : MonoBehaviour
     public void QuitGame()
     {
         // If the game is running in the editor, stop playing
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+#else
+        Application.Quit();
+#endif
     }
 
     private IEnumerator TransitionRoutine(int sceneBuildIndex)
     {
         yield return StartCoroutine(screenFader.FadeToBlack());
         SceneManager.LoadScene(sceneBuildIndex);
+    }
+    private IEnumerator TransitionRoutineByName(string sceneBuildName)
+    {
+        yield return StartCoroutine(screenFader.FadeToBlack());
+        SceneManager.LoadScene(sceneBuildName);
     }
 
 

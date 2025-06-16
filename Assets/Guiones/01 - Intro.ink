@@ -16,11 +16,11 @@ VAR chofer_text_color = "\#ADF0C7"
     *¿Por qué? No deben faltar muchas cuadras...
         ->TacheroAnnoyed
     *[Hay lugares que no aceptan explicaciones. Bajo.]
-        ~ LoadScreen(2)
+        ~ LoadScreenByName("2 - Primera Calle")
 ->DONE
 
 === TacheroAnnoyed ===
 <color={chofer_text_color}>¡Bajate ya! ¿No sabés que los taxis no entramos en Parque Chas?</color>
 <i>Bajo. Y cuando se cierra la puerta detrás de mí, siento que algo también se cierra adentro.</i>
-~ LoadScreen(2)
+~ LoadScreenByName("2 - Primera Calle")
 ->DONE
