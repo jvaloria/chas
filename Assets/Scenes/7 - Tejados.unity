@@ -280,6 +280,8 @@ MonoBehaviour:
   SceneBGMVolume: 1
   SceneSounds:
   - {fileID: 8300000, guid: 113250dcc2b268a4aa9cf0a6c7f5ac4c, type: 3}
+  - {fileID: 8300000, guid: 59bfce64639d74c48998352a9d8fa712, type: 3}
+  - {fileID: 8300000, guid: b0d6cdd72b1ec5c49bd5f8786aa9c728, type: 3}
 --- !u!4 &290710328
 Transform:
   m_ObjectHideFlags: 0
@@ -1265,9 +1267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16b20835af553c4798235d86a4bd718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playsSound: 0
+  playsSound: 1
   clipVolume: 1
-  objectAudio: {fileID: 0}
+  objectAudio: {fileID: 8300000, guid: b0d6cdd72b1ec5c49bd5f8786aa9c728, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
   continuesStory: 0

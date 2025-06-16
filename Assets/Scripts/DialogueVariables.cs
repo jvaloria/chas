@@ -4,8 +4,8 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 using Unity.VisualScripting;
-using Ink.Parsed;
-//using Ink.UnityIntegration;
+// Esto tira error si lo descomento, no sé por qué
+//using Ink.Parsed;
 
 public class DialogueVariables : MonoBehaviour
 {
@@ -40,13 +40,11 @@ public class DialogueVariables : MonoBehaviour
 
     public void Start()
     {
-        //string inkFileContents = globalsInkFile.text;
-        //Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
         globalVariablesStory = new Story(globalsInkFile.text);
         VariablesToStory(globalVariablesStory);
         foreach (string name in globalVariablesStory.variablesState)
         {
-            Ink.Runtime.Object value =  globalVariablesStory.variablesState.GetVariableWithName (name);
+            Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
             if (variables.ContainsKey(name))
             {
                 variables.Remove(name);
@@ -56,7 +54,7 @@ public class DialogueVariables : MonoBehaviour
             {
                 variables.Add(name, value);
             }
-            
+
         }
     }
 
@@ -95,15 +93,14 @@ public class DialogueVariables : MonoBehaviour
         {
             variables.Add(name, value);
         }
-        //viejotest = true;
     }
 
     public void VariablesToStory(Story story)
     {
-            foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
-            {
-                story.variablesState.SetGlobal(variable.Key, variable.Value);
-            }
+        foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
+        {
+            story.variablesState.SetGlobal(variable.Key, variable.Value);
+        }
     }
 
     public void SetBoolVariable(string name, bool boolean)
@@ -120,13 +117,14 @@ public class DialogueVariables : MonoBehaviour
         DialogueManager.GetInstance().SetVariableState(name, Value.Create(boolean));
     }
 
-    public void ResetVariables()
+    // FIXME: Esto tira error si lo descomento, no sé por qué
+    /*public void ResetVariables()
     {
         foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
         {
             variables[variable.Key] = Value.Create(false);
         }
         VariablesToStory(globalVariablesStory);
-    }
+    }*/
 
 }
