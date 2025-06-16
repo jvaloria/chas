@@ -34,7 +34,7 @@ public class PajarilloTejado : InteractableObject
                 StartFlying();
             }
         }
-        
+
     }
 
     void OnMouseDown()
@@ -53,7 +53,7 @@ public class PajarilloTejado : InteractableObject
 
     public void StartFlying()
     {
-        continuesStory = false;
+        //continuesStory = false;
         isflying = true;
     }
 
