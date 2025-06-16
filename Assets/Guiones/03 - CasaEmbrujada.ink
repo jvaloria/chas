@@ -13,10 +13,12 @@ VAR vieja_text_color = "\#FF9E9E"
         ->DONE
     *{!tuxedoCatMansion} [???]
         ->DONE
-    *{viejaMansionPizza} [Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.]
-        ->loadParada186
+    *{viejaMansionIglesia} [Camino siguiendo algo que podría ser fe, o simplemente impulso.]
+        <i>Las luces de la torre me guían como un faro que nunca prometió salvar a nadie.</i>
+        TODO armar escena de iglesia
+        ~ LoadScreenByName("09 - Iglesia")
         ->DONE
-    *{!viejaMansionPizza} [???]
+    *{!viejaMansionIglesia} [???]
         ->DONE
     *{viejaMansionFuente} [Si sigo derecho voy a la fuente, el de la bici me mandó para ahí]
         ->loadParada186
@@ -42,24 +44,27 @@ VAR vieja_text_color = "\#FF9E9E"
 
 ===vieja===
 ~ LoadObject("PanelBloqueante")
-<color={vieja_text_color}>Por fin llega la pizza! Por qué tardaste tanto?</color>
-    *Perdón, no soy el del delivery. ¿me dice cómo llego a <color=yellow>Avalos y Cádiz</color>, por favor?
+<color={vieja_text_color}>Te estaba esperando. ¿Por qué tardaste tanto?</color>
+    *No se a quién espera. Estoy buscando <color=yellow>Ávalos y Cádiz.</color>
         -> viejaAvalosyCadiz
     *{infoViejoFuente}Perdón, no soy el del delivery. ¿me dice cómo llego a <color=yellow>la fuente</color>, por favor?
         -> viejaFuente
 
 
 === viejaAvalosyCadiz ===
-<color={vieja_text_color}> ¿Eh? ¿perdiste la pizza? trae otra y te digo.</color>
-    *Bueno, ¿dónde es la pizzería? (ahí capaz me dicen)
-        Doblá acá a la izquierda, hacia Triunvirato.
-        ~ viejaMansionPizza = true
+<color={vieja_text_color}>Esto es <color=yellow>Ávalos y Cádiz</color>. Como te decía... te estaba esperando.</color>
+<i>No sé si me confunde con alguien, o si esto ya no tiene lógica.</i>
+    *No puede ser, acá debería haber un terreno baldío. Me mandaron a medirlo.
+        <color={vieja_text_color}>Acá no hay ningún terreno. Solo almas en pena.</color>
+        <color={vieja_text_color}>Si alguna vez querés salir de Parque Chas, podés ir a rezar a <color=yellow>la iglesia</color>.</color>
+        ~ viejaMansionIglesia = true
         ~ RemoveObject("Vieja")
         ~ RemoveObject("PanelBloqueante")
+        La <color=yellow>iglesia...</color>  Creo haber visto una torre hace un rato, pero ya no confío en lo que recuerdo.
         -> break_and_go
-    *No soy el del delivery dije. por favor.
-        <color={vieja_text_color}>Traeme la pizza te dije. La pizzería es doblando a la izquierda, hacia Triunvirato.</color>
-        ~ viejaMansionPizza = true
+    *No entiendo por qué me estaba esperando, no soy esa persona.
+        <color={vieja_text_color}> FALTA IMPLEMENTAR </color>
+        //~ viejaMansionIglesia = true
         ~ RemoveObject("Vieja")
         ~ RemoveObject("PanelBloqueante")
         -> break_and_go
@@ -69,7 +74,7 @@ VAR vieja_text_color = "\#FF9E9E"
 <color={vieja_text_color}> ¿Eh? ¿perdiste la pizza? trae otra y te digo.</color>
     *bueno, ¿dónde es la pizzería? (ahí capaz me dicen)
         <color={vieja_text_color}>doblá acá a la izquierda, hacia Triunvirato.</color>
-        ~ viejaMansionPizza = true
+        //~ viejaMansionPizza = true
         ~ RemoveObject("Vieja")
         ~ RemoveObject("PanelBloqueante")
         -> break_and_go
