@@ -9,26 +9,28 @@ VAR vieja_text_color = "\#FF9E9E"
 =yahora
 <i>¿Qué hago?</i>
     *{tuxedoCatMansion} [¿Maullidos? Suenan cerca. Mejor voy a ver qué pasa.]
-    ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->loadParada186
+        ->DONE
     *{!tuxedoCatMansion} [???]
-    ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->DONE
     *{viejaMansionPizza} [Triunvirato es para la izquierda, voy para allá. Alguien tiene que haber.]
-    ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->loadParada186
+        ->DONE
     *{!viejaMansionPizza} [???]
-    ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->DONE
     *{viejaMansionFuente} [Si sigo derecho voy a la fuente, el de la bici me mandó para ahí]
-     ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->loadParada186
+        ->DONE
     *{!viejaMansionFuente} [???]
-     ~ LoadScreenByName("4 - Parada186")
-    ->DONE
+        ->DONE
     +->
     ->yahora
 ->yahora
+
+===loadParada186===
+~ LoadScreenByName("4 - Parada186")
+->DONE
+->main.yahora
 
 ===rayo===
 <i>En la reja, aparece un gato que me mira como si me conociera. No se mueve. Me observa. Y siento que hay un juicio, pero sin condena.</i>

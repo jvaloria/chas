@@ -4,7 +4,7 @@ VAR gato_text_color = "purple"
 ->main
 
 ===main===
-     {tuxedoCatMansion:
+    {tuxedoCatMansion:
         ~ LoadObject("TuxedoCat")
     }
     <i>Doblo la esquina y el aire cambia. {tuxedoCatMansion: Otra vez el gato, me mira fijo.}</i>
