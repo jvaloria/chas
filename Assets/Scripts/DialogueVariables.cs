@@ -4,6 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 using Unity.VisualScripting;
+using Ink.Parsed;
 //using Ink.UnityIntegration;
 
 public class DialogueVariables : MonoBehaviour
@@ -117,6 +118,15 @@ public class DialogueVariables : MonoBehaviour
         }
         globalVariablesStory.variablesState.SetGlobal(name, Value.Create(boolean));
         DialogueManager.GetInstance().SetVariableState(name, Value.Create(boolean));
+    }
+
+    public void ResetVariables()
+    {
+        foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
+        {
+            variables[variable.Key] = Value.Create(false);
+        }
+        VariablesToStory(globalVariablesStory);
     }
 
 }
