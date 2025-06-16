@@ -37,7 +37,7 @@ VAR vieja_text_color = "\#FF9E9E"
 ->main.yahora
 
 ===tuxedoCat===
-¡Ey, espera!
+¡Ey, esperá!
 ->main.yahora
 
 ===vieja===
