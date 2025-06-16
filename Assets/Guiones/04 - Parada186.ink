@@ -1,6 +1,5 @@
 INCLUDE GLOBALS.ink
 VAR gato_text_color = "purple"
-~ tuxedoCatMansion = true
 
 ->main
 

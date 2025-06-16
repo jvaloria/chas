@@ -197,6 +197,13 @@ public class DialogueManager : MonoBehaviour
             _continueIcon.SetActive(true);
             DisplayChoices();
             canContinueToNextLine = true;
+        } else
+        {
+            // if the line is the same as the previous one, just display choices
+            //_continueIcon.SetActive(true);
+            HideChoices();
+            DisplayChoices();
+            //canContinueToNextLine = true;
         }
 
 
@@ -235,7 +242,7 @@ public class DialogueManager : MonoBehaviour
                     _choices[index].GetComponent<Button>().interactable = true;
                     _choicesText[index].text = choice.text;
                 }
-                
+
                 index++;
             }
 

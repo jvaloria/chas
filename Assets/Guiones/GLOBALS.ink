@@ -9,3 +9,5 @@ VAR aguaBendita = false
 VAR tuxedoCatMansion = false
 VAR viejaMansionPizza = false
 VAR viejaMansionFuente = false
+VAR clickedCar = false
+VAR clickedTree = false
