@@ -6,8 +6,13 @@ public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
-    public float fadeInDuration = 1.5f;
+    public float fadeInDuration = 2f;
 
+    private void Awake()
+    {
+        Color color = fadeImage.color;
+        color.a = 1f;
+    }
     void Start()
     {
         StartCoroutine(FadeFromBlack());
@@ -19,9 +24,9 @@ public class ScreenFader : MonoBehaviour
         float time = 0f;
         Color color = fadeImage.color;
 
-        while (time < fadeInDuration)
+        while (time < fadeDuration)
         {
-            color.a = Mathf.Lerp(0f, 1f, time / fadeInDuration);
+            color.a = Mathf.Lerp(0f, 1f, time / fadeDuration);
             fadeImage.color = color;
             time += Time.deltaTime;
             yield return null;
@@ -33,12 +38,14 @@ public class ScreenFader : MonoBehaviour
 
     public IEnumerator FadeFromBlack()
     {
+        this.gameObject.GetComponent<Canvas>().enabled = true;
         float time = 0f;
         Color color = fadeImage.color;
+        color.a = 1f;
 
-        while (time < fadeDuration)
+        while (time < fadeInDuration)
         {
-            color.a = Mathf.Lerp(1f, 0f, time / fadeDuration);
+            color.a = Mathf.Lerp(1f, 0f, time / fadeInDuration);
             fadeImage.color = color;
             time += Time.deltaTime;
             yield return null;
