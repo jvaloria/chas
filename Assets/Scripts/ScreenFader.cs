@@ -6,6 +6,7 @@ public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
+    public float fadeInDuration = 1.5f;
 
     void Start()
     {
@@ -18,9 +19,9 @@ public class ScreenFader : MonoBehaviour
         float time = 0f;
         Color color = fadeImage.color;
 
-        while (time < fadeDuration)
+        while (time < fadeInDuration)
         {
-            color.a = Mathf.Lerp(0f, 1f, time / fadeDuration);
+            color.a = Mathf.Lerp(0f, 1f, time / fadeInDuration);
             fadeImage.color = color;
             time += Time.deltaTime;
             yield return null;

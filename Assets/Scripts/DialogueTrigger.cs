@@ -9,9 +9,10 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] private bool started = false;
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
-        OnClicked();
+        //demorado con invoke porque sino no triggereaba en la build
+        Invoke("OnClicked", 0.1f);
     }
     public void OnClicked()
     {

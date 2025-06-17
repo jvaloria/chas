@@ -727,7 +727,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: TP-Chas
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -735,7 +735,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: TP-Chas
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: TP-Chas
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

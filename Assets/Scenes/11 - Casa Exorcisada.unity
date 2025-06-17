@@ -983,6 +983,10 @@ PrefabInstance:
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_fontSize
       value: 26
       objectReference: {fileID: 0}
@@ -1412,6 +1416,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 97e62aabec41d134e81d89bc7ebd7a40, type: 2}
   holdOnFirstFrame: 0
   startingFrameIndex: 0
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1450490945
 SpriteRenderer:
   m_ObjectHideFlags: 0
