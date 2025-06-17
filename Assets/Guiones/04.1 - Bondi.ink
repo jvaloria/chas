@@ -20,6 +20,8 @@ VAR devilCat_text_color = "\#FF400E"
 * [Apoyo la cabeza contra la ventana...]
     // TODO Fade to black
     // TODO acallar bondi
+    //~ StopBGM()
+    ~ SetBGMVolume(0.01)
     <i>Me duermo... El zumbido del motor desaparece...</i>
     <i>El silencio me empuja hacia adentro, como si el colectivo dejara de moverse pero yo siguiera cayendo.</i>
     // TODO APARECE UNA FIGURA ROJA A LO LEJOS

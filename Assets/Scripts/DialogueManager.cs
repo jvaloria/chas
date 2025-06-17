@@ -95,6 +95,14 @@ public class DialogueManager : MonoBehaviour
         {
             SoundManager.PlaySceneSFX(soundToPlay, volume);
         });
+        _currentStory.BindExternalFunction("StopBGM", () =>
+        {
+            SoundManager.StopBGM();
+        });
+        _currentStory.BindExternalFunction("SetBGMVolume", (float volume) =>
+        {
+            SoundManager.SetBGMVolume(volume);
+        });
 
 
         ContinueStory();

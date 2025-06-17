@@ -4,6 +4,8 @@ EXTERNAL TimedOption(int optionNumber, int timeForOption)
 EXTERNAL LoadScreen(int screenNumber)
 EXTERNAL LoadScreenByName (string sceneName)
 EXTERNAL PlaySound(string soundToPlay, float volume)
+EXTERNAL StopBGM()
+EXTERNAL SetBGMVolume(float volume)
 VAR cartelCalle = false
 VAR infoViejoFuente = false
 VAR aguaBendita = false
