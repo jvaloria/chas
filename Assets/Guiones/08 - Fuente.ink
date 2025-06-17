@@ -12,10 +12,8 @@ TODO BGM Mistico
     * [Tomo el agua. Siento que hace tiempo que estoy sediento de otra cosa.]
     ->BebeGatoBebe
     * [Me alejo. Hay algo en ese reflejo que no estoy listo para ver.]
-        TODO hacer que pueda volver de la death scene
-        [IMPLEMENTAR MUERTE]
-        ~ textoMuerte = "<i>Algo me golpeó la nuca, no sé que pasó. No puedo levantarme</i>"
-        ~ LoadScreenByName("Muerte")
+        <i>Doy un paso atrás. Después otro. Me alejo lento, como si el agua pudiera alcanzarme igual.</i>
+        ~ LoadScreenByName("8.1 - Transicion lejos fuente")
         ->DONE
 ->DONE
 
