@@ -20,10 +20,9 @@ VAR vieja_text_color = "\#FF9E9E"
     *{!viejaMansionIglesia} [???]
         ->DONE
     *{viejaMansionBrujula} [Camino sin convicción.]
-        // TODO armar escena de gato CALICO que lleva a brujula y fin
         <i>Necesito encontrar Ávalos y Cádiz. No puede ser tan difícil</i>
-        <i>Pero el barrio me rodea. Estoy atrapado, no por muros, sino por algo que me quiere adentro.</i>
-        //->loadParada186
+        // TODO armar escena de gato CALICO que lleva a brujula y fin
+        ~ LoadScreenByName("3.1 - Pre-Calico")
         ->DONE
     *{!viejaMansionBrujula} [???]
         ->DONE
