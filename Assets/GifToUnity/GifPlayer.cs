@@ -1,6 +1,8 @@
 using GifImporter;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Linq;
 
 namespace GifImporter
 {
@@ -10,6 +12,9 @@ namespace GifImporter
         public Gif Gif;
         public bool holdOnFirstFrame = false;
         public int startingFrameIndex = 0;
+        public bool resetToStartAfterPlayOnce = false;
+
+        public UnityEvent OnPlayOnceComplete;
 
         private int _index;
         private float _flip;
@@ -36,52 +41,68 @@ namespace GifImporter
             if (Gif == null || holdOnFirstFrame) return;
             var frames = Gif.Frames;
             if (frames == null || frames.Count == 0) return;
-
             int frameCount = frames.Count;
 
-            if (_playingOneShot)
+            // Handle one-shot playback
+            if (_playingOneShot && Application.isPlaying)
             {
-                if (Application.isPlaying && _flip < Time.time)
+                if (_flip < Time.time)
                 {
                     if (_playOnceForward)
                     {
-                        _index++;
-                        if (_index >= frameCount)
+                        if (_index < frameCount - 1)
                         {
-                            _index = frameCount - 1;
+                            _index++;
+                            Apply(frames[_index]);
+                        }
+                        else
+                        {
                             _playingOneShot = false;
                             _playOnceForward = false;
+                            if (resetToStartAfterPlayOnce)
+                            {
+                                _index = startingFrameIndex;
+                                Apply(frames[_index]);
+                            }
+                            OnPlayOnceComplete?.Invoke();
                         }
-                        else Apply(frames[_index]);
                     }
                     else if (_playOnceReverse)
                     {
-                        _index--;
-                        if (_index < 0)
+                        if (_index > 0)
                         {
-                            _index = 0;
+                            _index--;
+                            Apply(frames[_index]);
+                        }
+                        else
+                        {
                             _playingOneShot = false;
                             _playOnceReverse = false;
+                            if (resetToStartAfterPlayOnce)
+                            {
+                                _index = startingFrameIndex;
+                                Apply(frames[_index]);
+                            }
+                            OnPlayOnceComplete?.Invoke();
                         }
-                        else Apply(frames[_index]);
                     }
                 }
+
+                return; // Skip normal looping
             }
-            else
+
+            // Handle looping playback
+            int index = _index;
+            if (Application.isPlaying && _flip < Time.time)
             {
-                int index = _index;
+                index++;
+                if (index >= frameCount) index = 0;
+            }
 
-                if (Application.isPlaying && _flip < Time.time)
-                {
-                    index++;
-                    if (index >= frameCount) index = 0;
-                }
-
-                if (index != _index || _setGif != Gif)
-                {
-                    _index = index;
-                    Apply(frames[_index]);
-                }
+            if (index != _index || _setGif != Gif)
+            {
+                _index = index;
+                Apply(frames[_index]);
             }
         }
 

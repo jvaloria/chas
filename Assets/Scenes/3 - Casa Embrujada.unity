@@ -407,6 +407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 2902262164760720313, guid: 403c97bdbebd11b4ba5fa4eba335056b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6442278387936234438, guid: 403c97bdbebd11b4ba5fa4eba335056b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -702,6 +706,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 54b04be92fa45ad43b265d9e1bbe226b, type: 2}
   holdOnFirstFrame: 0
   startingFrameIndex: 0
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &641194852
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1694,6 +1702,22 @@ PrefabInstance:
       propertyPath: m_MaskAlphaCutoff
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3459787500343554950, guid: 8a2352e69d5ccae49b9c4499a678c93e, type: 3}
+      propertyPath: holdOnFirstFrame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459787500343554950, guid: 8a2352e69d5ccae49b9c4499a678c93e, type: 3}
+      propertyPath: resetToStartAfterPlayOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459787500343554950, guid: 8a2352e69d5ccae49b9c4499a678c93e, type: 3}
+      propertyPath: OnPlayOnceComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459787500343554950, guid: 8a2352e69d5ccae49b9c4499a678c93e, type: 3}
+      propertyPath: OnPlayOnceComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3467522197839727646, guid: 8a2352e69d5ccae49b9c4499a678c93e, type: 3}
       propertyPath: m_SortingOrder
       value: 16
@@ -2470,6 +2494,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 97e62aabec41d134e81d89bc7ebd7a40, type: 2}
   holdOnFirstFrame: 0
   startingFrameIndex: 0
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1450490945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2974,6 +3002,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 5ad37c9776e6d374982bd87f6cf3ee4b, type: 2}
   holdOnFirstFrame: 0
   startingFrameIndex: 0
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!222 &679065574518048954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3278,6 +3310,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 6dd6b48321f1f8248a35a430950e3143, type: 2}
   holdOnFirstFrame: 1
   startingFrameIndex: 20
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &3467522197315597767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3445,6 +3481,10 @@ MonoBehaviour:
   Gif: {fileID: 11400000, guid: 5ad37c9776e6d374982bd87f6cf3ee4b, type: 2}
   holdOnFirstFrame: 0
   startingFrameIndex: 0
+  resetToStartAfterPlayOnce: 0
+  OnPlayOnceComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &4394540400752990834
 RectTransform:
   m_ObjectHideFlags: 0
