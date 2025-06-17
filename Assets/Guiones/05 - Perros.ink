@@ -32,10 +32,8 @@ VAR usedCar = false
         ->ArribaArbol
     ->DONE
     * [Me arrinconaron, son ellos o yo...]
-        TODO hacer que pueda volver de la death scene
-        TODO [IMPLEMENTAR MUERTE]
         ~ PlaySound("PerroMuerte", 0.6)
-         ~ textoMuerte = "<i>Duele mucho, hasta que deja de doler...</i>"
+        ~ textoMuerte = "<i>Duele mucho, hasta que deja de doler...</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
     +->
@@ -61,7 +59,15 @@ VAR usedCar = false
 * [Hay una alcantarilla. Me meto por ahí.]
     // TODO Va a laberinto
     //[IMPLEMENTAR LABERINTO]
-    ~ LoadScreenByName("Muerte")
+    ~ FadeInObject("BlackPlane", 1)
+    <i>Las paredes de la alcantarilla están tibias, como si guardaran memoria. No huele mal.</i>
+    <i>Huele a encierro viejo. A secreto mal guardado.</i>
+    ~ LoadObject("aqui")
+    ~ FadeOutObject("BlackPlane", 2)
+    <i>Cuando salgo al otro lado, no reconozco nada. Y al mismo tiempo, todo me resulta conocido.</i>
+    <i>El cartel no me dice adónde ir. Solo me recuerda que existo.</i>
+    <i>Hasta que lo veo.</i>
+    ~ LoadScreenByName("3.4 - Brujula")
     ->DONE
 ->DONE
 

@@ -18,10 +18,7 @@ VAR devilCat_text_color = "\#FF400E"
 *{!devilCatMansion} [???]
     ->DONE
 * [Apoyo la cabeza contra la ventana...]
-    // TODO Fade to black
     ~ FadeInObject("BlackPlane", 3)
-    // TODO acallar bondi
-    //~ StopBGM()
     ~ SetBGMVolume(0.01)
     <i>Me duermo... El zumbido del motor desaparece...</i>
     <i>El silencio me empuja hacia adentro, como si el colectivo dejara de moverse pero yo siguiera cayendo.</i>
@@ -35,9 +32,6 @@ VAR devilCat_text_color = "\#FF400E"
     // TODO DIABLO - LOCUCIÓN
     ~ PlaySound("devilSpeak", 1)
     <color={devil_text_color}>Nadie se pierde en Parque Chas. Solo dejan de buscar la salida.</color>
-    //TODO hacer que pueda volver de la death scene
-    //TODO [IMPLEMENTAR MUERTE]
-    // TODO MSG SOS UN ALMA PERDIDA EN PARQUE CHAS
     ~ textoMuerte = "Vas con la figura, ya no buscás tu destino ni tu salida..."
     ~ LoadScreenByName("Muerte")
     ->DONE

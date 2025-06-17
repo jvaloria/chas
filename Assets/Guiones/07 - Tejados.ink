@@ -22,8 +22,10 @@ INCLUDE GLOBALS.ink
         ->choicesKnot
     ->DONE
     * [Salto con todas mis fuerzas para agarrarlo]
-        TODO [IMPLEMENTAR MUERTE]
-        TODO hacer que pueda volver de la death scene
+        <i>El viento me toca la cara como si me conociera.</i>
+        <i>Perdonen que no llegue.</i>
+        <i>Perdonen que no avisé.</i>
+        <i>Perdonen que no pude volver. O capaz… no supe cómo.</i>
         ~ textoMuerte = "<i>Caigo al piso, todo termina en un instante</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
