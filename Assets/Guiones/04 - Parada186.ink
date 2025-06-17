@@ -56,33 +56,10 @@ VAR gato_text_color = "purple"
         ~ RemoveObject("TuxedoCatBig")
         ~ LoadScreenByName("5 - Perros")
         ->DONE
-         //->4Gatos
-        //*186
-        TODO SFX de Gato maullido enojado y se vá
-        TODO Aparece el bondi 186 y te lleva por el camino del diablo
-        //[VA A ESCENA NUEVA: DIABLO]
-        //~ LoadScreen(5)
-        //->DONE
-        // temporalmente dejo esto para poder elegir la otra opcion
-        //->main.stitch
     * ¿Qué?!!
+        // TODO SFX de Gato maullido enojado y se vá
         Miauu
         ~ RemoveObject("TuxedoCatBig")
-        ~ RemoveObject("PanelBloqueante")
-        ->main.stitch
-->DONE
-
-=== 4Gatos ===
-    * [OK, voy para la derecha entonces]
-        ~ LoadScreenByName("5 - Perros")
-        ->DONE
-    * [El gato dijo derecha, pero se fué a la izquierda, mejor lo sigo]
-        TODO Camino del pasado
-        [VA A ESCENA NUEVA: PASADO]
-        //->DONE
-        // temporalmente dejo esto para poder elegir la otra opcion
-        ->4Gatos
-    * [Mirá si le voy a hacer caso a un gato parlante, vuelvo por donde vine]
         ~ RemoveObject("PanelBloqueante")
         ->main.stitch
 ->DONE

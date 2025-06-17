@@ -12,14 +12,14 @@ VAR usedCar = false
 =yahora
 
 { not usedCar:
-    TODO alargar audio, de 10 a 20+ segundos y ver bool para que no se repita
+    // TODO alargar audio, de 10 a 20+ segundos y ver bool para que no se repita
 	~ PlaySound("perros", 0.6)
-    <color=red>Grrrrrrrrrrrrrrrr</color>
+    ¡Perros!
 - else:
 	<i>Escucho algo allá arriba.</i>
 }
 
-    *{clickedCar} [¡Rápido, abajo de ese auto así no me mata!]
+    *{clickedCar} [¡Rápido, abajo de ese auto así no me matan!]
         ->BajoAuto
     ->DONE
     *{!clickedCar} [???]
@@ -31,7 +31,7 @@ VAR usedCar = false
     *{!clickedTree} [???]
         ->ArribaArbol
     ->DONE
-    * [Me arrinconó, es el o yo...]
+    * [Me arrinconaron, son ellos o yo...]
         TODO hacer que pueda volver de la death scene
         TODO [IMPLEMENTAR MUERTE]
         ~ PlaySound("PerroMuerte", 0.6)
@@ -53,12 +53,12 @@ VAR usedCar = false
 
 ===BajoAuto===
 ~ usedCar = true
-<i>Me oculto lo más rápido que puedo. Parece que se fue...</i>
-* [Mejor sigo viaje antes de que vuelva]
+<i>Me oculto lo más rápido que puedo. Parece que se fueron...</i>
+* [Mejor sigo viaje antes de que vuelvan]
     ->main.yahora
     ->DONE
-* [Hay una alcantarilla]
-    TODO Va a laberinto
+* [Hay una alcantarilla. Me meto por ahí.]
+    // TODO Va a laberinto
     //[IMPLEMENTAR LABERINTO]
     ~ LoadScreenByName("Muerte")
     ->DONE

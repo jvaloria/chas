@@ -39,8 +39,6 @@ public class ObjectController : MonoBehaviour
                 break;
             }
         }
-
-
     }
     private IEnumerator FadeOutObject(InteractableObject obj, float duration)
     {
@@ -61,12 +59,10 @@ public class ObjectController : MonoBehaviour
 
     public void FadeInObject(string objectName, float duration)
     {
-        Debug.Log($"Fading in object: {objectName} over {duration} seconds");
         foreach (InteractableObject obj in interactableObjects)
         {
             if (obj.name == objectName)
             {
-                Debug.Log("Fading in object");
                 StartCoroutine(FadeInObject(obj, duration));
                 break;
             }

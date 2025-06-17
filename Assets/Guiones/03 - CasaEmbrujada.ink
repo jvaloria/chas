@@ -16,7 +16,7 @@ VAR vieja_text_color = "\#FF9E9E"
     *{viejaMansionIglesia} [Camino siguiendo algo que podría ser fe, o simplemente impulso.]
         <i>Las luces de la torre me guían como un faro que nunca prometió salvar a nadie.</i>
         TODO armar escena de iglesia
-        ~ LoadScreenByName("09 - Iglesia")
+        ~ LoadScreenByName("9 - Iglesia")
         ->DONE
     *{!viejaMansionIglesia} [???]
         ->DONE
