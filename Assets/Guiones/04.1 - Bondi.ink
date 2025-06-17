@@ -19,6 +19,7 @@ VAR devilCat_text_color = "\#FF400E"
     ->DONE
 * [Apoyo la cabeza contra la ventana...]
     // TODO Fade to black
+    ~ FadeInObject("BlackPlane", 3)
     // TODO acallar bondi
     //~ StopBGM()
     ~ SetBGMVolume(0.01)

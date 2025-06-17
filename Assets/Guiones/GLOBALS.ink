@@ -1,5 +1,7 @@
 EXTERNAL LoadObject(string object)
 EXTERNAL RemoveObject(string object)
+EXTERNAL FadeOutObject(string object, float duration)
+EXTERNAL FadeInObject(string object, float duration)
 EXTERNAL TimedOption(int optionNumber, int timeForOption)
 EXTERNAL LoadScreen(int screenNumber)
 EXTERNAL LoadScreenByName (string sceneName)

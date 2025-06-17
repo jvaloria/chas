@@ -30,6 +30,15 @@ public class ObjectManager : MonoBehaviour
     {
         GameObject.FindFirstObjectByType<ObjectController>().DisableObject(objectName);
     }
+    public void FadeOutObject(string objectName, float duration = 1f)
+    {
+        GameObject.FindFirstObjectByType<ObjectController>().FadeOutObject(objectName, duration);
+    }
+
+    public void FadeInObject(string objectName, float duration = 1f)
+    {
+        GameObject.FindFirstObjectByType<ObjectController>().FadeInObject(objectName, duration);
+    }
 
     public void EnableObject(GameObject objeto)
     {

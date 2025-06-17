@@ -87,6 +87,14 @@ public class DialogueManager : MonoBehaviour
         {
             ObjectManager.GetInstance().DisableObject(imageToRemove);
         });
+        _currentStory.BindExternalFunction("FadeOutObject", (string imageToFade, float duration) =>
+        {
+            ObjectManager.GetInstance().FadeOutObject(imageToFade, duration);
+        });
+        _currentStory.BindExternalFunction("FadeInObject", (string imageToFade, float duration) =>
+        {
+            ObjectManager.GetInstance().FadeInObject(imageToFade, duration);
+        });
         _currentStory.BindExternalFunction("TimedOption", (int optionToTime, int timeForOption) =>
         {
             _sliders[optionToTime].EnableTimer(timeForOption);
