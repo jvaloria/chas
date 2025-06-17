@@ -3,35 +3,33 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
-// TODO
-// TO DO
-// LLEGA AL MAPA-MURAL DE PARQUE CHAS
-Un mural.
-Viejo, descascarado, pero vivo. Como esas cosas que el tiempo no destruye porque nadie se atreve a olvidarlas.
-Es un mapa del barrio. En el centro, una brújula.
-Siento que no es un mapa para salir. 
+<i>Un mural...</i>
+<i>Viejo, descascarado, pero vivo. Como esas cosas que el tiempo no destruye porque nadie se atreve a olvidarlas.</i>
+<i>Es un mapa del barrio. Siento que no es un mapa para salir.</i>
+->stitch
+=stitch
+<i>Es un mapa del barrio. Siento que no es un mapa para salir.</i>
+->stitch
+->DONE
 
-PUEDE AGARRAR LA BRÚJULA O NO
-SI AGARRA LA BRÚJULA
-En ese instante, todo se repliega. Como si el mundo diera un suspiro y me soltara.
-Ya no busco Ávalos ni Cádiz. Ya no busco salir.
-Parque Chas me guarda.
-Y yo lo dejo.
-SOS UN ALMA PERDIDA EN PARQUE CHAS
+===triggerBrujula===
+<i>En el centro, una <color="yellow">brújula</color> gira sin parar.</i>
+* [Esta brújula, la necesito...]
+    // final malo
+    <i>En ese instante, todo se repliega. Como si el mundo diera un suspiro y me soltara.</i>
+    <i>Ya no busco Ávalos ni Cádiz. Ya no busco salir.</i>
+    <i>Parque Chas me guarda... Y yo lo dejo.</i>
+    ~ textoMuerte = "Mi alma se pierde para siempre en Parque Chas"
+    ~ LoadScreenByName("Muerte")
+* [No confío en esta brújula, no todo lo que guía lleva a donde uno quiere estar.]
+    ~ RemoveObject("Brujula")
+    ~ LoadObject("CalicoCat")
+    // TODO trigger miau effect
+    <i>El gato me mira tranquilo, como si supiera que voy a seguirlo.</i>
+    <i>Y lo sigo.</i>
+    ~ LoadScreenByName("3.5 - Transicion Fuente") 
+    //FOTO DE LEJOS DE LA FUENTE, EL GATO CALICO ESTÁ AL LADO
+    //La fuente aparece sin anunciarse. Como si siempre hubiera estado a una cuadra de distancia, pero en otra dimensión. 
+    //TE LLEVA AL FINAL DEL GATO NARANJA
+->DONE
 
-SI NO AGARRAS LA BRÚJULA 
-
-No confío en esta brújula, no todo lo que guía lleva a donde uno quiere estar.
-
-APARECE EL GATO CALICO
-Ese gato me mira como si supiera que voy a seguirlo. 
-
-SE VA Y LO SIGUE
-¿A dónde se va?
-
-FOTO DE LEJOS DE LA FUENTE, EL GATO CALICO ESTÁ AL LADO
-
-La fuente aparece sin anunciarse. Como si siempre hubiera estado a una cuadra de distancia, pero en otra dimensión. 
-
-TE LLEVA AL FINAL DEL GATO NARANJA
-->END

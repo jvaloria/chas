@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/3.4 - Brujula.unity
     guid: 6aa21210dac93e34e9895cc3fb18c10b
   - enabled: 1
+    path: Assets/Scenes/3.5 - Transicion Fuente.unity
+    guid: d6164de777d4f6a45906d6a9a903902b
+  - enabled: 1
     path: Assets/Scenes/4 - Parada186.unity
     guid: d81a752cb131a1b46addd2da3b3ada32
   - enabled: 1
