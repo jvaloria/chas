@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/5 - Perros.unity
     guid: c6076ee4ac21aac4cb4c9846f3e110ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/6 - Altura - DEPRECATED.unity
     guid: 790f9ab15b3d9e341a58bfa4d58276b9
   - enabled: 1
@@ -62,6 +62,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final 1 - Gato.unity
     guid: 318211a9668a1ec41b33c1c4b43a189e
+  - enabled: 1
+    path: Assets/Scenes/Final 2 - Baja del bondi.unity
+    guid: be455d19be5b81e4180ef939c8a6e411
   - enabled: 1
     path: Assets/Scenes/Muerte.unity
     guid: 01c30e8fbfd2a4b40a2fbacbbf7acca0
