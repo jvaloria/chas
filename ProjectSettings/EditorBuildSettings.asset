@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/3.2 - Calico.unity
     guid: 4e04d50ac0309e14e80ba023c5f93cff
   - enabled: 1
+    path: Assets/Scenes/3.3 - Transicion Brujula.unity
+    guid: 1a886581139a998488b036d881f352cd
+  - enabled: 1
+    path: Assets/Scenes/3.4 - Brujula.unity
+    guid: 6aa21210dac93e34e9895cc3fb18c10b
+  - enabled: 1
     path: Assets/Scenes/4 - Parada186.unity
     guid: d81a752cb131a1b46addd2da3b3ada32
   - enabled: 1

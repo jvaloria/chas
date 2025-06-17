@@ -5,11 +5,7 @@ INCLUDE GLOBALS.ink
 ===main===
 // TODO
 // TO DO
-Sigo al gato.
-Porque lo contrario sería volver a lo de antes, y eso ya no me sirve.
-Me quedo solo, pero no estoy solo. Estoy conmigo. Y por primera vez en mucho tiempo, eso no me molesta.
-
-LLEGA AL MAPA-MURAL DE PARQUE CHAS
+// LLEGA AL MAPA-MURAL DE PARQUE CHAS
 Un mural.
 Viejo, descascarado, pero vivo. Como esas cosas que el tiempo no destruye porque nadie se atreve a olvidarlas.
 Es un mapa del barrio. En el centro, una brújula.

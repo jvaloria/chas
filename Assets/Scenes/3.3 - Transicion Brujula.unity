@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 113188693}
   - component: {fileID: 113188692}
   m_Layer: 0
-  m_Name: BG11-Brujula
+  m_Name: BG11-Transicion Brujula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113188691}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b00eb346f5142024181f909513595078, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 09b3c65a702ac7f4e810cc828f5b48b4, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 701935169}
@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 1083207944907247103, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: dad7de600c171c7419c5a83c66a72400, type: 3}
+      objectReference: {fileID: 4900000, guid: 9fd5b9659038bcd4aaf214a6da3e7064, type: 3}
     - target: {fileID: 1277818088139068453, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Name
       value: UI Canvas

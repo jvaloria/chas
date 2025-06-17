@@ -9,7 +9,7 @@ VAR calicoCat = false
 =yahora
 <i>Si lo sigo... Ya no estaré buscando calles, sino otra cosa.</i>
 *{calicoCat} [Sigo al gato. Algo en mí ya está rendido.]
-    ~ LoadScreenByName("Brujula")
+    ~ LoadScreenByName("3.3 - Transicion Brujula")
     ->DONE
 *{!calicoCat} [???]
     ->DONE
