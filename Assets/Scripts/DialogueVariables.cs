@@ -4,6 +4,8 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 using Unity.VisualScripting;
+using System.Linq;
+//using Ink.Parsed;
 // Esto tira error si lo descomento, no sé por qué
 //using Ink.Parsed;
 
@@ -117,14 +119,17 @@ public class DialogueVariables : MonoBehaviour
         DialogueManager.GetInstance().SetVariableState(name, Value.Create(boolean));
     }
 
-    // FIXME: Esto tira error si lo descomento, no sé por qué
-    /*public void ResetVariables()
+    //FIXME: Esto tira error si lo descomento, no sé por qué
+    public void ResetVariables()
     {
-        foreach (KeyValuePair<string, Ink.Runtime.Object> variable in variables)
+        foreach (var key in variables.Keys.ToList()) // ToList to avoid modifying during enumeration
         {
-            variables[variable.Key] = Value.Create(false);
+            if(key != "textoMuerte")
+            {
+                variables[key] = new BoolValue(false);
+            }
+            
         }
-        VariablesToStory(globalVariablesStory);
-    }*/
+    }
 
 }

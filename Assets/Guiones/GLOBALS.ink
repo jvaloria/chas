@@ -8,6 +8,8 @@ EXTERNAL LoadScreenByName (string sceneName)
 EXTERNAL PlaySound(string soundToPlay, float volume)
 EXTERNAL StopBGM()
 EXTERNAL SetBGMVolume(float volume)
+EXTERNAL ResetVariables()
+VAR textoMuerte = "Te animás a intentarlo de nuevo?"
 VAR cartelCalle = false
 VAR infoViejoFuente = false
 VAR aguaBendita = false

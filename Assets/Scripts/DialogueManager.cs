@@ -111,6 +111,10 @@ public class DialogueManager : MonoBehaviour
         {
             SoundManager.SetBGMVolume(volume);
         });
+        _currentStory.BindExternalFunction("ResetVariables", () =>
+        {
+            _dialogueVariables.ResetVariables();
+        });
 
 
         ContinueStory();

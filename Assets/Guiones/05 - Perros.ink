@@ -35,6 +35,7 @@ VAR usedCar = false
         TODO hacer que pueda volver de la death scene
         TODO [IMPLEMENTAR MUERTE]
         ~ PlaySound("PerroMuerte", 0.6)
+         ~ textoMuerte = "<i>Duele mucho, hasta que deja de doler...</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
     +->

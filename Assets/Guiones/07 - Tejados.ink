@@ -24,6 +24,7 @@ INCLUDE GLOBALS.ink
     * [Salto con todas mis fuerzas para agarrarlo]
         TODO [IMPLEMENTAR MUERTE]
         TODO hacer que pueda volver de la death scene
+        ~ textoMuerte = "<i>Caigo al piso, todo termina en un instante</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
 ->DONE

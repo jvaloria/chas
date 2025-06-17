@@ -38,6 +38,7 @@ VAR devilCat_text_color = "\#FF400E"
     //TODO hacer que pueda volver de la death scene
     //TODO [IMPLEMENTAR MUERTE]
     // TODO MSG SOS UN ALMA PERDIDA EN PARQUE CHAS
+    ~ textoMuerte = "Vas con la figura, ya no buscás tu destino ni tu salida..."
     ~ LoadScreenByName("Muerte")
     ->DONE
 ->DONE

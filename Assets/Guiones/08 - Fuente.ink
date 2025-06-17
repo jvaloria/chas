@@ -14,6 +14,7 @@ TODO BGM Mistico
     * [Me alejo. Hay algo en ese reflejo que no estoy listo para ver.]
         TODO hacer que pueda volver de la death scene
         [IMPLEMENTAR MUERTE]
+        ~ textoMuerte = "<i>Algo me golpeó la nuca, no sé que pasó. No puedo levantarme</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
 ->DONE
