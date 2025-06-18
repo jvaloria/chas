@@ -6,7 +6,7 @@ public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
-    public float fadeInDuration = 2f;
+    public float fadeInDuration = 1f;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class ScreenFader : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(FadeFromBlack());
+        //StartCoroutine(FadeFromBlack());
     }
 
     public IEnumerator FadeToBlack()

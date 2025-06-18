@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061962438}
   - component: {fileID: 1061962437}
+  - component: {fileID: 1061962439}
   m_Layer: 0
   m_Name: Img Tachero
   m_TagString: Untagged
@@ -305,6 +306,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061962439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061962436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769031e7552313d4e8378645e5326231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenFader: {fileID: 1561240290}
+  delayBeforeFade: 0.5
 --- !u!1 &1113739677
 GameObject:
   m_ObjectHideFlags: 0

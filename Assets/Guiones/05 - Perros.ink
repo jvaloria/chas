@@ -43,6 +43,8 @@ VAR dogsStarted = false
         ~ textoMuerte = "<i>Duele mucho, hasta que deja de doler...</i>"
         ~ LoadScreenByName("Muerte")
         ->DONE
+    *{usedCar}[Puedo ir por la alcantarilla bajo el auto]
+        ->BajoAuto.alcantarillaStitch
     +->
     ->yahora
 ->yahora
@@ -66,6 +68,8 @@ VAR dogsStarted = false
 * [Hay una alcantarilla. Me meto por ahí.]
     // TODO Va a laberinto
     //[IMPLEMENTAR LABERINTO]
+    ->alcantarillaStitch
+    =alcantarillaStitch
     ~ FadeInObject("BlackPlane", 1)
     <i>Las paredes de la alcantarilla están tibias, como si guardaran memoria. No huele mal.</i>
     <i>Huele a encierro viejo. A secreto mal guardado.</i>

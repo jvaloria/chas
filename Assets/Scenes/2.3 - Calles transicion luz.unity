@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 113188693}
   - component: {fileID: 113188692}
   - component: {fileID: 113188694}
+  - component: {fileID: 113188695}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -214,6 +215,20 @@ MonoBehaviour:
   deactivatesOther: 0
   otherInteractableObject: {fileID: 0}
   deactivatableInteractableObject: {fileID: 0}
+--- !u!114 &113188695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113188691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dea1e99bd56084bb01bc3caf1e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 113188692}
+  screenFader: {fileID: 1036722552}
 --- !u!1001 &125697689
 PrefabInstance:
   m_ObjectHideFlags: 0

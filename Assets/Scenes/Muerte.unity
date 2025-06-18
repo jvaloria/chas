@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 179599943}
   fadeDuration: 1
+  fadeInDuration: 1
 --- !u!225 &179599942
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -635,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 6765509407430964560, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 625884987}
     - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_text
       value: 
@@ -902,6 +903,7 @@ GameObject:
   - component: {fileID: 1753416814}
   - component: {fileID: 1753416816}
   - component: {fileID: 1753416815}
+  - component: {fileID: 1753416817}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -966,6 +968,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753416813}
   m_CullTransparentMesh: 1
+--- !u!114 &1753416817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753416813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769031e7552313d4e8378645e5326231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenFader: {fileID: 179599941}
+  delayBeforeFade: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

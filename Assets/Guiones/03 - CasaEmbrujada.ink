@@ -46,8 +46,8 @@ VAR vieja_text_color = "\#FF9E9E"
 === viejaAvalosyCadiz ===
 <color={vieja_text_color}>Esto es <color=yellow>Ávalos y Cádiz</color>. Como te decía... te estaba esperando.</color>
 <i>No sé si me confunde con alguien, o si esto ya no tiene lógica.</i>
-    *No puede ser, acá debería haber un terreno baldío. Me mandaron a medirlo.
-        <color={vieja_text_color}>Acá no hay ningún terreno. Solo almas en pena.</color>
+    *No puede ser, acá debería haber una casa derrumbada. Me mandaron a medirla.
+        <color={vieja_text_color}>Acá no hay casa derrumbada. Solo almas en pena.</color>
         <color={vieja_text_color}>Si alguna vez querés salir de Parque Chas, podés ir a rezar a <color=yellow>la iglesia</color>.</color>
         ~ viejaMansionIglesia = true
         ~ RemoveObject("Vieja")

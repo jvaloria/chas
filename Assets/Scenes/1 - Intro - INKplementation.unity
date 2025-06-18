@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 614067488}
   - component: {fileID: 614067487}
   - component: {fileID: 614067486}
+  - component: {fileID: 614067489}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -352,6 +353,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &614067489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614067485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dea1e99bd56084bb01bc3caf1e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 614067487}
+  screenFader: {fileID: 1561240290}
 --- !u!1 &980193437
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1003,10 @@ PrefabInstance:
     - target: {fileID: 7337577219150729490, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8026415146397205986, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8153077765534294256, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_AnchorMax.y
