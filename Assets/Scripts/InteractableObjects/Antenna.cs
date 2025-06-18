@@ -10,7 +10,7 @@ public class Antenna : InteractableObject
     public float flashDuration = 0.1f;
     public float fadeDuration = 0.2f;
     public Color flashColor = Color.white;
-    public GameObject glitchingAntenna;
+    public Animator glitchingAntenna;
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class Antenna : InteractableObject
         {
             StartCoroutine(FlashCoroutine());
         }
-        glitchingAntenna.GetComponent<GifPlayer>().holdOnFirstFrame = true;
+        glitchingAntenna.enabled = false;
     }
 
     private IEnumerator FlashCoroutine()
