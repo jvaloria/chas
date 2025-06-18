@@ -36,14 +36,14 @@ public class MansionWindow : InteractableObject
         if (onOff)
         {
             onOff = false;
-            offSpriteObject.GetComponent<GifPlayer>().PlayOnceForward();
+            offSpriteObject.GetComponent<SpriteFrameController>().PlayToFirstFrame();
             onSpriteObject.SetActive(false);
             windowCounter.CounterDown();
         }
         else
         {
             onOff = true;
-            offSpriteObject.GetComponent<GifPlayer>().PlayOnceReverse();
+            offSpriteObject.GetComponent<SpriteFrameController>().PlayToLastFrame();
             //offSpriteObject.SetActive(false);
             onSpriteObject.SetActive(true);
             //GetComponent<Image>().sprite = onSprite;
