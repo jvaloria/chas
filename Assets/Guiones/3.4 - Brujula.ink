@@ -21,6 +21,7 @@ INCLUDE GLOBALS.ink
     <i>Parque Chas me guarda... Y yo lo dejo.</i>
     ~ textoMuerte = "Mi alma se pierde para siempre en Parque Chas"
     ~ LoadScreenByName("Muerte")
+    ->DONE
 * [No confío en esta brújula, no todo lo que guía lleva a donde uno quiere estar.]
     ~ RemoveObject("Brujula")
     ~ LoadObject("CalicoCat")
@@ -28,8 +29,6 @@ INCLUDE GLOBALS.ink
     <i>El gato me mira tranquilo, como si supiera que voy a seguirlo.</i>
     <i>Y lo sigo.</i>
     ~ LoadScreenByName("3.5 - Transicion Fuente") 
-    //FOTO DE LEJOS DE LA FUENTE, EL GATO CALICO ESTÁ AL LADO
-    //La fuente aparece sin anunciarse. Como si siempre hubiera estado a una cuadra de distancia, pero en otra dimensión. 
-    //TE LLEVA AL FINAL DEL GATO NARANJA
+    ->DONE
 ->DONE
 
