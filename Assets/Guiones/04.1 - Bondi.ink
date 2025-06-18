@@ -32,7 +32,7 @@ VAR devilCat_text_color = "\#FF400E"
     // TODO DIABLO - LOCUCIÓN
     ~ PlaySound("devilSpeak", 1)
     <color={devil_text_color}>Nadie se pierde en Parque Chas. Solo dejan de buscar la salida.</color>
-    ~ textoMuerte = "Vas con la figura, ya no buscás tu destino ni tu salida..."
+    ~ textoMuerte = "Me voy con la figura, ya no busco mi destino ni mi salida..."
     ~ LoadScreenByName("Muerte")
     ->DONE
 ->DONE
