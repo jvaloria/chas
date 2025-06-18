@@ -422,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 1083207944907247103, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 63de208a80b93a04fb36990722060488, type: 3}
+      objectReference: {fileID: 4900000, guid: 4cd6e09aa2c66914aafda2f0b10749c0, type: 3}
     - target: {fileID: 1277818088139068453, guid: d14fa11bea884384e9adf14b5d5d8976, type: 3}
       propertyPath: m_Name
       value: UI Canvas

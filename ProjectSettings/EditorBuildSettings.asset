@@ -66,7 +66,10 @@ EditorBuildSettings:
     path: Assets/Scenes/8.2 - Final Taxi.unity
     guid: c8f8f460b9395b449bd35af9dd29abb3
   - enabled: 1
-    path: Assets/Scenes/9 - Iglesia.unity
+    path: Assets/Scenes/9 - Transicion pre-iglesia.unity
+    guid: f93326a97d65edc4e83008d6c6d6470f
+  - enabled: 1
+    path: Assets/Scenes/9.1 - Iglesia.unity
     guid: 1dbb2ea9983967c47a262f1beb90f32f
   - enabled: 1
     path: Assets/Scenes/10 - Virgen.unity

@@ -14,14 +14,12 @@ VAR vieja_text_color = "\#FF9E9E"
     *{!tuxedoCatMansion} [???]
         ->DONE
     *{viejaMansionIglesia} [Camino siguiendo algo que podría ser fe, o simplemente impulso.]
-        <i>Las luces de la torre me guían como un faro que nunca prometió salvar a nadie.</i>
-        ~ LoadScreenByName("9 - Iglesia")
+        ~ LoadScreenByName("9 - Transicion pre-iglesia")
         ->DONE
     *{!viejaMansionIglesia} [???]
         ->DONE
     *{viejaMansionBrujula} [Camino sin convicción.]
         <i>Necesito encontrar Ávalos y Cádiz. No puede ser tan difícil</i>
-        // TODO armar escena de gato CALICO que lleva a brujula y fin
         ~ LoadScreenByName("3.1 - Pre-Calico")
         ->DONE
     *{!viejaMansionBrujula} [???]
