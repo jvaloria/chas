@@ -115,6 +115,21 @@ public class DialogueManager : MonoBehaviour
         {
             _dialogueVariables.ResetVariables();
         });
+        _currentStory.BindExternalFunction("DeathTimer", (float timeToDeath) =>
+        {
+            GameObject slide = GameObject.Find("DogDeathSlider");
+            if (slide == null) { Debug.Log("where is my dogdeathslider"); }
+            slide.GetComponent<Slider>().enabled = true;
+            slide.GetComponent<DogDeathSlider>().enabled = true;
+            slide.GetComponent<DogDeathSlider>().StartSlider(timeToDeath);
+            //FindFirstObjectByType<DogDeathSlider>().gameObject.SetActive(true);
+        });
+        _currentStory.BindExternalFunction("StopDeathTimer", () =>
+        {
+            SoundManager.StopSceneSFX("perros");
+            GameObject slide = GameObject.Find("DogDeathSlider");
+            slide.GetComponent<DogDeathSlider>().StopSlider();
+        });
 
 
         ContinueStory();

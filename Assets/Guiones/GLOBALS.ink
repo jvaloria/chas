@@ -9,6 +9,8 @@ EXTERNAL PlaySound(string soundToPlay, float volume)
 EXTERNAL StopBGM()
 EXTERNAL SetBGMVolume(float volume)
 EXTERNAL ResetVariables()
+EXTERNAL DeathTimer(int timetodeath)
+EXTERNAL StopDeathTimer()
 VAR textoMuerte = "Te animás a intentarlo de nuevo?"
 VAR cartelCalle = false
 VAR infoViejoFuente = false

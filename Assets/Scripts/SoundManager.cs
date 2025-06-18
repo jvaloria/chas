@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public static class SoundManager
 {
@@ -79,6 +80,17 @@ public static class SoundManager
         if(clip != null)
         {
             PlaySFX(clip, volume);
+        }
+    }
+    public static void StopSceneSFX(string clipName)
+    {
+        AudioClip clip = GameObject.FindFirstObjectByType<SceneSoundsController>().getSound(clipName);
+        foreach (var src in sfxSources)
+        {
+            if (src.isPlaying && src.clip == clip)
+            {
+                src.Stop();
+            }
         }
     }
 

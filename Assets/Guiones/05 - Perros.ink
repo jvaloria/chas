@@ -1,6 +1,6 @@
 INCLUDE GLOBALS.ink
 VAR usedCar = false
-
+VAR dogsStarted = false
 
 ->main
 
@@ -13,25 +13,32 @@ VAR usedCar = false
 
 { not usedCar:
     // TODO alargar audio, de 10 a 20+ segundos y ver bool para que no se repita
-	~ PlaySound("perros", 0.6)
+	{not dogsStarted: 
+	    ~ PlaySound("perros", 0.6)
+	    ~ DeathTimer(15)
+	    ~ dogsStarted = true
+	}
     ¡Perros!
 - else:
 	<i>Escucho algo allá arriba.</i>
 }
 
     *{clickedCar} [¡Rápido, abajo de ese auto así no me matan!]
+        ~StopDeathTimer()
         ->BajoAuto
     ->DONE
     *{!clickedCar} [???]
         ->BajoAuto
     ->DONE
     *{clickedTree} [¡Ese árbol! Puedo trepar por ahí.]
+        ~StopDeathTimer()
         ->ArribaArbol
     ->DONE
     *{!clickedTree} [???]
         ->ArribaArbol
     ->DONE
-    * [Me arrinconaron, son ellos o yo...]
+    *{!usedCar}[Me arrinconaron, son ellos o yo...]
+        ~ StopDeathTimer()
         ~ PlaySound("PerroMuerte", 0.6)
         ~ textoMuerte = "<i>Duele mucho, hasta que deja de doler...</i>"
         ~ LoadScreenByName("Muerte")
