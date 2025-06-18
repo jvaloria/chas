@@ -147,7 +147,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113188691}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: df0b2c3b3cf600e45b90f9f4361103ab, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b3c203aafe84aea45ab424539841f705, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 701935169}
@@ -723,6 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 826046068}
   fadeDuration: 1
+  fadeInDuration: 2
 --- !u!225 &826046067
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1072,14 +1073,14 @@ RectTransform:
   m_GameObject: {fileID: 1482788933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4050}
-  m_LocalScale: {x: 1.4596, y: 1.4596, z: 1.4596}
+  m_LocalScale: {x: 1.1112664, y: 1.1112664, z: 1.1112664}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 512589162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
+  m_AnchoredPosition: {x: 0, y: -3.0000002}
   m_SizeDelta: {x: 733.4, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482788935
