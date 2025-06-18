@@ -25,10 +25,10 @@ INCLUDE GLOBALS.ink
 * [No confío en esta brújula, no todo lo que guía lleva a donde uno quiere estar.]
     ~ RemoveObject("Brujula")
     ~ LoadObject("CalicoCat")
-    // TODO trigger miau effect
+    ~ PlaySound("miau", 0.6)
     <i>El gato me mira tranquilo, como si supiera que voy a seguirlo.</i>
     <i>Y lo sigo.</i>
-    ~ LoadScreenByName("3.5 - Transicion Fuente") 
+    ~ LoadScreenByName("3.5 - Transicion Fuente")
     ->DONE
 ->DONE
 

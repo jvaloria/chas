@@ -3,7 +3,6 @@ INCLUDE GLOBALS.ink
 ->main
 
 ===main===
-TODO SFX RUIDO DE GOLPE DE PUERTA
 ~ PlaySound("door-knocking-SFX", 0.6)
 <i>Golpeo a la puerta.</i>
 <i>La iglesia está vacía. No hay nadie.</i>
