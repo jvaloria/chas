@@ -10,7 +10,6 @@ public static class SoundManager
 
     private static float bgmVolume = 1f;
     private static float sfxVolume = 1f;
-
     private static int maxSFXSources = 10;
 
     static SoundManager()

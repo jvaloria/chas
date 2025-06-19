@@ -1182,7 +1182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1407558239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1303,6 +1303,10 @@ MonoBehaviour:
   SpeedX: -2
   SpeedY: 0.5
   SpeedSizeIncrease: -150
+  currentXpos: 0
+  targetXpos: 1.8
+  speedUntilXpos: 0.9
+  hasReachedPos: 0
 --- !u!222 &1407558244
 CanvasRenderer:
   m_ObjectHideFlags: 0

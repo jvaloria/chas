@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
-  clipVolume: 1
+  clipVolume: 0.55
   objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
@@ -3295,7 +3295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
-  clipVolume: 1
+  clipVolume: 0.7
   objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
-  clipVolume: 1
+  clipVolume: 0.55
   objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
-  clipVolume: 1
+  clipVolume: 0.5
   objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0
@@ -4568,7 +4568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsSound: 1
-  clipVolume: 1
+  clipVolume: 0.6
   objectAudio: {fileID: 8300000, guid: e965c0fbfdc82404383d0e23a2bb4691, type: 3}
   hasCustomAction: 1
   isUsedOnce: 0

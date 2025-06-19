@@ -11,6 +11,9 @@ INCLUDE GLOBALS.ink
 <i>Ligero. Ágil. Silencioso. Mi cuerpo responde a leyes nuevas, como si siempre hubieran estado escritas en mí.</i>
 ->choicesKnot
 =choicesKnot
+{urracaFlies:
+    ~ TimedOption(0, 5)
+}
 <i>¿Qué hago?</i>
     *{urracaFlies} [El gorrión escapa, como marcando un camino... y yo me dejo llevar.]
         <i>El gorrión me lleva lejos, muy lejos.</i>
