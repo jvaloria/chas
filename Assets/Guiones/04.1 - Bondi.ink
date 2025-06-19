@@ -10,6 +10,7 @@ VAR devilCat_text_color = "\#FF400E"
 <color={devil_text_color}>Pasa... en el fondo siempre hay lugar.</color>
 <i>Me siento e inmediatamente me pesan los parpados</i>
 *{devilCatMansion} [¿Un gato en el bondi? Me habrá seguido arriba]
+    ~ PlaySound("miau", 1)
     ~ LoadObject("DevilCatBig")
     <i>El gato siamés se sienta a mi lado, me mira y ronronea.</i>
     <color={devilCat_text_color}>El tiempo pasa distinto acá... bajate... tenés mucho por qué vivir.</color>
@@ -28,7 +29,7 @@ VAR devilCat_text_color = "\#FF400E"
     <color={devil_text_color}>No te vas a perder, porque no vas a volver a despertar.</color>
     <i>Solo veo oscuridad. Esa figura me llama. No quiero ir... </i>
     <i>Pero quizás es la única que me queda.</i>
-    //TODO LA FIGURA ROJA SE ACERCA AÚN MAS Y AHORA LA VEMOS EN PPP
+    // TODO LA FIGURA ROJA SE ACERCA AÚN MAS Y AHORA LA VEMOS EN PPP
     // TODO DIABLO - LOCUCIÓN
     ~ PlaySound("devilSpeak", 1)
     <color={devil_text_color}>Nadie se pierde en Parque Chas. Solo dejan de buscar la salida.</color>

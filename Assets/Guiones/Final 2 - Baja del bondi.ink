@@ -10,7 +10,8 @@ INCLUDE GLOBALS.ink
 
 ===gato===
 <i>Esta es mi casa, no entiendo como terminé acá.</i>
-    *¿Me ayudaste vos?->stitch
+    *¿Me ayudaste vos?
+        ->stitch
 =stitch
 ¿Venís conmigo? Es el cumpleaños de mi hijo, y él siempre quiso un gato.
 ~ LoadObject("Fin")

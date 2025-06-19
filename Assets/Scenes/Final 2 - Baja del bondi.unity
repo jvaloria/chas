@@ -229,9 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5548638b6d43b7a49902eec2d381c6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playsSound: 0
+  playsSound: 1
   clipVolume: 1
-  objectAudio: {fileID: 0}
+  objectAudio: {fileID: 8300000, guid: 22891501ccf1dc74fa5cb9a75fdbf816, type: 3}
   hasCustomAction: 0
   isUsedOnce: 1
   continuesStory: 1
