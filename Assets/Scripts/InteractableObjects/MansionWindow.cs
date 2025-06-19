@@ -53,6 +53,10 @@ public class MansionWindow : InteractableObject
 
     public void setDevil()
     {
+        if (!onOff)
+        {
+            offSpriteObject.GetComponent<SpriteFrameController>().SetFrame(offSpriteObject.GetComponent<SpriteFrameController>().targetLastFrame);
+        }
         isDeviled = true;
         onSpriteObject.SetActive(false);
         //offSpriteObject.SetActive(false);
