@@ -14,6 +14,7 @@ public class VolumeUI : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.StopBGM();
         float bgmVolume = PlayerPrefs.GetFloat(BGM_PREF_KEY, 1f);
         float sfxVolume = PlayerPrefs.GetFloat(SFX_PREF_KEY, 1f);
 
