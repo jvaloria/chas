@@ -8,10 +8,10 @@ VAR vieja_text_color = "\#FF9E9E"
 ->yahora
 =yahora
 <i>¿Qué hago?</i>
-    *{tuxedoCatMansion} [¿Maullidos? Suenan cerca. Mejor voy a ver qué pasa.]
+    *{tuxedoCatMansion || devilCatMansion} [¿Maullidos? Suenan cerca. Mejor voy a ver qué pasa.]
         ~ LoadScreenByName("4 - Parada186")
         ->DONE
-    *{!tuxedoCatMansion} [???]
+    *{!tuxedoCatMansion && !devilCatMansion} [???]
         ->DONE
     *{viejaMansionIglesia} [Camino siguiendo algo que podría ser fe, o simplemente impulso.]
         ~ LoadScreenByName("9 - Transicion pre-iglesia")
@@ -34,12 +34,18 @@ VAR vieja_text_color = "\#FF9E9E"
 
 ===tuxedoCat===
 ¡Ey, esperá!
+~ tuxedoCatMansion = true
+->main.yahora
+
+===devilCat===
+¡Ey, esperá!
+~ devilCatMansion = true
 ->main.yahora
 
 ===vieja===
 ~ LoadObject("PanelBloqueante")
 <color={vieja_text_color}>Te estaba esperando. ¿Por qué tardaste tanto?</color>
-    *No se a quién espera. Estoy buscando <color=yellow>Ávalos y Cádiz.</color>
+    *{!viejaMansionIglesia || !viejaMansionBrujula} No se a quién espera. Estoy buscando <color=yellow>Ávalos y Cádiz.</color>
         -> viejaAvalosyCadiz
     *{viejaMansionIglesia && viejaMansionBrujula} ¡No voy a tener esta conversación de nuevo!
         ~ RemoveObject("Vieja")

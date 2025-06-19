@@ -13,6 +13,13 @@ public class WindowCounter : MonoBehaviour
     void Start()
     {
         counter = 2;
+        if (DialogueVariables.GetInstance().GetBoolVariable("devilCatMansion"))
+        {
+            foreach (var window in windows)
+            {
+                window.setDevil();
+            }
+        }
     }
 
     public void CounterUp()

@@ -648,7 +648,7 @@ MonoBehaviour:
   hasCustomAction: 1
   isUsedOnce: 1
   continuesStory: 1
-  storyKnot: tuxedoCat
+  storyKnot: devilCat
   activatesOther: 0
   deactivatesOther: 0
   otherInteractableObject: {fileID: 0}
@@ -4555,82 +4555,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.8, y: 4.25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5987415334516670222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7181966034302717752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c4593c8e563224c856055112589faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windows:
-  - {fileID: 1711152818467073161}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  otherInteractableObject: {fileID: 0}
---- !u!114 &5987415334528927886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7181966034282068152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c4593c8e563224c856055112589faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windows:
-  - {fileID: 1711152818463054601}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  otherInteractableObject: {fileID: 0}
---- !u!114 &5987415334706588943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7181966034125380921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c4593c8e563224c856055112589faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windows:
-  - {fileID: 1711152818085002888}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  otherInteractableObject: {fileID: 0}
---- !u!114 &5987415335018365315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7181966032723014069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c4593c8e563224c856055112589faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windows:
-  - {fileID: 1711152819920949764}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  otherInteractableObject: {fileID: 0}
 --- !u!114 &6393101166705192546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4807,7 +4731,6 @@ GameObject:
   - component: {fileID: 679065574207054902}
   - component: {fileID: 3775761400608057396}
   - component: {fileID: 1711152819920949764}
-  - component: {fileID: 5987415335018365315}
   m_Layer: 5
   m_Name: Window-TopRight
   m_TagString: Untagged
@@ -4827,7 +4750,6 @@ GameObject:
   - component: {fileID: 679065574518048954}
   - component: {fileID: 3775761401319605432}
   - component: {fileID: 1711152818085002888}
-  - component: {fileID: 5987415334706588943}
   m_Layer: 5
   m_Name: Window-TopMid
   m_TagString: Untagged
@@ -4847,7 +4769,6 @@ GameObject:
   - component: {fileID: 679065574694923579}
   - component: {fileID: 3775761400894464313}
   - component: {fileID: 1711152818463054601}
-  - component: {fileID: 5987415334528927886}
   m_Layer: 5
   m_Name: Window-BotLeft
   m_TagString: Untagged
@@ -4867,7 +4788,6 @@ GameObject:
   - component: {fileID: 679065574699326139}
   - component: {fileID: 3775761400898999993}
   - component: {fileID: 1711152818467073161}
-  - component: {fileID: 5987415334516670222}
   m_Layer: 5
   m_Name: Window-BotRight
   m_TagString: Untagged

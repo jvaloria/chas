@@ -119,16 +119,28 @@ public class DialogueVariables : MonoBehaviour
         DialogueManager.GetInstance().SetVariableState(name, Value.Create(boolean));
     }
 
+    public bool GetBoolVariable(string name)
+    {
+        if (variables.ContainsKey(name) && variables[name] is Ink.Runtime.BoolValue boolValue)
+        {
+            return boolValue.value;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     //FIXME: Esto tira error si lo descomento, no sé por qué
     public void ResetVariables()
     {
         foreach (var key in variables.Keys.ToList()) // ToList to avoid modifying during enumeration
         {
-            if(key != "textoMuerte")
+            if (key != "textoMuerte")
             {
                 variables[key] = new BoolValue(false);
             }
-            
+
         }
     }
 

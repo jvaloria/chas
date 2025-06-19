@@ -14,6 +14,12 @@ public class Antenna : InteractableObject
 
     private void Start()
     {
+        if (DialogueVariables.GetInstance().GetBoolVariable("tuxedoCatMansion"))
+        {
+            this.gameObject.SetActive(false);
+            return;
+        }
+
         if (!flashImage)
         {
             Debug.LogError("Flash Image not assigned to script!");
