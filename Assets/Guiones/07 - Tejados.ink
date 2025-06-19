@@ -12,7 +12,7 @@ INCLUDE GLOBALS.ink
 ->choicesKnot
 =choicesKnot
 {urracaFlies:
-    ~ TimedOption(0, 5)
+    ~ TimedOption(0, 10)
 }
 <i>¿Qué hago?</i>
     *{urracaFlies} [El gorrión escapa, como marcando un camino... y yo me dejo llevar.]

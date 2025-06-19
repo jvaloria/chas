@@ -1192,14 +1192,14 @@ RectTransform:
   m_GameObject: {fileID: 1407558238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1110.4465, y: 1110.4465, z: 1110.4465}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1456619180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35288, y: 20278}
+  m_AnchoredPosition: {x: -300, y: 130}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1407558240
@@ -1243,7 +1243,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 724882550a869b3488ef9baa16ded058, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61a6a575ca9319a428734401791c7337, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1300,12 +1300,12 @@ MonoBehaviour:
   deactivatableInteractableObject: {fileID: 0}
   pajaritoState: 0
   animator: {fileID: 1407558241}
-  SpeedX: -2
+  SpeedX: -1.5
   SpeedY: 0.5
-  SpeedSizeIncrease: -150
+  SpeedSizeIncrease: -2
   currentXpos: 0
-  targetXpos: 1.8
-  speedUntilXpos: 0.9
+  targetXpos: 3.5
+  speedUntilXpos: 1.5
   hasReachedPos: 0
 --- !u!222 &1407558244
 CanvasRenderer:
@@ -1347,18 +1347,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.8, y: -6.08}
+  m_Offset: {x: 1.86, y: -1.96}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40, y: 22.5}
+    oldSize: {x: 12.8, y: 7.2}
     newSize: {x: 40, y: 22.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.55, y: 7.9}
+  m_Size: {x: 3.43, y: 2.73}
   m_EdgeRadius: 0
 --- !u!1 &1456619179
 GameObject:
@@ -1386,7 +1386,7 @@ RectTransform:
   m_GameObject: {fileID: 1456619179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 37.500114}
-  m_LocalScale: {x: 0.0069444436, y: 0.0069444436, z: 0.0069444436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1407558239}
