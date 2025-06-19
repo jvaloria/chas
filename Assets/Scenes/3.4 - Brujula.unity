@@ -364,7 +364,7 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 1478533268}
   - {fileID: 1560940676}
-  - {fileID: 1903931190}
+  - {fileID: 1903931193}
 --- !u!1001 &398998801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1559,9 +1559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5548638b6d43b7a49902eec2d381c6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playsSound: 0
-  clipVolume: 0
-  objectAudio: {fileID: 0}
+  playsSound: 1
+  clipVolume: 1
+  objectAudio: {fileID: 8300000, guid: 3b7287b76e0b9e14da790bed461eb581, type: 3}
   hasCustomAction: 0
   isUsedOnce: 1
   continuesStory: 1
@@ -1671,7 +1671,7 @@ GameObject:
   - component: {fileID: 1903931189}
   - component: {fileID: 1903931192}
   - component: {fileID: 1903931191}
-  - component: {fileID: 1903931190}
+  - component: {fileID: 1903931193}
   m_Layer: 5
   m_Name: CalicoCat
   m_TagString: Untagged
@@ -1698,29 +1698,6 @@ RectTransform:
   m_AnchoredPosition: {x: -274, y: -27}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1903931190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903931188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d301a39cb701a14982d43b429c2b975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playsSound: 1
-  clipVolume: 0.5
-  objectAudio: {fileID: 8300000, guid: 3b7287b76e0b9e14da790bed461eb581, type: 3}
-  hasCustomAction: 0
-  isUsedOnce: 0
-  continuesStory: 0
-  storyKnot: 
-  activatesOther: 0
-  deactivatesOther: 0
-  otherInteractableObject: {fileID: 0}
-  deactivatableInteractableObject: {fileID: 0}
 --- !u!114 &1903931191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,6 +1736,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903931188}
   m_CullTransparentMesh: 1
+--- !u!114 &1903931193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903931188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5548638b6d43b7a49902eec2d381c6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playsSound: 0
+  clipVolume: 1
+  objectAudio: {fileID: 0}
+  hasCustomAction: 0
+  isUsedOnce: 0
+  continuesStory: 0
+  storyKnot: 
+  activatesOther: 0
+  deactivatesOther: 0
+  otherInteractableObject: {fileID: 0}
+  deactivatableInteractableObject: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
