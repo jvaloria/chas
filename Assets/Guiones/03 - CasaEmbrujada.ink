@@ -41,12 +41,15 @@ VAR vieja_text_color = "\#FF9E9E"
 <color={vieja_text_color}>Te estaba esperando. ¿Por qué tardaste tanto?</color>
     *No se a quién espera. Estoy buscando <color=yellow>Ávalos y Cádiz.</color>
         -> viejaAvalosyCadiz
-
+    *{viejaMansionIglesia && viejaMansionBrujula} ¡No voy a tener esta conversación de nuevo!
+        ~ RemoveObject("Vieja")
+        ~ RemoveObject("PanelBloqueante")
+        -> break_and_go
 
 === viejaAvalosyCadiz ===
 <color={vieja_text_color}>Esto es <color=yellow>Ávalos y Cádiz</color>. Como te decía... te estaba esperando.</color>
 <i>No sé si me confunde con alguien, o si esto ya no tiene lógica.</i>
-    *No puede ser, acá debería haber una casa derrumbada. Me mandaron a medirla.
+    *{!viejaMansionIglesia} No puede ser, acá debería haber una casa derrumbada. Me mandaron a medirla.
         <color={vieja_text_color}>Acá no hay casa derrumbada. Solo almas en pena.</color>
         <color={vieja_text_color}>Si alguna vez querés salir de Parque Chas, podés ir a rezar a <color=yellow>la iglesia</color>.</color>
         ~ viejaMansionIglesia = true
@@ -54,7 +57,7 @@ VAR vieja_text_color = "\#FF9E9E"
         ~ RemoveObject("PanelBloqueante")
         La <color=yellow>iglesia...</color>  Creo haber visto una torre hace un rato, pero ya no confío en lo que recuerdo.
         -> break_and_go
-    *No entiendo por qué me estaba esperando, no soy esa persona.
+    *{!viejaMansionBrujula}No entiendo por qué me estaba esperando, no soy esa persona.
         ~ viejaMansionBrujula = true
         -> viejaBrujula
 
