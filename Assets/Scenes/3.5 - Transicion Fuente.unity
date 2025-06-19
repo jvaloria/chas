@@ -342,8 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48394013079f5ed41af3957e1576c27c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneBGM: {fileID: 8300000, guid: 4974387690a4f1d4c87461aae2b2cdb9, type: 3}
-  SceneBGMVolume: 1
+  SceneBGM: {fileID: 8300000, guid: b8dd23caf26b7814e86b6647103bce18, type: 3}
+  SceneBGMVolume: 0.2
   SceneSounds: []
 --- !u!4 &290710328
 Transform:
