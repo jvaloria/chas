@@ -978,9 +978,9 @@ MonoBehaviour:
   continuesStory: 1
   storyKnot: cartelCalleNext
   activatesOther: 0
-  deactivatesOther: 0
+  deactivatesOther: 1
   otherInteractableObject: {fileID: 0}
-  deactivatableInteractableObject: {fileID: 0}
+  deactivatableInteractableObject: {fileID: 1905485273}
 --- !u!114 &1346676143
 MonoBehaviour:
   m_ObjectHideFlags: 0

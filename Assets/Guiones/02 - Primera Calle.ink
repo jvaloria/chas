@@ -5,7 +5,7 @@ VAR ciclista_text_color = "\#BDB2FB"
 
 === main ===
 
-~PlaySound("taxiSeVa", 0.10)
+~PlaySound("taxiSeVa", 0.07)
 <i>Parque Chas... Tendría que haber pensado un poco más antes de aceptar venir acá, encima a esta hora.</i>
 <i>¿<color=yellow>Avalos y Cádiz</color> era? A ver a dónde tengo que ir...</i>
 ~ LoadObject("celularmapa")
