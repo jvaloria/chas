@@ -10,9 +10,14 @@ public class PajarilloTejado : InteractableObject
     [SerializeField] float SpeedX;
     [SerializeField] float SpeedY;
     [SerializeField] float SpeedSizeIncrease;
+    private float passedTime = 0f;
 
     void Update()
     {
+        passedTime += Time.deltaTime;
+        if (passedTime < 1) {
+            transform.position += new Vector3(0.015f,0,0);
+        }
         if (isflying)
         {
             transform.position = new Vector3(SpeedX * Time.deltaTime + transform.position.x, SpeedY * Time.deltaTime + transform.position.y, transform.position.z);
@@ -48,7 +53,7 @@ public class PajarilloTejado : InteractableObject
 
     public void moveToCompensate()
     {
-        transform.position += new Vector3(1.01f, 0f, 0f);
+        transform.position += new Vector3(0.75f, 0f, 0f);
     }
 
     public void StartFlying()
