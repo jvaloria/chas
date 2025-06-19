@@ -23,7 +23,7 @@ VAR gato_text_color = "purple"
 ~ LoadScreenByName("4.1 - Bondi")
 ->DONE
 * [<i>Mejor vuelvo a buscar el terreno, mido y me voy.</i>]
-        ~ LoadScreenByName("5 - Perros")
+        ~ LoadScreenByName("3 - Casa Embrujada")
         ->DONE
 ->DONE
 
