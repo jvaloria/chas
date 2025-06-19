@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 1544844709}
   - component: {fileID: 1544844710}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: SoundController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

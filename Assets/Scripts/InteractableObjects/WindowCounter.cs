@@ -32,6 +32,7 @@ public class WindowCounter : MonoBehaviour
                 window.setDevil();
             }
             ObjectManager.GetInstance().EnableObject(otherInteractableObject.gameObject);
+            SoundManager.PlaySceneSFX("jumpScare");
         }
     }
 }

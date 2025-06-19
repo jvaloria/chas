@@ -10,7 +10,7 @@ VAR chofer_text_color = "\#ADF0C7"
 <i>Es el cumpleaños de mi hijo. Prometí llegar para soplar las velitas. Prometí tantas cosas que ya no me creo ni a mí mismo.</i>
 ~ FadeInObject("Taxista", 1)
 <color={chofer_text_color}>Parque Chas. Hasta acá llego flaco. No entro.</color>
-<color={chofer_text_color}>BAJATE RAPIDO que no me gusta quedarme mucho acá.</color>
+<color={chofer_text_color}>BAJATE RÁPIDO que no me gusta quedarme mucho acá.</color>
 ->stitch
 =stitch
     *¿Por qué? No deben faltar muchas cuadras...
